@@ -14,6 +14,8 @@ Private review originals live at `/data/anibish/review-evidence`, mounted read-o
 
 ## Owner enrollment
 
+The interactive command has a local PTY regression check (`python3 scripts/enrollment-journey.py`) that verifies the hidden-password flow, TOTP and transactional owner/audit creation in a temporary QA database.
+
 The owner must run the following in a private interactive terminal after the enrollment source is deployed. Do not paste passwords or authenticator secrets into chat, files or logs. The command verifies a new password twice and a real authenticator code before inserting the first owner. It refuses to replace any privileged user.
 
 ```sh

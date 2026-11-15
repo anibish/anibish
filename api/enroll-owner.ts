@@ -26,7 +26,7 @@ async function enroll(){
   const [org]=(await db.query("INSERT INTO organizations(name) VALUES('ANIBISH Studio') RETURNING id")).rows;
   await db.query("INSERT INTO memberships(user_id,org_id,role) VALUES($1,$2,'owner')",[user.id,org.id]);
   await db.query("INSERT INTO security_events(user_id,event,detail) VALUES($1,'owner.enrolled',$2)",[user.id,JSON.stringify({method:'trusted_ssh_interactive',mfa_tested:true,email_attestation:'Owner attested business contact during root enrollment; SMTP verification not claimed.'})]);
-  await db.query("INSERT INTO audit_log(org_id,actor_id,action,resource) VALUES($1,$2,'owner.enrolled',$2)",[org.id,user.id]);
+  await db.query("INSERT INTO audit_log(org_id,actor_id,action,resource) VALUES($1,$2,'owner.enrolled',$3)",[org.id,user.id,user.id]);
  });
  stdout.write('\nOwner enrolled and authenticator verified. Production portals remain closed until the remaining launch gates are verified. No password or authenticator secret is written to application logs.\n');
 }
