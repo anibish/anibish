@@ -14,6 +14,9 @@ trap 'rm -rf -- "$task_dir"' EXIT
 docker exec "$db" pg_dump -U anibish -d anibish -Fc > "$task_dir/database.dump"
 mkdir "$task_dir/files"
 docker cp "$api:/app/storage/." "$task_dir/files/"
+# Recover encrypted MFA records without depending on the original Coolify host.
+# This root-only temporary file is included only inside the encrypted archive.
+docker exec "$api" node -e 'const fs=require("fs"); const keys=["MFA_ENCRYPTION_KEY","SANDBOX_PAYMENT_SECRET"]; const secrets=Object.fromEntries(keys.map(k=>{if(!process.env[k])throw new Error("Missing recovery configuration");return [k,process.env[k]]})); process.stdout.write(JSON.stringify(secrets));' > "$task_dir/runtime-secrets.json"
 if [[ -d "$root/review-evidence" ]]; then cp -a "$root/review-evidence" "$task_dir/review-evidence"; fi
 stamp=$(date -u +%Y%m%dT%H%M%SZ)
 archive="$root/backups/anibish-$stamp.tar.gpg"

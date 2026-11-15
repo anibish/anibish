@@ -34,9 +34,9 @@ Commit reviewed code, push only `main`, trigger this application's Coolify deplo
 
 ## Encrypted backup / restore
 
-`ops/backup-anibish.sh` is installed as `/data/anibish/backup.sh`. Daily 02:15 UTC cron writes encrypted database, private uploads and original review evidence archives under `/data/anibish/backups`. GPG AES-256, SHA-256 manifests, private temporary paths and a root-only passphrase are used. `ops/verify-restore-anibish.sh` decrypts and restores into a uniquely named disposable database, checks records and 74 original files, then drops only that restore database.
+`ops/backup-anibish.sh` is installed as `/data/anibish/backup.sh`. Daily 02:15 UTC cron writes encrypted database, private uploads, original review evidence and required MFA/sandbox runtime recovery keys under `/data/anibish/backups`. GPG AES-256, SHA-256 manifests, private temporary paths and a root-only passphrase are used. `ops/verify-restore-anibish.sh` decrypts and restores into a uniquely named disposable database, checks records and 74 original files, authenticates restored MFA ciphertext with the archived encryption key, then drops only that restore database. Plaintext recovery configuration exists only in the root-only temporary work directory and is removed after encryption/verification.
 
-The initial recovery rehearsal passed. The owner approved an additional private recovery-key copy to ignored `.local/launch/backup-recovery-key`, mode 0600. Never commit it. The MFA encryption key and Coolify application configuration also need independent owner-controlled recovery storage; a database archive alone is insufficient to recover encrypted MFA secrets. Daily offsite transfer, retention policy and a complete replacement-VPS rehearsal remain outstanding.
+The initial recovery rehearsal passed. The owner approved an additional private recovery-key copy to ignored `.local/launch/backup-recovery-key`, mode 0600. Never commit it. New archives include the MFA encryption key inside the encrypted payload; older archives such as the first approved local copy do not. A current encrypted archive must be retained independently to recover MFA after VPS loss. Full Coolify configuration recovery remains separate. Daily offsite transfer, retention policy and a complete replacement-VPS rehearsal remain outstanding.
 
 ## Local validation
 
