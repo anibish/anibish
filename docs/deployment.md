@@ -1,44 +1,43 @@
-# Local operation and deployment preparation
+# Deployment and recovery — version 0.2.0
 
-No production deployment is authorized or performed. These are preparation instructions.
+Production uses Coolify application `xz0yo1hnzb8pe6nwuhvfe5tl`, project ANIBISH, production environment, repository `anibish/anibish`, branch `main`, Docker Compose file `ops/coolify-compose.yaml`. No GitHub Actions. Canonical website https://anibish.com; same-origin `/api`; no separate API DNS record.
 
-## Local host setup
+## Isolation and configuration
 
-Install Node 22, PostgreSQL 16+ and Redis. Use an application-specific PostgreSQL database and independent Redis instance. Never point these commands at another application’s database.
+Dedicated web, Fastify API, worker, migration job, PostgreSQL 16 and Redis 7 containers have resource limits and unique persistent volumes. PostgreSQL, Redis and API expose no host ports. Only the web service has public Traefik routing. An internal network connects data services. Migrations finish once with restart disabled, before API startup.
 
-Copy `.env.example` to `.env`, configure `DATABASE_URL` and `REDIS_URL`, and generate independent secrets for container operation. Database URLs must percent-encode special password characters. Keep `.env`, `.local/` and `storage/` out of source control.
+Coolify stores independent encrypted `ANIBISH_DB_PASSWORD`, `ANIBISH_MFA_KEY` and `ANIBISH_SANDBOX_SECRET`. Never copy another project's secrets. `PAYMENT_MODE=sandbox` is enforced. `ANIBISH_LAUNCH_STAGE` defaults to `public`. Do not change the stage merely to make screens accessible.
 
+Public mode permits health checks, published content/services and persistent enquiries. Admin mode additionally requires an enrolled, verified, MFA-enabled super admin at startup and rejects customer login. Full mode requires separate customer gate verification. Customer registration, financial operations and privileged mutations remain unavailable publicly in the initial launch.
+
+Private review originals live at `/data/anibish/review-evidence`, mounted read-only into this API. Only authorized MFA staff may fetch evidence, with source hash verification. Public media requires explicit rights approval; original customer screenshots are not approved.
+
+## Owner enrollment
+
+The owner must run the following in a private interactive terminal after the enrollment source is deployed. Do not paste passwords or authenticator secrets into chat, files or logs. The command verifies a new password twice and a real authenticator code before inserting the first owner. It refuses to replace any privileged user.
+
+```sh
+ssh -t estiva-vps 'api=$(docker ps -q --filter label=com.docker.compose.project=xz0yo1hnzb8pe6nwuhvfe5tl --filter label=com.docker.compose.service=api); docker exec -it "$api" ./node_modules/.bin/tsx api/enroll-owner.ts'
 ```
-npm ci
-npm run db:migrate
-npm run db:import
-npm run api:dev
-# In a second terminal:
-npm run dev
-```
 
-The import reads `../reviews` and preserves all originals. It is repeatable without duplicate records. It imports all services as drafts and all review evidence as `needs_review`. No fictional prices are published.
+Enrollment alone does not open portals. Production admin access still requires successful sign-in/MFA, permissions, audit and recovery checks. Customer accounts remain closed until their own gate passes. Email verification through SMTP must not be claimed from trusted owner enrollment.
 
-Optional development-only fixtures: `npm run db:seed:local`. Random access details are written to ignored `.local/demo-access.json`; demo account emails are `client@example.test` and `admin@example.test`. The admin account uses the same local password plus its generated TOTP secret. Do not use these accounts or fixtures in production. For owner setup, register a real local account, verify using the development mailbox link, then run `npm run admin:create` and enroll an authenticator.
+## Email
 
-Build using `npm run build`; `npm start` runs standalone output locally. The API remains a separate process. Set `API_INTERNAL_URL` before building if the internal API host changes.
+Only the worker receives optional dedicated `ANIBISH_SMTP_HOST`, `ANIBISH_SMTP_PORT`, `ANIBISH_SMTP_USER`, `ANIBISH_SMTP_PASSWORD`; sender is mail@anibish.com. Existing SPF/DKIM/DMARC records were preserved. Actual sender authentication and delivery need provider credentials and testing. The database outbox remains authoritative; Redis is a queue hint. Stable message IDs, locked jobs, retries/backoff, preferences and delivery logs are implemented. A healthy worker with `smtp_unconfigured` means process health, not successful email delivery.
 
-## Docker / Coolify preparation
+## Deploy / rollback
 
-`compose.yaml` isolates PostgreSQL, Redis, migrations, the API and web application. PostgreSQL and Redis are not published to the host. Web binds loopback only. Unique named volumes retain application data. The migration job runs before API health checks.
+Commit reviewed code, push only `main`, trigger this application's Coolify deployment, then inspect migration exit status and all five running health checks. Never restart unrelated applications or run broad Docker cleanup. Validate HTTPS, www 301, published content, forms and persisted records. Roll back this application to the prior verified Git commit if critical regressions occur. Database schema rollback needs an isolated restore plan, not blind reverse SQL. Current migrations are additive.
 
-Required configuration: `POSTGRES_PASSWORD`, `MFA_ENCRYPTION_KEY` (32 random bytes as 64 hex characters), `SANDBOX_PAYMENT_SECRET` and `PUBLIC_ORIGIN`. Use `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` to generate a secret locally. Do not place generated values in documentation or commits.
+## Encrypted backup / restore
 
-Prepare with `docker compose config --quiet`. Build and runtime have not been verified in Docker during this batch. Review the image versions and supply the approved hostname/TLS route in Coolify. Attach only this stack to the existing Traefik network; never change another service’s labels, DNS, credentials or routing. A production deployment requires separate explicit authorization.
+`ops/backup-anibish.sh` is installed as `/data/anibish/backup.sh`. Daily 02:15 UTC cron writes encrypted database, private uploads and original review evidence archives under `/data/anibish/backups`. GPG AES-256, SHA-256 manifests, private temporary paths and a root-only passphrase are used. `ops/verify-restore-anibish.sh` decrypts and restores into a uniquely named disposable database, checks records and 74 original files, then drops only that restore database.
 
-## Backups and restore
+The initial recovery rehearsal passed. The owner approved an additional private recovery-key copy to ignored `.local/launch/backup-recovery-key`, mode 0600. Never commit it. The MFA encryption key and Coolify application configuration also need independent owner-controlled recovery storage; a database archive alone is insufficient to recover encrypted MFA secrets. Daily offsite transfer, retention policy and a complete replacement-VPS rehearsal remain outstanding.
 
-Before migrations, take `pg_dump --format=custom` of this application database. Back up its private file volume and the MFA encryption key independently; losing the key prevents decoding existing authenticator secrets. Redis is not the source of truth for business records.
+## Local validation
 
-Restore to a new isolated database and file volume, run migration verification, check file hashes and sample tenant isolation, then plan any cutover separately. No automated backup/restore rehearsal was performed. Set encryption, access permissions, retention and recovery objectives before production operation.
+Use Node 22, application-specific PostgreSQL and Redis. Copy `.env.example` to ignored `.env`; never point local seed/import/tests at production. Run `npm ci`, `npm run db:migrate`, `npm run api:dev`, and `npm run dev`. Development fixtures are optional. API tests require a database URL containing `anibish_qa`.
 
-## Health and external setup
-
-`GET /health` verifies PostgreSQL and reports Redis, sandbox payment mode and email-outbox status. The frontend health check requests `/`. Outbound email delivery, live payment APIs/webhooks, malware scanning, encrypted storage backups, legal policies and business tax details must be configured and independently verified before commercial use.
-
-The payment adapter accepts integer minor units and verifies sandbox HMAC signatures. The order-payment operation uses a transaction, row lock and unique idempotency keys. A live provider adapter, incoming provider webhook endpoint and reconciliation worker are not implemented.
+Run build, both TypeScript checks, lint and API tests. `scripts/continuation-journey.mjs` uses isolated QA accounts and MFA; `scripts/launch-smoke.mjs` exercises public production pages and creates clearly labelled synthetic enquiries. Captures and private test output remain ignored.

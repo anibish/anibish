@@ -37,14 +37,16 @@ services:
       DATABASE_URL: postgresql://anibish:${ANIBISH_DB_PASSWORD}@postgres:5432/anibish
       REDIS_URL: redis://redis:6379
       PUBLIC_ORIGIN: https://anibish.com
-      LAUNCH_STAGE: public
+      LAUNCH_STAGE: ${ANIBISH_LAUNCH_STAGE:-public}
       PAYMENT_MODE: sandbox
       MFA_ENCRYPTION_KEY: ${ANIBISH_MFA_KEY}
       SANDBOX_PAYMENT_SECRET: ${ANIBISH_SANDBOX_SECRET}
       STORAGE_DIR: /app/storage
       CONTACT_EMAIL: mail@anibish.com
+      EVIDENCE_DIR: /app/evidence
     volumes:
       - anibish_files:/app/storage
+      - /data/anibish/review-evidence:/app/evidence:ro
     networks:
       - private
     restart: unless-stopped
@@ -64,7 +66,12 @@ services:
     build:
       context: .
       dockerfile: api/Dockerfile
-    environment: *api_environment
+    environment:
+      <<: *api_environment
+      ANIBISH_SMTP_HOST: ${ANIBISH_SMTP_HOST:-}
+      ANIBISH_SMTP_PORT: ${ANIBISH_SMTP_PORT:-587}
+      ANIBISH_SMTP_USER: ${ANIBISH_SMTP_USER:-}
+      ANIBISH_SMTP_PASSWORD: ${ANIBISH_SMTP_PASSWORD:-}
     command: ["./node_modules/.bin/tsx", "api/worker.ts"]
     volumes:
       - anibish_files:/app/storage

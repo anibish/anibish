@@ -1,8 +1,8 @@
-# ANIBISH · Local studio platform
+# ANIBISH · Software engineering studio
 
-A premium Apple-inspired public studio and connected client/admin application. Next.js App Router, React, TypeScript, Tailwind, Fastify, PostgreSQL, Drizzle and Redis. All assets are bundled locally. No production deployment or unrelated service changes were performed.
+A premium Apple-inspired public studio and connected client/admin application. Next.js App Router, React, TypeScript, Tailwind, Fastify, PostgreSQL, Drizzle and Redis. Public website: https://anibish.com. Source version 0.2.0. Dedicated Coolify containers run on the existing VPS; unrelated applications are preserved.
 
-**The master brief is not fully complete.** Core workflows work locally; advanced modules and external integrations have explicit limits in [feature coverage](docs/feature-coverage.md).
+**The master brief is not fully complete.** Public enquiries work in production. Privileged workflows have local functional evidence and remain disabled pending owner enrollment and production gates; see [feature coverage](docs/feature-coverage.md).
 
 ## Run locally
 
@@ -18,7 +18,7 @@ npm run dev
 
 Open http://localhost:3000. `npm run build` creates standalone output; `npm start` serves that output locally. The API runs separately. [Deployment instructions](docs/deployment.md) cover environment variables, containers, owner setup and backup preparation.
 
-Optional `npm run db:seed:local` creates development-only demo accounts with random credentials in ignored `.local/demo-access.json`. Never use these fixtures in production. Register an owner account and run `npm run admin:create` to grant administrative access; MFA enrollment is required before administration.
+Optional `npm run db:seed:local` creates development-only demo accounts with random credentials in ignored `.local/demo-access.json`. Never use these fixtures in production. Production uses the private interactive owner enrollment in [deployment instructions](docs/deployment.md). Development fixtures must never be imported into production.
 
 ## Explore
 
@@ -31,7 +31,7 @@ Optional `npm run db:seed:local` creates development-only demo accounts with ran
 - `/design-system` — components, theme foundations and linked route index
 - `.local/visual-audit/screenshots/index.html` — private local screenshot gallery
 
-Contact, quote and consultation forms save to the local enquiry inbox. Quotes create contracts, orders, projects, milestones, conversations and invoices transactionally. Private files, messages, versioned deliveries, customer decisions and sandbox payments persist in PostgreSQL. Sandbox payments never charge funds. Email requests enter an outbox; no outbound transport is configured.
+Contact, quote and consultation forms save to the application database, including in public production mode. Quotes create contracts, orders, projects, milestones, conversations and invoices transactionally. Private files, messages, versioned deliveries, customer decisions and sandbox payments persist in PostgreSQL. Sandbox payments never charge funds. Email requests enter a durable database outbox. The worker supports dedicated SMTP credentials, retries and delivery logs; production SMTP is currently unconfigured.
 
 All bundled prices are labelled placeholders. Fixed service ordering requires a published service with explicit owner price approval. Professional facts and awards awaiting the missing profile PDF are clearly identified. Policy text is draft material requiring review.
 
@@ -56,13 +56,13 @@ The browser scripts use local Chrome by default and require development fixtures
 - `src/lib` — frontend API client and editorial fixtures
 - `api` — Fastify handlers, authorization, cryptography, payment adapter, import/migration tools
 - `api/migrations` — versioned relational PostgreSQL migrations
-- `public/assets` — original coastal SVG and optimized review evidence
+- `public/assets` — original coastal SVG; raw review evidence remains private
 - `docs` — route inventory, asset audit, implementation status, screenshots and coverage
 - `storage` and `.local` — ignored private development state
 
 Source screenshots in `../reviews` are preserved. All 74 were inspected and imported idempotently. Private asset report in `.local/launch/asset-import-report.json` records individual provenance and publication review status. No profile PDF was found.
 
-Docker/Coolify configuration is prepared and explicitly unverified at runtime. There is no GitHub Actions configuration, Supabase dependency or recurring cloud service requirement.
+The isolated production Docker/Coolify topology has been deployed and its encrypted backup restored into a disposable database. There is no GitHub Actions configuration, Supabase dependency or recurring cloud service requirement.
 
 ## Public launch (0.2.0)
 

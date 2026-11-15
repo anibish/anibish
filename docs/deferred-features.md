@@ -1,7 +1,12 @@
-# Remaining functional scope
+# Remaining scope and external dependencies
 
-The task expanded from design-only into a local full-stack build. Core workflows were implemented rather than deferred wholesale. `feature-coverage.md` is the authoritative module-by-module status.
+The public website is deployed. The full master brief is not complete. See `feature-coverage.md` for module status and `completion-report.md` for launch evidence.
 
-Remaining work includes live payment/webhook/refund reconciliation, SMTP delivery and durable outbox worker, recurring billing, advanced project/team scheduling, ticket conversation threads, message attachments/unread UI, full database-driven CMS rendering, media-to-case-study linking, MFA recovery, production legal/tax details, security/a11y audits, Docker runtime and backup-restore rehearsal.
-
-No production launch, DNS edits, VPS changes, third-party subscriptions, GitHub Actions or changes to unrelated projects were performed.
+- Production owner password and authenticator enrollment and actual production MFA sign-in remain owner-only steps. Customer/admin gates remain closed until verified.
+- Dedicated SMTP credentials, sender authentication and real provider delivery are unavailable. Password recovery, email verification and outbound notifications cannot be claimed operational in production.
+- Live payment processing is deliberately disabled. Merchant/legal/GST/bank details, live provider integration, reconciliation/refund testing and explicit owner authorization are required before activation.
+- Raw historical review screenshots remain private. Only six owner-approved anonymized text excerpts may be published.
+- Configurable CMS content, publication history, media rights, redirects and navigation are implemented; arbitrary layout building and a polished dedicated editor for every content subtype remain partial.
+- Advanced project planning supports dependencies, team assignments, weighted milestones, templates, subtasks and private time; capacity planning, complex scheduling automation and a full Gantt editor remain incomplete.
+- MFA recovery codes, automated malware scanning, independent penetration/accessibility audit, automated offsite backups and complete replacement-server recovery remain outstanding.
+- ANIBISH-specific monitoring alert delivery needs an approved notification destination. Existing unrelated alert channels must not be repurposed.
