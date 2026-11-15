@@ -83,6 +83,7 @@ services:
       timeout: 10s
       retries: 5
   migrate:
+    restart: "no"
     build:
       context: .
       dockerfile: api/Dockerfile

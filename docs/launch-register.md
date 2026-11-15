@@ -16,3 +16,14 @@ Date: 16 November 2026 (Asia/Kolkata).
 - UNVERIFIED: Deployment, HTTPS, DNS cutover and production smoke tests are pending at this checkpoint.
 
 No live financial processing is authorized. All payment adapters, callbacks, records and reports remain explicitly sandbox-only.
+
+## Continuation checkpoint
+
+- VERIFIED: Sanitized source pushed to `anibish/anibish` on `main`; remote SHA matched `e628bc43538a1396afaa3a0cad2bb3764966a89c` before the next batch.
+- VERIFIED: Owner approved exactly six anonymized review text excerpts on 16 November 2026. Those six records were imported into the dedicated production database. Raw images remain private.
+- VERIFIED: Fresh production dependency audit reports zero known vulnerabilities.
+- VERIFIED: 16 API/unit groups now pass, including dependency-cycle rejection, attachment isolation, unread/read state, private time records and persistent login lockout after API reconstruction.
+- VERIFIED: Updated public-mode Next.js production build, TypeScript and lint checks pass.
+- PARTIALLY IMPLEMENTED: Billing UI now binds draft invoices, finalization, PDF/history, recurring agreements, manual sandbox transfer verification, credit notes and currency-separated reports. Browser validation is still pending.
+- PARTIALLY IMPLEMENTED: Messaging UI now supports authenticated attachments, replies, search and reconnection status; project scheduling APIs include team assignments, dependencies, time entries, template application and final handover. Full UI and restart coverage remain pending.
+- UNVERIFIED: First Coolify deployment `vjng7hpluhwmf9nbhfnqzex1` is starting. An automatically applied migration restart policy was corrected for this application and explicitly disabled in source. DNS remains unchanged at this checkpoint.
