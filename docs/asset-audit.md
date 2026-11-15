@@ -1,4 +1,13 @@
-# Source and publication audit
+# Source and publication audit — current decision
+
+All 74 original screenshots remain private, with hash-verified copies in owner storage and dedicated VPS storage. No raw screenshot or derivative is published in GitHub history or served as an approved public image. The owner approved exactly six anonymized text excerpts on 16 November 2026, including the original 4.7/5 individual rating where applicable. No aggregate rating, client identity or commercial metric is invented. Production CMS contains the approved excerpts and 74 private evidence metadata records; evidence access requires MFA-protected staff permissions.
+
+No profile PDF was found. Product illustrations are labelled concepts, rather than original delivered client screenshots. Further review/image publication requires explicit rights approval.
+
+## Historical discovery notes
+
+Earlier local gallery descriptions below do not authorize publication and were superseded by the current privacy decision.
+
 
 74 PNG files were present in the original `reviews of software consulting` folder at discovery. The folder was renamed to `reviews` during execution; the original files were not edited or deleted by this implementation. Every screenshot was visually inspected using `../design-audit/contact-1.jpg` through `contact-7.jpg`.
 

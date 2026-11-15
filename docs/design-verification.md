@@ -1,4 +1,17 @@
-# Design and functional verification
+# Design and functional verification — continuation
+
+Updated 16 November 2026. Current source passes optimized production build, frontend/API TypeScript, ESLint and 25 API test groups. A separate QA browser journey passed 12 workflow groups, including five mobile operations screens; zero page errors. The sandbox invoice was rendered and visually inspected. Public production verification and deployment identifiers are in `completion-report.md`.
+
+Captures remain private: `.local/launch/index.html` links 32 production desktop/mobile images and 13 operations/PDF images. Historical design-phase captures remain at `.local/visual-audit/screenshots/index.html`. The previous 250 captures were not rerun as production tests.
+
+## Current limitations
+
+Customer and admin production screens show intentional launch gates. Their connected layouts were tested locally using distinct QA identities, including an MFA admin. Production owner MFA enrollment and sign-in are outstanding. SMTP delivery is unconfigured. Legal policies remain drafts. Full WCAG, Safari/Firefox and independent security review are unverified. CMS subtypes without specialized editors use structured fields; advanced planning automation remains partial. See `feature-coverage.md`.
+
+## Historical first-batch report
+
+The following is retained as earlier evidence, not current deployment state. Later continuation work supersedes its Docker, CMS, email-worker and publication preparation statements.
+
 
 Verified locally on 15 November 2026 using Node 22.23.3, Next.js 16.4.6, PostgreSQL 16 and headless Google Chrome. This report does not certify production readiness.
 
