@@ -1,6 +1,6 @@
 # Design and functional verification — continuation
 
-Updated 16 November 2026. Current source passes optimized production build, frontend/API TypeScript, ESLint and 25 API test groups. A separate QA browser journey passed 12 workflow groups, including five mobile operations screens; zero page errors. The sandbox invoice was rendered and visually inspected. Public production verification and deployment identifiers are in `completion-report.md`.
+Updated 16 November 2026. Current source passes optimized production build, frontend/API TypeScript, ESLint and 25 API test groups. A separate QA browser journey passed 12 workflow groups, including five mobile operations screens; zero page errors. A separate interactive PTY enrollment regression also passed after fixing the transactional audit parameter. The sandbox invoice was rendered and visually inspected. Public production verification and deployment identifiers are in `completion-report.md`.
 
 Captures remain private: `.local/launch/index.html` links 32 production desktop/mobile images and 13 operations/PDF images. Historical design-phase captures remain at `.local/visual-audit/screenshots/index.html`. The previous 250 captures were not rerun as production tests.
 

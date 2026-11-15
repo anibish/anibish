@@ -8,7 +8,7 @@ The public website is live at **https://anibish.com**. This is a verified public
 
 - Repository: https://github.com/anibish/anibish
 - Branch: `main`; ordinary push, no force-push and no GitHub Actions.
-- Deployed application commit: `27b22bcb9d61b6fc3f2ded2046ea7708ed46e239`. Push and remote branch SHA matched when published. Later documentation/test-only commits may follow this runtime release.
+- Deployed application commit: `190daee683953d4900b9a81b793d41cfc810ba33`. Push and remote branch SHA matched when published. Later documentation/test-only commits may follow this runtime release.
 - Existing local implementation history was retained after removing private screenshot paths from intended public history. A private pre-publication history bundle remains owner-controlled.
 - Current source/history checks found zero private storage, raw review, capture, environment-secret or database archive paths in the public history. Pattern-based secret scanning found no matches; this is not a formal secret-scanner certification.
 - Fresh production dependency audit: **zero known vulnerabilities**. Development dependencies are outside that production-only result.
@@ -23,8 +23,8 @@ The public website is live at **https://anibish.com**. This is a verified public
 - No separate API hostname was necessary.
 - Coolify project ANIBISH: `op7ci4izgnxwsd3x59tkun3i`; production environment `8qamsv7n1x7hcn2au4yc6iad`.
 - Application: `xz0yo1hnzb8pe6nwuhvfe5tl`.
-- Verified release deployment: `798a7849-2869-4bb2-a200-5a425cc1deb2`, status `finished`, source commit matches above.
-- Running release container suffix: `20261115T200503`.
+- Verified release deployment: `baa4a16e-eff9-4f91-8d9c-9c0abe9ef3ff`, status `finished`, source commit matches above.
+- Running release container suffixes: `20261115T202028` / `20261115T202029`.
 - Dedicated web, API, worker, PostgreSQL and Redis containers healthy; one-shot migration container exited 0. All ten migrations recorded.
 - Database, Redis and API have no host-published ports. Unique volumes and private data network are isolated from other applications. Dedicated independently generated secrets are encrypted by Coolify. Review originals are mounted read-only only into this API.
 - All production data is real editorial content or clearly labelled synthetic enquiry tests: 26 services, six approved anonymized reviews, 74 private evidence metadata records, eight enquiry tests, zero orders and zero payments at verification. No development accounts were imported.
@@ -76,7 +76,7 @@ Recent own-container logs were compared against configured secret values, with z
 
 Daily encrypted backup runs at 02:15 UTC. Fresh archive `anibish-20261115T201130Z.tar.gpg` passed checksum, decryption and restore into a disposable isolated database: 26 services, 11 CMS records, eight enquiries, zero orders/payments, all 74 private originals. The API restart preserved all four final browser enquiry references.
 
-The owner explicitly approved private local copies of the backup recovery key and this encrypted archive. They were stored in ignored `.local/launch/`, restrictive owner-only permissions; archive checksum matched the VPS. Recovery secrets are not in source or logs. The separate MFA encryption key and Coolify configuration still need a complete independent owner recovery plan. Daily offsite automation, retention policy, full replacement-VPS recovery and MFA recovery codes remain outstanding. Database restore alone does not recover lost MFA encryption keys.
+The owner explicitly approved private local copies of the backup recovery key and this encrypted archive. They were stored in ignored `.local/launch/`, restrictive owner-only permissions; archive checksum matched the VPS. Recovery secrets are not in source or logs. Updated server-side archives now include the MFA/sandbox recovery keys inside the encrypted payload; the initially approved Mac copy does not. Full Coolify configuration and a current independent archive still need an owner recovery plan. Daily offsite automation, retention policy, full replacement-VPS recovery and MFA recovery codes remain outstanding. Database restore alone does not recover lost MFA encryption keys.
 
 ## Monitoring and existing applications
 
@@ -104,7 +104,8 @@ Existing CarsWhere, Estiva, Bishnoi, GadgetsWhere and Origin application checks 
 | Encrypted restore | PASS, isolated database and 74 original files |
 | Production dependency vulnerabilities | Zero known, omit-dev audit |
 | Actual production customer login / isolation | NOT ENABLED / NOT EXECUTED with production customers |
-| Actual production admin MFA login / service edit | BLOCKED pending private owner enrollment |
+| Interactive owner enrollment regression | PASS in temporary local QA database: password, TOTP, owner and audit transaction |
+| Actual production admin MFA login / service edit | BLOCKED pending private owner enrollment retry |
 | Live SMTP / live payments | NOT CONFIGURED / DELIBERATELY DISABLED |
 
 A first smoke attempt during container cutover received 503; the final run started after readiness and passed. A private-resource assertion was adjusted to verify non-image not-found content because streamed Next.js not-found responses can carry HTTP 200. No private image bytes were returned; strict unknown-route HTTP status remains a limitation.
@@ -121,3 +122,9 @@ Private screenshot gallery: `.local/launch/index.html` (32 final public images p
 6. Complete specialized CMS editors and advanced resource scheduling where the generic structured workflows do not fulfill the full master brief.
 
 Public lead capture remains independent of these payment and portal blockers.
+
+## Owner enrollment follow-up
+
+A full interactive QA reproduction found an audit SQL parameter conflict in the initial owner-enrollment command. Its transaction rolled back, leaving production with zero owners. Commit `190daee` fixes the parameter typing; a PTY regression now verifies hidden password entry, TOTP, owner creation and both audit/security records in a temporary isolated database. API TypeScript and lint passed, the corrected source hash matched the deployed container, and production public checks passed 16/16 again. The private launcher now explicitly distinguishes success and failure. The owner was asked to retry with the new setup key; no password or TOTP was collected by the agent.
+
+Recovery scripts now include required runtime MFA/sandbox keys inside encrypted archives and verify configuration plus any restored MFA ciphertext. Archive `anibish-20261115T202304Z.tar.gpg` restored eight enquiries and all original evidence, with zero enrolled MFA records at that point. A rehearsal interrupted by deployment was retried successfully after removing only its identified temporary database and directory. Cleanup now handles replacement containers. These newer key-containing archives have not been copied to the Mac under the earlier archive-specific approval.
