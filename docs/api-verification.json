@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "testGroups": 8,
+  "failed": 0,
+  "database": "isolated anibish_qa",
+  "coverage": [
+    "registration/verification/recovery/sessions",
+    "CSRF and privilege escalation",
+    "required MFA and encrypted secrets",
+    "quote-to-order/project/contract/invoice",
+    "payment concurrency/idempotence",
+    "tenant isolation and composite FK boundaries",
+    "internal messages and tasks",
+    "revision/approval/progress",
+    "private upload/download",
+    "approved fixed checkout",
+    "sandbox adapter signatures"
+  ]
+}

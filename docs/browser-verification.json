@@ -1,0 +1,2507 @@
+{
+  "generatedAt": "2026-11-15T18:12:41.304Z",
+  "screenshots": 250,
+  "errors": [],
+  "results": [
+    {
+      "route": "/categories/ai-automation",
+      "role": "public",
+      "device": "desktop",
+      "file": "categories-ai-automation-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/categories/web-commerce",
+      "role": "public",
+      "device": "desktop",
+      "file": "categories-web-commerce-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/categories/mobile-education",
+      "role": "public",
+      "device": "desktop",
+      "file": "categories-mobile-education-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/categories/ai-automation",
+      "role": "public",
+      "device": "mobile",
+      "file": "categories-ai-automation-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/categories/web-commerce",
+      "role": "public",
+      "device": "mobile",
+      "file": "categories-web-commerce-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/categories/mobile-education",
+      "role": "public",
+      "device": "mobile",
+      "file": "categories-mobile-education-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/categories/advisory-support",
+      "role": "public",
+      "device": "desktop",
+      "file": "categories-advisory-support-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/categories/architecture-infrastructure",
+      "role": "public",
+      "device": "desktop",
+      "file": "categories-architecture-infrastructure-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/",
+      "role": "public",
+      "device": "desktop",
+      "file": "home-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/categories/advisory-support",
+      "role": "public",
+      "device": "mobile",
+      "file": "categories-advisory-support-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/categories/architecture-infrastructure",
+      "role": "public",
+      "device": "mobile",
+      "file": "categories-architecture-infrastructure-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/",
+      "role": "public",
+      "device": "mobile",
+      "file": "home-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/about",
+      "role": "public",
+      "device": "desktop",
+      "file": "about-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/ai-agents",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-ai-agents-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/about",
+      "role": "public",
+      "device": "mobile",
+      "file": "about-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/ai-agents",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-ai-agents-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/private-ai",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-private-ai-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/websites",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-websites-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/automation",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-automation-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/private-ai",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-private-ai-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/automation",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-automation-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/websites",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-websites-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/saas",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-saas-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/mobile",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-mobile-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/commerce",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-commerce-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/saas",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-saas-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/commerce",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-commerce-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/mobile",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-mobile-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/enterprise",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-enterprise-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/backend",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-backend-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/education",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-education-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/enterprise",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-enterprise-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/education",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-education-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/backend",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-backend-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/architecture",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-architecture-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/security",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-security-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/devops",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-devops-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/architecture",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-architecture-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/devops",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-devops-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/security",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-security-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/advisory",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-advisory-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/rag",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-rag-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/maintenance",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-maintenance-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/advisory",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-advisory-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/rag",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-rag-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/maintenance",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-maintenance-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/llm",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-llm-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/local-ai",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-local-ai-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/ios",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-ios-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/llm",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-llm-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/ios",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-ios-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/local-ai",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-local-ai-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/android",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-android-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/web-applications",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-web-applications-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/saas-platforms",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-saas-platforms-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/android",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-android-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/saas-platforms",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-saas-platforms-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/web-applications",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-web-applications-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/online-marketplaces",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-online-marketplaces-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/erp-crm",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-erp-crm-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/lms",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-lms-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/online-marketplaces",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-online-marketplaces-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/erp-crm",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-erp-crm-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/lms",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-lms-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/ai-engineering",
+      "role": "public",
+      "device": "desktop",
+      "file": "services-ai-engineering-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/services/ai-engineering",
+      "role": "public",
+      "device": "mobile",
+      "file": "services-ai-engineering-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/portfolio/responsive-websites",
+      "role": "public",
+      "device": "desktop",
+      "file": "portfolio-responsive-websites-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/portfolio",
+      "role": "public",
+      "device": "desktop",
+      "file": "portfolio-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/portfolio",
+      "role": "public",
+      "device": "mobile",
+      "file": "portfolio-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/portfolio/responsive-websites",
+      "role": "public",
+      "device": "mobile",
+      "file": "portfolio-responsive-websites-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/portfolio/ssl-scanner",
+      "role": "public",
+      "device": "desktop",
+      "file": "portfolio-ssl-scanner-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/portfolio/ssl-scanner",
+      "role": "public",
+      "device": "mobile",
+      "file": "portfolio-ssl-scanner-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/reviews",
+      "role": "public",
+      "device": "desktop",
+      "file": "reviews-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/portfolio/learning-platform",
+      "role": "public",
+      "device": "desktop",
+      "file": "portfolio-learning-platform-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/reviews",
+      "role": "public",
+      "device": "mobile",
+      "file": "reviews-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/portfolio/learning-platform",
+      "role": "public",
+      "device": "mobile",
+      "file": "portfolio-learning-platform-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/contact",
+      "role": "public",
+      "device": "desktop",
+      "file": "contact-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/contact",
+      "role": "public",
+      "device": "mobile",
+      "file": "contact-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/checkout",
+      "role": "public",
+      "device": "desktop",
+      "file": "checkout-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/quote",
+      "role": "public",
+      "device": "desktop",
+      "file": "quote-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/checkout",
+      "role": "public",
+      "device": "mobile",
+      "file": "checkout-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/quote",
+      "role": "public",
+      "device": "mobile",
+      "file": "quote-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/login",
+      "role": "public",
+      "device": "desktop",
+      "file": "login-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/forgot-password",
+      "role": "public",
+      "device": "desktop",
+      "file": "forgot-password-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/login",
+      "role": "public",
+      "device": "mobile",
+      "file": "login-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/register",
+      "role": "public",
+      "device": "desktop",
+      "file": "register-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/forgot-password",
+      "role": "public",
+      "device": "mobile",
+      "file": "forgot-password-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/register",
+      "role": "public",
+      "device": "mobile",
+      "file": "register-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/design-system",
+      "role": "public",
+      "device": "desktop",
+      "file": "design-system-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/experience",
+      "role": "public",
+      "device": "desktop",
+      "file": "experience-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/pricing",
+      "role": "public",
+      "device": "desktop",
+      "file": "pricing-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/design-system",
+      "role": "public",
+      "device": "mobile",
+      "file": "design-system-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/experience",
+      "role": "public",
+      "device": "mobile",
+      "file": "experience-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/pricing",
+      "role": "public",
+      "device": "mobile",
+      "file": "pricing-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/awards",
+      "role": "public",
+      "device": "desktop",
+      "file": "awards-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/consultation",
+      "role": "public",
+      "device": "desktop",
+      "file": "consultation-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/awards",
+      "role": "public",
+      "device": "mobile",
+      "file": "awards-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/insights",
+      "role": "public",
+      "device": "desktop",
+      "file": "insights-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/consultation",
+      "role": "public",
+      "device": "mobile",
+      "file": "consultation-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/insights",
+      "role": "public",
+      "device": "mobile",
+      "file": "insights-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/privacy",
+      "role": "public",
+      "device": "desktop",
+      "file": "privacy-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/terms",
+      "role": "public",
+      "device": "desktop",
+      "file": "terms-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/refunds",
+      "role": "public",
+      "device": "desktop",
+      "file": "refunds-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/privacy",
+      "role": "public",
+      "device": "mobile",
+      "file": "privacy-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/terms",
+      "role": "public",
+      "device": "mobile",
+      "file": "terms-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/refunds",
+      "role": "public",
+      "device": "mobile",
+      "file": "refunds-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/account",
+      "role": "public",
+      "device": "desktop",
+      "file": "account-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=services",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-services-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=overview",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-overview-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/account",
+      "role": "public",
+      "device": "mobile",
+      "file": "account-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=services",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-services-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=overview",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-overview-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=leads",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-leads-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=quotes",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-quotes-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=leads",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-leads-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=contracts",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-contracts-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=quotes",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-quotes-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=contracts",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-contracts-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=orders",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-orders-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=projects",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-projects-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=orders",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-orders-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=milestones",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-milestones-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=projects",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-projects-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=tasks",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-tasks-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=milestones",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-milestones-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=conversations",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-conversations-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=tasks",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-tasks-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=files",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-files-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=conversations",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-conversations-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=deliveries",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-deliveries-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=files",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-files-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=invoices",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-invoices-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=deliveries",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-deliveries-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=payments",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-payments-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=invoices",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-invoices-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=refunds",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-refunds-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=payments",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-payments-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=tickets",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-tickets-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=refunds",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-refunds-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=notifications",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-notifications-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=tickets",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-tickets-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=requirement",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-requirement-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=notifications",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-notifications-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=change_request",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-change-request-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=requirement",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-requirement-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=maintenance",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-maintenance-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=change_request",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-change-request-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=maintenance",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-maintenance-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=settings",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-module-settings-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=overview",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-overview-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=settings",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-module-settings-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=services",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-services-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=overview",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-overview-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=leads",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-leads-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=services",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-services-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=organizations",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-organizations-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=leads",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-leads-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=quotes",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-quotes-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=organizations",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-organizations-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=contracts",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-contracts-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=quotes",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-quotes-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=orders",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-orders-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=contracts",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-contracts-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=projects",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-projects-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=orders",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-orders-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=milestones",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-milestones-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=projects",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-projects-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=tasks",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-tasks-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=milestones",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-milestones-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=conversations",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-conversations-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=tasks",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-tasks-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=files",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-files-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=conversations",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-conversations-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=deliveries",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-deliveries-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=files",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-files-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=invoices",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-invoices-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=deliveries",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-deliveries-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=payments",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-payments-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=invoices",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-invoices-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=refunds",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-refunds-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=payments",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-payments-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=tickets",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-tickets-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=refunds",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-refunds-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=notifications",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-notifications-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=tickets",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-tickets-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=cms",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-cms-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=notifications",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-notifications-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=portfolio",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-portfolio-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=cms",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-cms-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=portfolio",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-portfolio-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=review",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-review-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=award",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-award-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=review",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-review-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=experience",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-experience-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=award",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-award-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=blog",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-blog-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=experience",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-experience-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=faq",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-faq-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=blog",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-blog-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=navigation",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-navigation-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=faq",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-faq-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=policy",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-policy-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=navigation",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-navigation-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=email_template",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-email-template-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=policy",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-policy-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=team",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-team-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=email_template",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-email-template-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=timesheet",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-timesheet-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=team",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-team-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=expense",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-expense-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=timesheet",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-timesheet-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=retainer",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-retainer-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=expense",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-expense-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=campaign",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-campaign-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=retainer",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-retainer-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=newsletter",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-newsletter-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=campaign",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-campaign-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=referral",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-referral-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=newsletter",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-newsletter-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=change_request",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-change-request-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=referral",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-referral-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=risk",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-risk-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=change_request",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-change-request-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=requirement",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-requirement-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=risk",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-risk-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=requirement",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-requirement-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=internal_note",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-internal-note-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=maintenance",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-maintenance-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=internal_note",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-internal-note-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=credit_note",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-credit-note-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=maintenance",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-maintenance-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=credit_note",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-credit-note-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=settings",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-settings-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=audit",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-audit-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=settings",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-settings-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=assets",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-assets-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=audit",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-audit-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=assets",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-assets-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=outbox",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-module-outbox-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=outbox",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-module-outbox-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin/service-editor",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-service-editor-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin/service-editor",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-service-editor-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=quotes",
+      "role": "admin",
+      "device": "desktop",
+      "file": "admin-quotation-detail-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/admin?module=quotes",
+      "role": "admin",
+      "device": "mobile",
+      "file": "admin-quotation-detail-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=orders",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-order-detail-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=orders",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-order-detail-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=conversations",
+      "role": "client",
+      "device": "desktop",
+      "file": "client-message-thread-desktop.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    },
+    {
+      "route": "/client?module=conversations",
+      "role": "client",
+      "device": "mobile",
+      "file": "client-message-thread-mobile.png",
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "pageErrors": []
+    }
+  ]
+}

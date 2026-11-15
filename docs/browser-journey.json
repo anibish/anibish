@@ -1,0 +1,11 @@
+[
+  "PASS · Quote created through administration",
+  "PASS · Customer accepted quote",
+  "PASS · Sandbox payment recorded from customer order",
+  "PASS · Delivery created from administration",
+  "PASS · Customer delivery approval persisted",
+  "PASS · Invoice downloaded from authenticated customer workspace",
+  "PASS · Customer message saved and reloaded",
+  "PASS · File uploaded through customer workspace",
+  "PASS · Customer support request persisted"
+]
