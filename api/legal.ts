@@ -27,5 +27,5 @@ export async function acceptLegal(db:import('pg').PoolClient,body:unknown,userId
  if(versions.length!==2)fail(409,'Approved current Privacy Policy and Terms of Use are required before continuing.');
  if(workflow!=='registration'&&!raw){const prior=(await db.query('SELECT DISTINCT v.policy FROM legal_consents c JOIN legal_versions v ON v.id=c.policy_version_id WHERE c.user_id=$1 AND (v.id=ANY($2::uuid[]) OR v.policy=ANY($3::text[]))',[userId,versions.map(v=>v.id),versions.filter(v=>!v.material).map(v=>v.policy)])).rows;if(prior.length===2)return;}
  const b=z.object({accepted:z.literal(true),privacy:z.string().uuid(),terms:z.string().uuid()}).parse(raw);
- for(const v of versions){if(b[v.policy as 'privacy'|'terms']!==v.id)fail(409,'Policies changed. Review and accept the current versions.');await db.query('INSERT INTO legal_consents(user_id,policy_version_id,workflow,reference_id) VALUES($1,$2,$3,$4)',[userId,v.id,workflow,reference||null])}
+ for(const v of versions){if(b[v.policy as 'privacy'|'terms']!==v.id)fail(409,'Policies changed. Review and accept the current versions.');await db.query('INSERT INTO legal_consents(user_id,policy_version_id,workflow,reference_id,action) VALUES($1,$2,$3,$4,$5)',[userId,v.id,workflow,reference||null,v.policy==='privacy'?'privacy_acknowledged':'terms_accepted'])}
 }
