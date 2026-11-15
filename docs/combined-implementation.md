@@ -21,3 +21,5 @@ Recovery: encrypted server backup `anibish-20261115T214115Z.tar.gpg` was decrypt
 Final composition batch: private draft Cc and attachments persist; unsafe attachment paths are rejected, and attachments are limited to three / 600 KB total. Signatures are owner-only. CRM creation is idempotent per email and work-item kind. Email content is not silently copied to customer-visible records. No real financial processing or customer registration was enabled. Public legal drafts still require owner/legal approval.
 
 The live check found an HTML-only message display defect; a sanitized HTML fallback was added and browser regression-tested. Production password-reset completion is deliberately not exercised against the owner: recovery/token endpoints remain closed in admin-only launch mode, and the working password/MFA are preserved.
+
+Final runtime 0.3.3 (`021064f`) and Coolify deployment `1dc2c1cc-b8d0-47b3-b0df-8d7669c4aed6` are verified live. Final counts and remaining work are recorded in [the combined completion report](combined-completion-report.md).
