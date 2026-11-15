@@ -44,6 +44,9 @@ services:
       STORAGE_DIR: /app/storage
       CONTACT_EMAIL: mail@anibish.com
       EVIDENCE_DIR: /app/evidence
+      ANIBISH_MAIL_ENABLED: ${ANIBISH_MAIL_ENABLED:-false}
+      ANIBISH_INFO_IMAP_PASSWORD: ${ANIBISH_INFO_IMAP_PASSWORD:-}
+      ANIBISH_MAIL_IMAP_PASSWORD: ${ANIBISH_MAIL_IMAP_PASSWORD:-}
     volumes:
       - anibish_files:/app/storage
       - /data/anibish/review-evidence:/app/evidence:ro

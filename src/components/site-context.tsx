@@ -10,4 +10,4 @@ export function safeLink(value:string){return /^(\/(?!\/)|https:\/\/|mailto:|tel
 
 export function useServices(){const site=useSite();return site.services===undefined?services:site.services.map(s=>({slug:s.slug,title:s.title,category:s.category,description:s.description,tagline:String(s.data.tagline||s.title),icon:String(s.data.icon||'Sparkles'),price:String(s.data.display_price||'Custom quote'),kind:s.pricing_model==='quote'?'Quotation':'Fixed scope'}));}
 
-export function useReviews():Review[]{return useSite().pages.filter(p=>p.kind==='review').map(p=>({id:Number(p.content.source_number||0),handle:p.title,country:'Client feedback',quote:String(p.content.body||''),tag:String(p.content.category||'Engineering'),rating:Number(p.content.rating||5)}));}
+export function useReviews():Review[]{return useSite().pages.filter(p=>p.kind==='review').map(p=>({id:Number(p.content.source_number||0),handle:p.title,country:'Client feedback',quote:String(p.content.body||''),tag:String(p.content.category||'Engineering'),source:p.content.platform_verified===true?String(p.content.platform):'Not specified',rating:p.content.rating==null?undefined:Number(p.content.rating)}));}

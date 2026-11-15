@@ -27,7 +27,7 @@ export const services = [
  ['lms', 'Learning Management Systems', 'A better place to learn.', 'Mobile & education', 'GraduationCap', 'Learning platforms, content journeys and LMS integrations for education teams.', 'Custom quote', 'Quotation'],
  ['ai-engineering', 'AI Engineering', 'A practical path from possibility to product.', 'AI & automation', 'BrainCircuit', 'Evaluation-led AI product engineering with clear data flows and human oversight.', 'Custom quote', 'Quotation'],
 ].map(([slug,title,tagline,category,icon,description,price,kind])=>({slug,title,tagline,category,icon,description,price,kind}));
-export type Review={id:number;handle:string;country:string;quote:string;tag:string;rating?:number};
+export type Review={id:number;handle:string;country:string;quote:string;tag:string;source?:string;rating?:number};
 export const reviews:Review[] = [];
 export const projects = [
  {slug:'responsive-websites',title:'Websites, built around real businesses.',category:'Web development',label:'Source-backed work',description:'Responsive website delivery and repeat collaboration documented in supplied customer reviews.',review:20,color:'peach'},
@@ -45,3 +45,5 @@ export const publicRoutes = [...categories.slice(1).map(c=>'/categories/'+c.toLo
 export const allRoutes = [...publicRoutes,...clientNav.map(([s])=>`/client${s?'/'+s:''}`),...orders.map(o=>'/client/orders/'+o.id),...adminNav.map(([s])=>`/admin${s?'/'+s:''}`),'/workspace','/control','/dashboard'];
 
 export const operationalModules=['overview','services','leads','organizations','quotes','contracts','orders','projects','milestones','tasks','conversations','files','deliveries','invoices','payments','refunds','tickets','notifications','cms','portfolio','review','award','experience','blog','faq','navigation','policy','email_template','team','timesheet','expense','retainer','campaign','newsletter','referral','change_request','risk','requirement','internal_note','maintenance','credit_note','settings','audit','assets','outbox'];
+
+allRoutes.push('/admin/email');
