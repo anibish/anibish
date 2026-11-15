@@ -18,6 +18,10 @@ docker cp "$api:/app/storage/." "$task_dir/files/"
 # This root-only temporary file is included only inside the encrypted archive.
 docker exec "$api" node -e 'const fs=require("fs"); const keys=["MFA_ENCRYPTION_KEY","SANDBOX_PAYMENT_SECRET"]; const secrets=Object.fromEntries(keys.map(k=>{if(!process.env[k])throw new Error("Missing recovery configuration");return [k,process.env[k]]})); process.stdout.write(JSON.stringify(secrets));' > "$task_dir/runtime-secrets.json"
 if [[ -d "$root/review-evidence" ]]; then cp -a "$root/review-evidence" "$task_dir/review-evidence"; fi
+# Dedicated mail recovery configuration exists only inside the encrypted archive.
+worker=$(docker ps -q --filter "label=com.docker.compose.project=$project" --filter label=com.docker.compose.service=worker)
+[[ -n "$worker" ]]
+docker exec "$worker" node -e 'const keys=["ANIBISH_INFO_IMAP_PASSWORD","ANIBISH_MAIL_IMAP_PASSWORD","ANIBISH_SMTP_USER","ANIBISH_SMTP_PASSWORD","ANIBISH_SMTP_HOST","ANIBISH_SMTP_PORT","ANIBISH_MAIL_ENABLED"]; process.stdout.write(JSON.stringify(Object.fromEntries(keys.map(k=>[k,process.env[k]||""]))));' > "$task_dir/mail-runtime-secrets.json"
 stamp=$(date -u +%Y%m%dT%H%M%SZ)
 archive="$root/backups/anibish-$stamp.tar.gpg"
 tar -C "$task_dir" -cf - . | gpg --batch --yes --pinentry-mode loopback --passphrase-file "$root/secrets/backup-passphrase" --symmetric --cipher-algo AES256 --output "$archive"

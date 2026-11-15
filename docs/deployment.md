@@ -1,4 +1,4 @@
-# Deployment and recovery — version 0.2.0
+# Deployment and recovery — version 0.3.3
 
 Production uses Coolify application `xz0yo1hnzb8pe6nwuhvfe5tl`, project ANIBISH, production environment, repository `anibish/anibish`, branch `main`, Docker Compose file `ops/coolify-compose.yaml`. No GitHub Actions. Canonical website https://anibish.com; same-origin `/api`; no separate API DNS record.
 
@@ -34,7 +34,7 @@ Commit reviewed code, push only `main`, trigger this application's Coolify deplo
 
 ## Encrypted backup / restore
 
-`ops/backup-anibish.sh` is installed as `/data/anibish/backup.sh`. Daily 02:15 UTC cron writes encrypted database, private uploads, original review evidence and required MFA/sandbox runtime recovery keys under `/data/anibish/backups`. GPG AES-256, SHA-256 manifests, private temporary paths and a root-only passphrase are used. `ops/verify-restore-anibish.sh` decrypts and restores into a uniquely named disposable database, checks records and 74 original files, authenticates restored MFA ciphertext with the archived encryption key, then drops only that restore database. Plaintext recovery configuration exists only in the root-only temporary work directory and is removed after encryption/verification.
+`ops/backup-anibish.sh` is installed as `/data/anibish/backup.sh`. Daily 02:15 UTC cron writes encrypted database, private uploads, original review evidence and required MFA/sandbox and dedicated mail runtime recovery keys under `/data/anibish/backups`. GPG AES-256, SHA-256 manifests, private temporary paths and a root-only passphrase are used. `ops/verify-restore-anibish.sh` decrypts and restores into a uniquely named disposable database, checks records and 74 original files, authenticates restored MFA ciphertext with the archived encryption key, then drops only that restore database. Plaintext recovery configuration exists only in the root-only temporary work directory and is removed after encryption/verification.
 
 The initial recovery rehearsal passed. The owner approved an additional private recovery-key copy to ignored `.local/launch/backup-recovery-key`, mode 0600. Never commit it. New archives include the MFA encryption key inside the encrypted payload; older archives such as the first approved local copy do not. A current encrypted archive must be retained independently to recover MFA after VPS loss. Full Coolify configuration recovery remains separate. Daily offsite transfer, retention policy and a complete replacement-VPS rehearsal remain outstanding.
 
@@ -43,3 +43,11 @@ The initial recovery rehearsal passed. The owner approved an additional private 
 Use Node 22, application-specific PostgreSQL and Redis. Copy `.env.example` to ignored `.env`; never point local seed/import/tests at production. Run `npm ci`, `npm run db:migrate`, `npm run api:dev`, and `npm run dev`. Development fixtures are optional. API tests require a database URL containing `anibish_qa`.
 
 Run build, both TypeScript checks, lint and API tests. `scripts/continuation-journey.mjs` uses isolated QA accounts and MFA; `scripts/launch-smoke.mjs` exercises public production pages and creates clearly labelled synthetic enquiries. Captures and private test output remain ignored.
+
+## Private mail operations
+
+Dedicated credentials are stored in encrypted ANIBISH Coolify variables, never in the repository. Hostinger uses full mailbox usernames with TLS IMAP 993 and SMTP 465; Brevo uses its dedicated SMTP login/key and required STARTTLS 587. `ANIBISH_MAIL_ENABLED` gates private correspondence and synchronization. Only the notification worker receives Brevo SMTP configuration. Mail credentials are included only within the encrypted recovery archive; restore `mail-runtime-secrets.json` privately into the dedicated application variables. Do not print recovery configuration.
+
+The worker refreshes each inbox every two minutes; the interface refreshes its private cache every 30 seconds and on reconnect. Synchronization deliberately fetches the latest 100 messages per selected folder, rather than claiming a complete provider history. Owner-only folder selection can synchronize other provider folders. Full retention administration remains pending. HTML is sanitized and remote images removed; attachments are download-only and not malware-scanned. Outgoing composition accepts three attachments totaling at most 600 KB.
+
+`outbox.status=sent` means SMTP accepted, not recipient delivery. Interrupted/ambiguous sends are marked `unknown` and require investigation rather than automatic resend. Email Centre send identifiers are idempotent and preserve ambiguous state. Production `.test` and `.invalid` recipient jobs are suppressed. Provider event callbacks, bounce suppression and a complete customer recovery launch rehearsal remain pending. Do not enable registration or real payments based on SMTP acceptance alone.
