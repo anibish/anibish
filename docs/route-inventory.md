@@ -1,6 +1,6 @@
 # Current route conventions
 
-Production canonical customer portal is `/dashboard`, with module navigation `/dashboard?module=<name>`. `/client` redirects to `/dashboard`. `/admin?module=reports` adds database-driven business reporting. CMS media and redirect controls are under CMS; invoices include transactions, refunds, recurring billing, transfers, credit notes and reports. Both workspaces are deliberately gated in the public production launch.
+Production canonical customer portal is `/dashboard`, with module navigation `/dashboard?module=<name>`. `/client` redirects to `/dashboard`. `/admin?module=reports` adds database-driven business reporting. CMS media and redirect controls are under CMS; invoices include transactions, refunds, recurring billing, transfers, credit notes and reports. Customer access remains deliberately gated; administration is enabled only for enrolled MFA-protected studio accounts.
 
 The inventory below records original design paths; sample order identifiers are historical screen aliases, not seeded production orders. Actual order/project records are selected by UUID.
 

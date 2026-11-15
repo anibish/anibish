@@ -2,7 +2,7 @@
 
 The public website is deployed. The full master brief is not complete. See `feature-coverage.md` for module status and `completion-report.md` for launch evidence.
 
-- Production owner password and authenticator enrollment and actual production MFA sign-in remain owner-only steps. Customer/admin gates remain closed until verified.
+- Production owner enrollment, actual MFA sign-in and admin activation are verified. Customer access remains closed until SMTP verification/recovery and production customer tests pass.
 - Dedicated SMTP credentials, sender authentication and real provider delivery are unavailable. Password recovery, email verification and outbound notifications cannot be claimed operational in production.
 - Live payment processing is deliberately disabled. Merchant/legal/GST/bank details, live provider integration, reconciliation/refund testing and explicit owner authorization are required before activation.
 - Raw historical review screenshots remain private. Only six owner-approved anonymized text excerpts may be published.

@@ -2,7 +2,7 @@
 
 A premium Apple-inspired public studio and connected client/admin application. Next.js App Router, React, TypeScript, Tailwind, Fastify, PostgreSQL, Drizzle and Redis. Public website: https://anibish.com. Source version 0.2.0. Dedicated Coolify containers run on the existing VPS; unrelated applications are preserved.
 
-**The master brief is not fully complete.** Public enquiries work in production. Privileged workflows have local functional evidence and remain disabled pending owner enrollment and production gates; see [feature coverage](docs/feature-coverage.md).
+**The master brief is not fully complete.** Public enquiries work in production. MFA-protected owner administration is live; customer workflows remain closed pending provider-dependent gates; see [feature coverage](docs/feature-coverage.md).
 
 ## Run locally
 
@@ -66,4 +66,4 @@ The isolated production Docker/Coolify topology has been deployed and its encryp
 
 ## Public launch (0.2.0)
 
-`ops/coolify-compose.yaml` is the isolated production topology. The initial launch uses `LAUNCH_STAGE=public` and closes account, admin and payment mutations at the API boundary. Public enquiries remain persistent. Raw customer screenshots and generated private captures were removed from the intended publication history; originals remain private. CMS publication snapshots, invoice finalization, signed sandbox callbacks and the notification worker have automated coverage. See `docs/launch-register.md` for the current gates.
+`ops/coolify-compose.yaml` is the isolated production topology. The first launch used `LAUNCH_STAGE=public`. Current production uses `LAUNCH_STAGE=admin`: verified MFA studio accounts can administer the application; customer registration, checkout and incoming sandbox webhooks remain closed. Public enquiries remain persistent. Raw customer screenshots and generated private captures were removed from the intended publication history; originals remain private. CMS publication snapshots, invoice finalization, signed sandbox callbacks and the notification worker have automated coverage. See `docs/launch-register.md` for the current gates.
