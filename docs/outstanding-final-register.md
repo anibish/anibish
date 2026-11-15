@@ -1,18 +1,18 @@
 # Final accelerated batch register
 
-Baseline: runtime 0.3.3 / 021064f, GitHub 2e6e82d. Existing setup will be preserved.
+Preserve production owner MFA, working mail credentials, sandbox billing and isolated VPS resources.
 
-| Requirement | Current status | Required completion evidence |
+| Requirement | Status | Evidence / remaining work |
 |---|---|---|
-| Global typography ×1.25 | VERIFIED LOCALLY — 156 route/viewport checks | 30 computed samples exactly ×1.25; 26 routes at 1440/1280/768/390/360/320, no page overflow; production verification pending |
-| Reviews | PARTIAL | Reconcile 75 occurrences / 74 originals, private candidate editor, explicit bulk approval, exact accounting |
-| Legal | PARTIAL | Refund policy, accurate drafts, material-change UI, owner approval remains gated |
-| Customer portal | VERIFIED LOCALLY / BLOCKED production | Complete technical readiness and production isolation rehearsal; approved policies required |
-| Mail history and CRM | PARTIAL | Incremental full history, reconciliation, threads, retention, correspondence history |
-| Brevo events | NOT IMPLEMENTED | Authenticated callbacks, suppression, event wiring; dedicated provider management authorization where necessary |
-| Action audit | PARTIAL | Per-action inventory and executed success/failure/duplicate/timeout evidence |
-| Business specialist editors / scheduling | PARTIAL | Inspect actual supported modules, implement missing high-priority controls |
-| Operations | PARTIAL | Retention, recovery, monitoring; offsite only to approved destination |
-| Publication / deployment | NOT IMPLEMENTED for this batch | Backup, checks, push, isolated Coolify release and runtime smoke tests |
+| Typography ×1.25 | VERIFIED IN PRODUCTION | a77ce43; 30 live computed samples exactly ×1.25; 156 local route/viewport checks; additional specialist layouts checked at six widths |
+| Reviews | VERIFIED LOCALLY / publication BLOCKED on owner clearance | 74 originals directly inspected, 75 occurrences, 74 distinct, one duplicate; 6 approved excerpts public, 68 distinct pending; private bulk editor tested |
+| Legal | VERIFIED LOCALLY / approval BLOCKED | Three accurate owner-review drafts; WYSIWYG, previews, immutable versions, restore, owner controls; policies remain unpublished |
+| Consent / customer portal | VERIFIED LOCALLY / PARTIAL production readiness | Mandatory versioned terms/privacy, separate marketing history, material reacceptance; registration and recovery remain production-gated; full production customer rehearsal outstanding |
+| Mail history / CRM | VERIFIED LOCALLY / actual full sync UNVERIFIED | UID-validity-aware resumable history, folder reconciliation, references threading, search, retention default keep-all, explicit private CRM links; provider regression after deployment required |
+| Brevo | VERIFIED LOCALLY / provider registration pending | Dedicated management key authenticated HTTP 200; authenticated idempotent receiver, suppression, failed jobs, template management; authentic callbacks after deployment required |
+| Action audit | PARTIAL | 86 literal mutation routes plus 12 generic patterns discovered; per-action browser evidence incomplete; JSON and multipart in-flight reuse implemented |
+| Business workflows | VERIFIED LOCALLY / PARTIAL breadth | Existing CRM, CMS, projects, delivery, support, reporting and sandbox finance regression exercised; no claim every master feature complete |
+| Backup | VERIFIED IN PRODUCTION | anibish-20261115T225212Z.tar.gpg checksum/decrypt/isolated restore, MFA and 74 originals verified; automated offsite destination unavailable |
+| Functional release | VERIFIED LOCALLY / deployment pending | 36 API groups; legal/mail/auth 12 browser steps; review bulk workflow and 30 specialist width checks; final build and production smoke required |
 
-No new production verification is claimed by this register. Legal approval and real-money activation remain owner-controlled.
+Real payments remain disabled. Unapproved policies, additional reviews and customer production access remain safely gated. See review-reconciliation.md, legal-owner-drafts.md and action-feedback-audit.md for exact limits.

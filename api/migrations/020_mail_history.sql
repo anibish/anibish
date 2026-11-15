@@ -1,0 +1,10 @@
+ALTER TABLE mail_sync_state ADD COLUMN uidvalidity text;
+ALTER TABLE mail_sync_state ADD COLUMN cursor_uid bigint NOT NULL DEFAULT 0;
+ALTER TABLE mail_sync_state ADD COLUMN provider_total integer NOT NULL DEFAULT 0;
+ALTER TABLE mail_sync_state ADD COLUMN remaining integer NOT NULL DEFAULT 0;
+ALTER TABLE mail_sync_state ADD COLUMN skipped integer NOT NULL DEFAULT 0;
+CREATE TABLE mail_sync_issues(mailbox text NOT NULL,folder text NOT NULL,uidvalidity text NOT NULL,uid bigint NOT NULL,reason text NOT NULL,observed_at timestamptz NOT NULL DEFAULT now(),PRIMARY KEY(mailbox,folder,uidvalidity,uid));
+CREATE TABLE mail_retention(singleton boolean PRIMARY KEY DEFAULT true CHECK(singleton),cache_days integer NOT NULL DEFAULT 0 CHECK(cache_days BETWEEN 0 AND 3650),updated_at timestamptz NOT NULL DEFAULT now());
+INSERT INTO mail_retention DEFAULT VALUES;
+ALTER TABLE mail_messages ADD COLUMN body_evicted boolean NOT NULL DEFAULT false;
+ALTER TABLE mail_messages ADD COLUMN restored_until timestamptz;

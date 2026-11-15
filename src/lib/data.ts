@@ -27,7 +27,7 @@ export const services = [
  ['lms', 'Learning Management Systems', 'A better place to learn.', 'Mobile & education', 'GraduationCap', 'Learning platforms, content journeys and LMS integrations for education teams.', 'Custom quote', 'Quotation'],
  ['ai-engineering', 'AI Engineering', 'A practical path from possibility to product.', 'AI & automation', 'BrainCircuit', 'Evaluation-led AI product engineering with clear data flows and human oversight.', 'Custom quote', 'Quotation'],
 ].map(([slug,title,tagline,category,icon,description,price,kind])=>({slug,title,tagline,category,icon,description,price,kind}));
-export type Review={id:number;handle:string;country:string;quote:string;tag:string;source?:string;rating?:number};
+export type Review={id:number;handle:string;country:string;quote:string;tag:string;source?:string;rating?:number;excerpt?:boolean;featured?:boolean;service_slug?:string;project_slug?:string};
 export const reviews:Review[] = [];
 export const projects = [
  {slug:'responsive-websites',title:'Websites, built around real businesses.',category:'Web development',label:'Source-backed work',description:'Responsive website delivery and repeat collaboration documented in supplied customer reviews.',review:20,color:'peach'},

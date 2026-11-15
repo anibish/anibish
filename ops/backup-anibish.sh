@@ -21,7 +21,7 @@ if [[ -d "$root/review-evidence" ]]; then cp -a "$root/review-evidence" "$task_d
 # Dedicated mail recovery configuration exists only inside the encrypted archive.
 worker=$(docker ps -q --filter "label=com.docker.compose.project=$project" --filter label=com.docker.compose.service=worker)
 [[ -n "$worker" ]]
-docker exec "$worker" node -e 'const keys=["ANIBISH_INFO_IMAP_PASSWORD","ANIBISH_MAIL_IMAP_PASSWORD","ANIBISH_SMTP_USER","ANIBISH_SMTP_PASSWORD","ANIBISH_SMTP_HOST","ANIBISH_SMTP_PORT","ANIBISH_MAIL_ENABLED"]; process.stdout.write(JSON.stringify(Object.fromEntries(keys.map(k=>[k,process.env[k]||""]))));' > "$task_dir/mail-runtime-secrets.json"
+docker exec "$worker" node -e 'const keys=["ANIBISH_INFO_IMAP_PASSWORD","ANIBISH_MAIL_IMAP_PASSWORD","ANIBISH_SMTP_USER","ANIBISH_SMTP_PASSWORD","ANIBISH_SMTP_HOST","ANIBISH_SMTP_PORT","ANIBISH_MAIL_ENABLED","ANIBISH_BREVO_WEBHOOK_TOKEN"]; process.stdout.write(JSON.stringify(Object.fromEntries(keys.map(k=>[k,process.env[k]||""]))));' > "$task_dir/mail-runtime-secrets.json"
 stamp=$(date -u +%Y%m%dT%H%M%SZ)
 archive="$root/backups/anibish-$stamp.tar.gpg"
 tar -C "$task_dir" -cf - . | gpg --batch --yes --pinentry-mode loopback --passphrase-file "$root/secrets/backup-passphrase" --symmetric --cipher-algo AES256 --output "$archive"

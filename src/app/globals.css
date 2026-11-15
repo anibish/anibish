@@ -39,3 +39,7 @@ th{position:relative}.table-wrap{position:relative;overscroll-behavior-x:contain
 
 /* Larger type retains its size at narrow breakpoints. */
 .button{min-height:52px}input,select,textarea{min-height:52px}.form-actions,.legal-toolbar,.record-actions{flex-wrap:wrap}.panel,.form-card,.portal-main,.workspace-content{min-width:0}.record-name strong{white-space:normal;overflow-wrap:anywhere}.table-wrap{overflow-x:auto}.action-confirmation{overflow-y:auto}.public-nav{flex-wrap:wrap}.mail-html,.legal-public,.tiptap{overflow-wrap:anywhere}@media(max-width:400px){.section{padding-left:18px;padding-right:18px}.form-card{padding:20px}.button{gap:10px}.portal-header{gap:8px}.workspace-content{padding-left:14px;padding-right:14px}}
+
+.review-editor{position:fixed;inset:0;margin:auto;width:min(900px,calc(100vw - 24px));max-height:90dvh;overflow:auto;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:24px}.review-editor::backdrop{background:#17203855;backdrop-filter:blur(4px)}.review-editor label{display:block;margin-top:16px}.review-editor .checkbox{display:flex}.review-editor textarea{min-height:90px}
+/* Long subjects, addresses and evidence identifiers must wrap at narrow widths. */
+.form-card,.panel,.review-editor,.action-status{overflow-wrap:anywhere}.form-card input,.form-card select,.form-card textarea{max-width:100%;min-width:0}.form-card label{min-width:0}
