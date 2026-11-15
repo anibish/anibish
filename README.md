@@ -29,7 +29,7 @@ Optional `npm run db:seed:local` creates development-only demo accounts with ran
 - `/client` — private customer workspace
 - `/admin` — MFA-protected studio administration
 - `/design-system` — components, theme foundations and linked route index
-- `docs/screenshots/index.html` — desktop/mobile screenshot gallery
+- `.local/visual-audit/screenshots/index.html` — private local screenshot gallery
 
 Contact, quote and consultation forms save to the local enquiry inbox. Quotes create contracts, orders, projects, milestones, conversations and invoices transactionally. Private files, messages, versioned deliveries, customer decisions and sandbox payments persist in PostgreSQL. Sandbox payments never charge funds. Email requests enter an outbox; no outbound transport is configured.
 
@@ -60,6 +60,10 @@ The browser scripts use local Chrome by default and require development fixtures
 - `docs` — route inventory, asset audit, implementation status, screenshots and coverage
 - `storage` and `.local` — ignored private development state
 
-Source screenshots in `../reviews` are preserved. All 74 were inspected and imported idempotently. [Asset report](docs/asset-import-report.json) records individual provenance and publication review status. No profile PDF was found.
+Source screenshots in `../reviews` are preserved. All 74 were inspected and imported idempotently. Private asset report in `.local/launch/asset-import-report.json` records individual provenance and publication review status. No profile PDF was found.
 
 Docker/Coolify configuration is prepared and explicitly unverified at runtime. There is no GitHub Actions configuration, Supabase dependency or recurring cloud service requirement.
+
+## Public launch (0.2.0)
+
+`ops/coolify-compose.yaml` is the isolated production topology. The initial launch uses `LAUNCH_STAGE=public` and closes account, admin and payment mutations at the API boundary. Public enquiries remain persistent. Raw customer screenshots and generated private captures were removed from the intended publication history; originals remain private. CMS publication snapshots, invoice finalization, signed sandbox callbacks and the notification worker have automated coverage. See `docs/launch-register.md` for the current gates.

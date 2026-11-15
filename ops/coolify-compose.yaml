@@ -1,0 +1,138 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        API_INTERNAL_URL: http://api:3001
+        NEXT_PUBLIC_LAUNCH_MODE: public
+    environment:
+      API_INTERNAL_URL: http://api:3001
+      NEXT_PUBLIC_LAUNCH_MODE: public
+      NODE_ENV: production
+    restart: unless-stopped
+    mem_limit: 512m
+    cpus: 1.0
+    expose:
+      - "3000"
+    networks:
+      - default
+      - private
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    environment: &api_environment
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      API_PORT: "3001"
+      DATABASE_URL: postgresql://anibish:${ANIBISH_DB_PASSWORD}@postgres:5432/anibish
+      REDIS_URL: redis://redis:6379
+      PUBLIC_ORIGIN: https://anibish.com
+      LAUNCH_STAGE: public
+      PAYMENT_MODE: sandbox
+      MFA_ENCRYPTION_KEY: ${ANIBISH_MFA_KEY}
+      SANDBOX_PAYMENT_SECRET: ${ANIBISH_SANDBOX_SECRET}
+      STORAGE_DIR: /app/storage
+      CONTACT_EMAIL: mail@anibish.com
+    volumes:
+      - anibish_files:/app/storage
+    networks:
+      - private
+    restart: unless-stopped
+    mem_limit: 384m
+    cpus: 0.75
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 20s
+      timeout: 5s
+      retries: 6
+  worker:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    environment: *api_environment
+    command: ["./node_modules/.bin/tsx", "api/worker.ts"]
+    volumes:
+      - anibish_files:/app/storage
+    networks:
+      - private
+      - default
+    restart: unless-stopped
+    mem_limit: 192m
+    cpus: 0.25
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "const pg=require('pg');const p=new pg.Pool({connectionString:process.env.DATABASE_URL});p.query(\"SELECT 1 FROM worker_heartbeats WHERE name='notifications' AND last_seen>now()-interval '60 seconds'\").then(r=>{p.end();process.exit(r.rowCount?0:1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+  migrate:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    command: ["./node_modules/.bin/tsx", "api/bootstrap.ts"]
+    environment: *api_environment
+    networks:
+      - private
+    depends_on:
+      postgres:
+        condition: service_healthy
+    mem_limit: 192m
+    cpus: 0.5
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: anibish
+      POSTGRES_USER: anibish
+      POSTGRES_PASSWORD: ${ANIBISH_DB_PASSWORD}
+    volumes:
+      - anibish_database:/var/lib/postgresql/data
+    networks:
+      - private
+    restart: unless-stopped
+    mem_limit: 384m
+    cpus: 0.5
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U anibish -d anibish"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "64mb", "--maxmemory-policy", "noeviction"]
+    volumes:
+      - anibish_redis:/data
+    networks:
+      - private
+    restart: unless-stopped
+    mem_limit: 128m
+    cpus: 0.25
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+networks:
+  default: {}
+  private:
+    internal: true
+volumes:
+  anibish_database: {}
+  anibish_redis: {}
+  anibish_files: {}

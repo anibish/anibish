@@ -22,3 +22,5 @@
 /* Keep visually hidden table headings inside their scroll container. */
 th{position:relative}.table-wrap{position:relative;overscroll-behavior-x:contain}
 .field>label{font-weight:500}
+.cms-prose{max-width:800px;margin:0 auto 60px;white-space:pre-line}.cms-prose p{font-size:15px;margin-bottom:25px}.cms-content-block{padding:45px 0;border-top:1px solid var(--border)}.cms-content-block h2{margin:15px 0 25px}.cms-content-block p{max-width:800px;margin-bottom:25px}.cms-content-block img{border-radius:16px;margin-top:30px}.cms-content-block .button{margin-top:15px}
+.cms-preview{max-width:1100px;width:95vw}.cms-preview .section{margin:0;padding:25px}.cms-preview .page-intro{padding:35px 20px}.cms-preview h1{font-size:40px}.cms-preview h2{font-size:30px}.cms-preview img{max-height:450px;object-fit:contain}

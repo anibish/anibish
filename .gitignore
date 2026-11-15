@@ -8,3 +8,11 @@ storage/
 api-dist/
 *.tsbuildinfo
 .local/
+
+*.dump
+*.backup
+*.sql.gz
+*.tar.gz
+*.bundle
+docs/screenshots/
+public/assets/reviews/

@@ -1,0 +1,4 @@
+export const production=()=>process.env.NODE_ENV==='production';
+export const launchStage=()=>process.env.LAUNCH_STAGE||(production()?'public':'full');
+export function routeEnabled(path:string){if(!production()||launchStage()==='full')return true;return path==='/health'||path==='/enquiries'||path==='/services'||path.startsWith('/public/');}
+export function validateProduction(){if(!production())return;for(const name of ['DATABASE_URL','REDIS_URL','PUBLIC_ORIGIN','MFA_ENCRYPTION_KEY','SANDBOX_PAYMENT_SECRET'])if(!process.env[name])throw new Error(name+' is required in production.');if(process.env.PAYMENT_MODE!=='sandbox')throw new Error('Only sandbox payment mode is permitted.');if(!process.env.PUBLIC_ORIGIN?.startsWith('https://'))throw new Error('Production requires an HTTPS public origin.');}

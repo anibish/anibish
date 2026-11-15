@@ -1,6 +1,6 @@
 {
   "name": "anibish-platform",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev --webpack --hostname 0.0.0.0",
@@ -16,7 +16,9 @@
     "lint": "eslint src api --quiet",
     "typecheck:api": "tsc --noEmit -p api/tsconfig.json",
     "db:seed:local": "node --env-file-if-exists=.env --import tsx api/seed-local.ts",
-    "test:browser": "node scripts/journey.mjs"
+    "test:browser": "node scripts/journey.mjs",
+    "worker": "node --env-file-if-exists=.env --import tsx api/worker.ts",
+    "db:bootstrap": "node --env-file-if-exists=.env --import tsx api/bootstrap.ts"
   },
   "dependencies": {
     "@fastify/cookie": "^11.1.5",
@@ -25,9 +27,11 @@
     "@fastify/rate-limit": "^11.2.2",
     "drizzle-orm": "^0.45.4",
     "fastify": "^5.12.8",
+    "fastify-raw-body": "^6.0.3",
     "ioredis": "^6.0.0",
     "lucide-react": "^0.468.0",
     "next": "^16.0.0",
+    "nodemailer": "^10.5.0",
     "pdfkit": "^0.20.2",
     "pg": "^8.23.1",
     "react": "^19.2.0",
@@ -39,14 +43,15 @@
     "@playwright/test": "^1.56.0",
     "@tailwindcss/postcss": "^4.1.0",
     "@types/node": "^22.0.0",
+    "@types/nodemailer": "^8.0.2",
+    "@types/pdfkit": "^0.17.7",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "tailwindcss": "^4.1.0",
-    "typescript": "^5.7.0",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.6",
-    "@types/pg": "^8.23.1",
-    "@types/pdfkit": "^0.17.7"
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.7.0"
   },
   "type": "module"
 }
