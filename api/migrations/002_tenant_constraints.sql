@@ -1,0 +1,17 @@
+ALTER TABLE projects ADD CONSTRAINT projects_org_id_unique UNIQUE(id,org_id);
+ALTER TABLE orders ADD CONSTRAINT orders_org_id_unique UNIQUE(id,org_id);
+ALTER TABLE conversations ADD CONSTRAINT conversations_org_id_unique UNIQUE(id,org_id);
+ALTER TABLE deliveries ADD CONSTRAINT deliveries_org_id_unique UNIQUE(id,org_id);
+ALTER TABLE payments ADD CONSTRAINT payments_org_id_unique UNIQUE(id,org_id);
+ALTER TABLE milestones ADD CONSTRAINT milestones_project_tenant FOREIGN KEY(project_id,org_id) REFERENCES projects(id,org_id);
+ALTER TABLE tasks ADD CONSTRAINT tasks_project_tenant FOREIGN KEY(project_id,org_id) REFERENCES projects(id,org_id);
+ALTER TABLE conversations ADD CONSTRAINT conversations_project_tenant FOREIGN KEY(project_id,org_id) REFERENCES projects(id,org_id);
+ALTER TABLE files ADD CONSTRAINT files_project_tenant FOREIGN KEY(project_id,org_id) REFERENCES projects(id,org_id);
+ALTER TABLE deliveries ADD CONSTRAINT deliveries_project_tenant FOREIGN KEY(project_id,org_id) REFERENCES projects(id,org_id);
+ALTER TABLE messages ADD CONSTRAINT messages_conversation_tenant FOREIGN KEY(conversation_id,org_id) REFERENCES conversations(id,org_id);
+ALTER TABLE contracts ADD CONSTRAINT contracts_order_tenant FOREIGN KEY(order_id,org_id) REFERENCES orders(id,org_id);
+ALTER TABLE invoices ADD CONSTRAINT invoices_order_tenant FOREIGN KEY(order_id,org_id) REFERENCES orders(id,org_id);
+ALTER TABLE payments ADD CONSTRAINT payments_order_tenant FOREIGN KEY(order_id,org_id) REFERENCES orders(id,org_id);
+ALTER TABLE approvals ADD CONSTRAINT approvals_delivery_tenant FOREIGN KEY(delivery_id,org_id) REFERENCES deliveries(id,org_id);
+ALTER TABLE refunds ADD CONSTRAINT refunds_payment_tenant FOREIGN KEY(payment_id,org_id) REFERENCES payments(id,org_id);
+ALTER TABLE tickets ADD CONSTRAINT tickets_project_tenant FOREIGN KEY(project_id,org_id) REFERENCES projects(id,org_id);

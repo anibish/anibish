@@ -1,0 +1,10 @@
+import {cp,mkdir} from 'node:fs/promises';
+import {spawn} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const project=fileURLToPath(new URL('../',import.meta.url));
+await mkdir(new URL('../.next/standalone/.next/',import.meta.url),{recursive:true});
+await cp(new URL('../.next/static/',import.meta.url),new URL('../.next/standalone/.next/static/',import.meta.url),{recursive:true,force:true});
+await cp(new URL('../public/',import.meta.url),new URL('../.next/standalone/public/',import.meta.url),{recursive:true,force:true});
+const child=spawn(process.execPath,['.next/standalone/server.js'],{cwd:project,stdio:'inherit',env:{...process.env,HOSTNAME:process.env.WEB_HOST||'127.0.0.1'}});
+for(const signal of ['SIGTERM','SIGINT'])process.on(signal,()=>child.kill(signal));
+child.on('exit',code=>process.exit(code||0));

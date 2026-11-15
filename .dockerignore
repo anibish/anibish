@@ -1,0 +1,8 @@
+node_modules
+.next
+docs/screenshots
+.env*
+
+.local
+.git
+storage

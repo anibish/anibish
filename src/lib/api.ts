@@ -1,0 +1,2 @@
+export async function api<T=unknown>(path:string,options:RequestInit={}):Promise<T>{const response=await fetch('/api'+path,{...options,headers:{...(options.body instanceof FormData?{}:{'Content-Type':'application/json'}),'x-studio-client':'web',...options.headers},credentials:'same-origin',cache:'no-store'});const data=await response.json().catch(()=>({error:'The server could not be reached.'}));if(!response.ok)throw new Error(data.error||'The request could not be completed.');return data as T}
+export const send=(data:unknown)=>JSON.stringify(data);
