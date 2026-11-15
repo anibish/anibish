@@ -1,6 +1,6 @@
 # ANIBISH · Software engineering studio
 
-A premium Apple-inspired public studio and connected client/admin application. Next.js App Router, React, TypeScript, Tailwind, Fastify, PostgreSQL, Drizzle and Redis. Public website: https://anibish.com. Source version 0.3.3. Dedicated Coolify containers run on the existing VPS; unrelated applications are preserved.
+A premium Apple-inspired public studio and connected client/admin application. Next.js App Router, React, TypeScript, Tailwind, Fastify, PostgreSQL, Drizzle and Redis. Public website: https://anibish.com. Source version 0.4.0. Dedicated Coolify containers run on the existing VPS; unrelated applications are preserved.
 
 **The master brief is not fully complete.** Public enquiries work in production. MFA-protected owner administration is live; customer workflows remain closed pending legal approval and remaining customer production gates; see [feature coverage](docs/feature-coverage.md).
 
@@ -33,7 +33,7 @@ Optional `npm run db:seed:local` creates development-only demo accounts with ran
 
 Contact, quote and consultation forms save to the application database, including in public production mode. Quotes create contracts, orders, projects, milestones, conversations and invoices transactionally. Private files, messages, versioned deliveries, customer decisions and sandbox payments persist in PostgreSQL. Sandbox payments never charge funds. Email requests enter a durable database outbox. The worker supports dedicated SMTP credentials, retries and delivery logs; dedicated Brevo SMTP and both Hostinger mailboxes have passed actual VPS send/receive tests. Customer registration remains gated on approved legal policies and customer production validation.
 
-All bundled prices are labelled placeholders. Fixed service ordering requires a published service with explicit owner price approval. Professional facts and awards awaiting the missing profile PDF are clearly identified. Policy text is draft material requiring review.
+All bundled prices are labelled placeholders. Fixed service ordering requires a published service with explicit owner price approval. Professional facts and awards awaiting the missing profile PDF are clearly identified. Legal publication is controlled by the owner; remaining drafts require review. See [current outstanding register](docs/outstanding-final-register.md) for the latest production evidence.
 
 ## Validation
 

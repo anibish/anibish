@@ -28,3 +28,6 @@ tar -C "$task_dir" -cf - . | gpg --batch --yes --pinentry-mode loopback --passph
 sha256sum "$archive" > "$archive.sha256"
 date -u +%FT%TZ > "$root/backups/last-success"
 echo "ANIBISH encrypted backup completed: $(basename "$archive")"
+
+# Prune only old ANIBISH archives after a successful encrypted backup.
+if [[ -x "$root/retain-backups.sh" ]]; then "$root/retain-backups.sh" --apply; fi

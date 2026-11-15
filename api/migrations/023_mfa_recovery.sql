@@ -1,0 +1,1 @@
+CREATE TABLE mfa_recovery_codes(user_id uuid NOT NULL REFERENCES users(id),code_hash text NOT NULL,generated_at timestamptz NOT NULL DEFAULT now(),consumed_at timestamptz,PRIMARY KEY(user_id,code_hash));
