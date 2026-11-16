@@ -2,6 +2,12 @@
 
 This register describes executed source reconciliation and published content. It does not certify the entire business platform as complete. Raw evidence, private repositories, customer order identifiers and original review images remain private.
 
+## Complete source-to-publication reconciliation
+
+The latest reconciliation accounts for all136 completed Fiverr orders and23 GitHub repositories. The23 existing public portfolio entries comprise19 product/professional cases and four expressly approved freelance collections. Those four collections cover40 orders. The other96 orders have private, anonymized delivery-record proposals:75 supported by a safe delivery summary and21 deliberately limited to evidenced completion. They are not96 verified unique projects. Shared usernames or generic gig titles alone do not justify merging orders into an engagement.
+
+All previously approved product groups and collections are already published; there are no approved-but-unpublished existing CMS entries. New public descriptions require their own confidentiality/publication clearance. The MFA-only coverage view separates completed orders, repository records, private drafts and published cases. Its exact-content batch publication validates current revisions, approved media and explicit rights confirmation. Private draft imports are hash-guarded, idempotent and preserve owner edits; neither operation releases raw sources or automatically clears private repositories.
+
 ## GitHub and professional sources
 
 **VERIFIED IN PRODUCTION:**23 repositories were enumerated with pagination and inspected:11 public,12 private, four forks.18 available READMEs and relevant source trees/manifests were examined; five READMEs were absent. Forks, firmware/dependency material, empty repositories, prototypes and original product foundations were separated. Related repositories were grouped rather than presented as separate delivered products. Private code, repository URLs and architecture are excluded from public content.

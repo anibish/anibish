@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {pool,transaction} from './db';
 import {fail} from './security';
 export function cleanLegal(html:string){return sanitize(html,{allowedTags:['p','br','h1','h2','h3','h4','strong','em','u','s','ul','ol','li','a','table','thead','tbody','tr','th','td','hr','blockquote'],allowedAttributes:{a:['href','title'],th:['colspan','rowspan'],td:['colspan','rowspan'],'*':['style']},allowedStyles:{'*':{'text-align':[/^(left|right|center|justify)$/]}},allowedSchemes:['https','http','mailto'],allowProtocolRelative:false,transformTags:{a:sanitize.simpleTransform('a',{rel:'noopener noreferrer'})}})}
-const policy=z.enum(['privacy','terms','refunds','cookies']);
+const policy=z.enum(['privacy','terms','refunds','cookies','dpa']);
 export async function registerLegal(app:FastifyInstance,c:DomainContext){
  const owner=async(req:Parameters<DomainContext['actor']>[0])=>{const a=await c.actor(req,'cms',true);if(a.global_role!=='super_admin'||!c.staff(a))fail(403,'Super Admin permission required.');return a};
  app.get('/public/legal',async()=> (await pool.query('SELECT DISTINCT ON(v.policy) v.* FROM legal_versions v JOIN legal_policy_state s ON s.policy=v.policy AND s.enabled WHERE v.effective_date<=(now() AT TIME ZONE \'Asia/Kolkata\')::date ORDER BY v.policy,v.version DESC')).rows);

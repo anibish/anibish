@@ -46,4 +46,4 @@ export const allRoutes = [...publicRoutes,...clientNav.map(([s])=>`/client${s?'/
 
 export const operationalModules=['overview','services','leads','organizations','quotes','contracts','orders','projects','milestones','tasks','conversations','files','deliveries','invoices','payments','refunds','tickets','notifications','cms','portfolio','review','award','experience','blog','faq','navigation','policy','email_template','team','timesheet','expense','retainer','campaign','newsletter','referral','change_request','risk','requirement','internal_note','maintenance','credit_note','settings','audit','assets','outbox'];
 
-allRoutes.push('/admin/email','/admin/compliance','/dashboard/privacy','/cookies');
+allRoutes.push('/admin/email','/admin/compliance','/dashboard/privacy','/cookies','/dpa');

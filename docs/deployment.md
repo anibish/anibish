@@ -79,3 +79,13 @@ File uploads enforce storage/count/headroom and concurrency limits before persis
 The trusted initial-control assessment CLI accepts private evidence files, requires an explicit dry-run/apply mode, preserves official requirement provenance and never overwrites owner or later revisions. It records an assistant assessment, never owner/legal approval or independent certification. Its input files and findings remain private.
 
 Quota/session environment defaults are documented in `.env.example` and forwarded by the dedicated Compose configuration. Project-file byte ceilings are250MiB per user,1GiB per organization and5GiB application-wide; record ceilings are200/1000/10000, with5GiB free-disk reserve and at most two concurrent buffered uploads per API process. These quotas do not claim to cover provider mail storage or every backup volume. Staff/customer idle windows default to15/30minutes and the absolute session limit to12hours. The server validates intervals; user-activity signals do not prove human presence against an already compromised same-origin client.
+
+## Portfolio and governance release043–044
+
+Take a verified encrypted backup before these migrations.043 permits a null actor only for truthful system-generated CMS revision provenance; authenticated CMS routes still record their actual actor.044 adds a disabled, unpublished DPA draft and expands the policy constraint without changing existing legal versions, consents or approvals. DPA publication does not execute a client agreement.
+
+The trusted `api/portfolio-draft-import.ts` accepts an owner-private input file and an explicit `--dry-run` or `--apply` mode. It creates only anonymous private drafts, validates current completed-source hashes and preserves edited or published records on reimport. Review them through the Super Admin source coverage controls before any publication. A source order count is not a unique-project count.
+
+New passwords use versioned, bounded scrypt parameters. Existing issued hashes remain verifiable and upgrade during a successful login only after all enabled factors and locked credential-state checks pass. Do not reset passwords or MFA to migrate hashes. Runtime images omit global npm/npx after dependency installation; build stages retain their tools. Verify the actual deployed image and application startup, not only the dependency lockfile.
+
+Retention previews use fixed documented timestamps and explicit owner-approved basis/period fields. Legal holds default to active; previews never delete data or authorize provider operations. Unknown external backup coverage is reported as unknown rather than a zero candidate count. Retention execution remains disabled.

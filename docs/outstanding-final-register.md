@@ -2,6 +2,14 @@
 
 This is the current register. Earlier completion reports are historical snapshots. Preserve the approved1.25 typography, actual owner MFA, working Hostinger/Brevo credentials, private evidence and isolated VPS resources. Payments remain sandbox-only.
 
+## Current continuation0.6.0
+
+The completed public0.5.2 baseline displays all23 published portfolio entries,82 reviews and six recognitions without pagination.23 is a publication count, not a hidden result limit. All136 completed Fiverr orders are accounted for:40 are represented by four approved collections and96 have private delivery-record proposals awaiting specific public-description clearance. All23 GitHub repositories are reconciled; every previously approved product group is already public. Do not count orders, repositories and cases as equivalent projects.
+
+VERIFIED LOCALLY: guarded, idempotent private portfolio draft import; MFA-only source coverage and exact-revision batch publication with separate content/rights confirmation; fixed non-destructive retention selectors and explicit unknown external coverage; a separate unpublished DPA editor/public route; stronger versioned password hashing with legacy login migration after successful factors and credential-race checks. Existing public snapshots, owner credentials, MFA and approved typography are preserved. Production status and final integrated test counts are recorded only after rollout in the private owner report.
+
+PARTIAL/BLOCKED: new delivery descriptions require owner clearance; private legal drafts require explicit adoption; destructive retention/erasure execution, provider agreements/residency assurances, independent security assessment and approved automated offsite recovery are not implied by these controls. No legal-compliance certification or live-payment activation is asserted.
+
 | Requirement | Status | Executed evidence and exact remaining work |
 |---|---|---|
 | Typography | VERIFIED IN PRODUCTION |30 computed baseline/production samples exactly+25%;156 earlier application checks; six-width public/specialist/customer checks. No font shrinking, zoom or transform scaling introduced. |
