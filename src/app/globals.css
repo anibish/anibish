@@ -62,3 +62,8 @@ th{position:relative}.table-wrap{position:relative;overscroll-behavior-x:contain
 
 /* Inert server-rendered form groups retain the existing layout and typography. */
 .secure-form-fields{min-width:0;margin:0;padding:0;border:0}.auth-form form>.secure-form-fields>.button{width:100%;margin-top:20px}
+
+@media(max-width:760px){
+ .work-section .section-heading,.client-reviews-section .section-heading{flex-direction:column;align-items:flex-start}
+ .work-section .section-heading>.text-link,.client-reviews-section .section-heading>.text-link{display:inline-flex;white-space:normal;max-width:100%;margin-bottom:0}
+}
