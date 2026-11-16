@@ -50,3 +50,6 @@ th{position:relative}.table-wrap{position:relative;overscroll-behavior-x:contain
 @media(max-width:760px){.sidebar:not(.open){visibility:hidden;pointer-events:none}.sidebar.open{visibility:visible}.checkbox>span{min-width:0}}
 /* Portfolio status text remains readable with the approved typography scale. */
 .portfolio-case-intro>*{min-width:0}.portfolio-case-intro h1{overflow-wrap:anywhere}.portfolio-card-meta{align-items:flex-start;flex-wrap:wrap}.portfolio-case-intro .pill-row .badge,.portfolio-card-meta .badge{white-space:normal;max-width:100%;overflow-wrap:anywhere}
+
+/* Message retry and prepared-file cards keep actions readable beside long content. */
+.message-recovery-feedback{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:start}.message-recovery-feedback>p,.message-recovery-feedback>small{min-width:0;overflow-wrap:anywhere}.message-recovery-feedback>button{justify-self:start;min-width:0;max-width:100%;min-height:44px;white-space:normal;overflow-wrap:normal;word-break:normal}
