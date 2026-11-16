@@ -2,7 +2,7 @@
 
 Status: VERIFIED IN PRODUCTION. The approved centralized 1.25 type scale is preserved. No CSS zoom, transform-based text scaling or browser zoom is used.
 
-Thirty computed before/after samples across 1440, 1280, 768, 390, 360 and 320 pixel viewports measured exactly 1.25×. This is a representative computed sample, not a claim that every text node was measured. The earlier application-wide source audit and 156 route/viewport checks cover the public site, portals, forms and tables. Later specialist and production workflow checks supplement that evidence.
+Before values use the preserved pre-change CSS reference; after values use deployed styles. Thirty computed before/after samples across 1440, 1280, 768, 390, 360 and 320 pixel viewports measured exactly 1.25×. This is a representative computed sample, not a claim that every text node was measured. The earlier application-wide source audit and 156 route/viewport checks cover the public site, portals, forms and tables. Later specialist and production workflow checks supplement that evidence.
 
 | Width | Selector | Before px | After px | Change |
 |---|---|---|---|---|

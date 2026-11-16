@@ -1,7 +1,7 @@
 {
   "enumeration": "Fastify registered routes; each expansion checked with hasRoute",
   "registeredMutationRoutes": 112,
-  "routesWithDirectTestReferences": 65,
+  "routesWithDirectTestReferences": 67,
   "fullMatrixSignedOff": 0,
   "nonMutatingUxInventory": "PARTIAL",
   "actions": [
@@ -43,7 +43,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -59,7 +59,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -88,7 +88,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -111,7 +111,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -140,7 +140,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -156,7 +156,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -179,7 +179,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -226,7 +226,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -279,7 +279,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -296,7 +296,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -325,7 +325,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -348,7 +348,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -371,7 +371,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -387,7 +387,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -416,7 +416,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -464,7 +464,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -499,7 +499,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -515,7 +515,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -531,7 +531,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -566,7 +566,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -582,7 +582,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -619,7 +619,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -642,7 +642,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -673,7 +673,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -704,7 +704,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -729,7 +729,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -778,7 +778,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -807,7 +807,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -823,7 +823,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -852,7 +852,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -868,7 +868,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -884,7 +884,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -955,7 +955,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -990,7 +990,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1031,7 +1031,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1090,7 +1090,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1125,7 +1125,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1148,7 +1148,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1171,7 +1171,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1187,7 +1187,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1203,7 +1203,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1219,7 +1219,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1242,7 +1242,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1258,7 +1258,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1299,7 +1299,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1328,7 +1328,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1357,7 +1357,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1380,7 +1380,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1403,7 +1403,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1428,7 +1428,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1446,7 +1446,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1469,7 +1469,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1492,7 +1492,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1527,7 +1527,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1550,7 +1550,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1585,7 +1585,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1608,7 +1608,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1643,7 +1643,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1678,7 +1678,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1688,13 +1688,32 @@
       "candidateComponents": [
         "src/components/membership.tsx"
       ],
-      "automatedTestReferences": [],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 119,
+          "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 119,
+          "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 119,
+          "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1704,13 +1723,32 @@
       "candidateComponents": [
         "src/components/account.tsx"
       ],
-      "automatedTestReferences": [],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 119,
+          "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 119,
+          "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 119,
+          "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1726,7 +1764,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1742,7 +1780,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1758,7 +1796,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1774,7 +1812,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1802,7 +1840,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1823,7 +1861,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1857,7 +1895,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1878,7 +1916,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1901,7 +1939,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1918,7 +1956,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1947,7 +1985,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1963,7 +2001,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1992,7 +2030,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2016,7 +2054,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2032,7 +2070,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2048,7 +2086,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2071,7 +2109,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2087,7 +2125,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2103,7 +2141,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2117,7 +2155,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2158,7 +2196,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2172,7 +2210,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2196,7 +2234,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2249,7 +2287,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2302,7 +2340,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2320,7 +2358,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2338,7 +2376,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2356,7 +2394,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2399,7 +2437,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2417,7 +2455,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2442,7 +2480,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2477,7 +2515,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2493,7 +2531,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2552,7 +2590,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2568,7 +2606,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2584,7 +2622,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2600,7 +2638,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2616,7 +2654,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2632,7 +2670,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2658,7 +2696,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2674,7 +2712,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2751,7 +2789,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2780,7 +2818,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2796,7 +2834,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2812,7 +2850,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2847,7 +2885,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2863,7 +2901,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2910,7 +2948,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2926,7 +2964,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2942,7 +2980,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -2977,7 +3015,7 @@
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
+      "automatedEvidence": "56 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     }
   ]
