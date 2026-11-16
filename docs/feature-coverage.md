@@ -28,4 +28,6 @@ Final implementation runtime: c35a1cd9eac407435e61db6a44fd92feef7fcc3c, verified
 
 - VERIFIED IN PRODUCTION content:19 portfolio cases, six recognition records,74 distinct reviews (56 named records /24 usernames;61 Fiverr/13 neutral), four approved product screenshots and162 private sources.136 completed Fiverr detail pages inspected; three cancelled extras excluded. Metadata completeness remains PARTIAL.
 - VERIFIED LOCALLY release code:64 API groups, TypeScript, lint/build; safe migration031 preserves existing CMS decisions; authenticated late-provider acceptance prevents duplicate email retries.36 new scoped feedback browser checks cover CMS/media, invoice history, messaging and support.
-- Action audit:155 discovered UI operations in21components;43 scoped browser references,112 pending,0 complete per-action failure matrices. This does not claim all actions verified. See action-feedback-ui-inventory.json and outstanding-final-register.md.
+- Action audit:155 discovered UI operations in21components;52 scoped browser references,103 pending,0 complete per-action failure matrices. This does not claim all actions verified. See action-feedback-ui-inventory.json and outstanding-final-register.md.
+
+The email-editor replacement confirmation and template-preview invalidation follow-up adds26 scoped local browser assertions. No provider email was sent by these tests. Actual new production behavioral rehearsal remains separate from source/runtime verification.
