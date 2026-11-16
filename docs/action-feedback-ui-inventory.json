@@ -1,21 +1,21 @@
 {
   "summary": {
     "status": "PARTIAL",
-    "sourceSnapshot": "Release278b559 plus local email-editor/template-preview follow-up; no production verification claimed for the follow-up.",
+    "sourceSnapshot": "Current review-source import follow-up; completed releases278b559 and21b5033 verified separately in production. New import deployment verification pending.",
     "scope": "Enumerated meaningful operations in 21 public/account/CMS/business components; generated dashboard forms and remaining project variants are not yet exhaustive.",
-    "uiOperations": 155,
-    "mutationOperations": 79,
-    "readOperations": 27,
-    "clientOperations": 43,
+    "uiOperations": 162,
+    "mutationOperations": 80,
+    "readOperations": 31,
+    "clientOperations": 45,
     "downloadOperations": 6,
-    "actionsWithScopedBrowserEvidence": 52,
+    "actionsWithScopedBrowserEvidence": 59,
     "browserPending": 103,
     "fullFailureMatricesSignedOff": 0,
-    "feedbackRegressionChecksExecuted": 62,
-    "registeredMutationRoutes": 112,
+    "feedbackRegressionChecksExecuted": 84,
+    "registeredMutationRoutes": 113,
     "coverageNote": "Scoped browser references prove only the named executed checks. API test references are source mappings, not blanket positive/negative/browser passes.",
     "components": 21,
-    "integratedApiTestGroupsPassed": 64
+    "integratedApiTestGroupsPassed": 72
   },
   "findings": [
     {
@@ -150,7 +150,7 @@
       ],
       "source_sha256": "bd9dbb080eea26bff2e3f9b22b60769e9e69a5f728e7a337229bfed8e2c4512d",
       "status": "PARTIAL",
-      "processing": "Working… disabled submit; resend uses Requesting…; retry-logout has no component busy guard.",
+      "processing": "Working\u2026 disabled submit; resend uses Requesting\u2026; retry-logout has no component busy guard.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Server message plus applicable branded success transition; login independently confirms /auth/me.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -177,7 +177,7 @@
       ],
       "source_sha256": "bd9dbb080eea26bff2e3f9b22b60769e9e69a5f728e7a337229bfed8e2c4512d",
       "status": "PARTIAL",
-      "processing": "Working… disabled submit; resend uses Requesting…; retry-logout has no component busy guard.",
+      "processing": "Working\u2026 disabled submit; resend uses Requesting\u2026; retry-logout has no component busy guard.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Server message plus applicable branded success transition; login independently confirms /auth/me.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -243,7 +243,7 @@
       ],
       "source_sha256": "bd9dbb080eea26bff2e3f9b22b60769e9e69a5f728e7a337229bfed8e2c4512d",
       "status": "PARTIAL",
-      "processing": "Working… disabled submit; resend uses Requesting…; retry-logout has no component busy guard.",
+      "processing": "Working\u2026 disabled submit; resend uses Requesting\u2026; retry-logout has no component busy guard.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Server message plus applicable branded success transition; login independently confirms /auth/me.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -309,7 +309,7 @@
       ],
       "source_sha256": "bd9dbb080eea26bff2e3f9b22b60769e9e69a5f728e7a337229bfed8e2c4512d",
       "status": "PARTIAL",
-      "processing": "Working… disabled submit; resend uses Requesting…; retry-logout has no component busy guard.",
+      "processing": "Working\u2026 disabled submit; resend uses Requesting\u2026; retry-logout has no component busy guard.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Server message plus applicable branded success transition; login independently confirms /auth/me.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -355,7 +355,7 @@
       ],
       "source_sha256": "bd9dbb080eea26bff2e3f9b22b60769e9e69a5f728e7a337229bfed8e2c4512d",
       "status": "PARTIAL",
-      "processing": "Working… disabled submit; resend uses Requesting…; retry-logout has no component busy guard.",
+      "processing": "Working\u2026 disabled submit; resend uses Requesting\u2026; retry-logout has no component busy guard.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Server message plus applicable branded success transition; login independently confirms /auth/me.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -401,7 +401,7 @@
       ],
       "source_sha256": "bd9dbb080eea26bff2e3f9b22b60769e9e69a5f728e7a337229bfed8e2c4512d",
       "status": "PARTIAL",
-      "processing": "Working… disabled submit; resend uses Requesting…; retry-logout has no component busy guard.",
+      "processing": "Working\u2026 disabled submit; resend uses Requesting\u2026; retry-logout has no component busy guard.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Server message plus applicable branded success transition; login independently confirms /auth/me.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -447,7 +447,7 @@
       ],
       "source_sha256": "bd9dbb080eea26bff2e3f9b22b60769e9e69a5f728e7a337229bfed8e2c4512d",
       "status": "PARTIAL",
-      "processing": "Working… disabled submit; resend uses Requesting…; retry-logout has no component busy guard.",
+      "processing": "Working\u2026 disabled submit; resend uses Requesting\u2026; retry-logout has no component busy guard.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Server message plus applicable branded success transition; login independently confirms /auth/me.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -493,7 +493,7 @@
       ],
       "source_sha256": "bd9dbb080eea26bff2e3f9b22b60769e9e69a5f728e7a337229bfed8e2c4512d",
       "status": "PARTIAL",
-      "processing": "Working… disabled submit; resend uses Requesting…; retry-logout has no component busy guard.",
+      "processing": "Working\u2026 disabled submit; resend uses Requesting\u2026; retry-logout has no component busy guard.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Server message plus applicable branded success transition; login independently confirms /auth/me.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -520,7 +520,7 @@
       ],
       "source_sha256": "bd9dbb080eea26bff2e3f9b22b60769e9e69a5f728e7a337229bfed8e2c4512d",
       "status": "PARTIAL",
-      "processing": "Working… disabled submit; resend uses Requesting…; retry-logout has no component busy guard.",
+      "processing": "Working\u2026 disabled submit; resend uses Requesting\u2026; retry-logout has no component busy guard.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Server message plus applicable branded success transition; login independently confirms /auth/me.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -605,7 +605,7 @@
       ],
       "source_sha256": "e338f975f384bf7eb84c37e258254871b51466ce9f7ef1c013e1327ad1f26762",
       "status": "PARTIAL",
-      "processing": "Confirm dialog, Updating password… and disabled button.",
+      "processing": "Confirm dialog, Updating password\u2026 and disabled button.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Password changed. Sign in again.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -645,7 +645,7 @@
       ],
       "source_sha256": "18e25ce23694a73d94556fd12e7fbf9f59ab5dbcafd3183f0a1487ad3ffa31c3",
       "status": "PARTIAL",
-      "processing": "Saving…; disabled fieldset; busy guard.",
+      "processing": "Saving\u2026; disabled fieldset; busy guard.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Server message; returned revision retained.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -724,7 +724,7 @@
       ],
       "source_sha256": "18e25ce23694a73d94556fd12e7fbf9f59ab5dbcafd3183f0a1487ad3ffa31c3",
       "status": "PARTIAL",
-      "processing": "Confirm dialog; Deactivating…; disabled submit.",
+      "processing": "Confirm dialog; Deactivating\u2026; disabled submit.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Account access deactivated.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -782,7 +782,7 @@
       ],
       "source_sha256": "1daf827b690a1d621e6ed114828d1ae06f336f1eeeba1099d6e0e7f27505c214",
       "status": "PARTIAL",
-      "processing": "Confirm invalidation; Verifying and generating…; busy guard.",
+      "processing": "Confirm invalidation; Verifying and generating\u2026; busy guard.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "One-time displayed codes and remaining count.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -846,7 +846,7 @@
       ],
       "source_sha256": "764dfcabe81ccf536a7d9d9ab379b6b7d50ede80659c765201fefcfd1eb05eb5",
       "status": "PARTIAL",
-      "processing": "Recording acceptance…; disabled until unchecked mandatory checkbox is accepted.",
+      "processing": "Recording acceptance\u2026; disabled until unchecked mandatory checkbox is accepted.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Refresh removes fulfilled acceptance requirement and appends history.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -920,7 +920,7 @@
           "method": "POST",
           "file": "api/tests/integration.test.ts",
           "line": 19,
-          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+          "test": "complete quote \u2192 order \u2192 sandbox payment \u2192 project \u2192 messages \u2192 revisions \u2192 approval \u2192 invoice \u2192 support"
         }
       ],
       "browser_evidence": [
@@ -956,7 +956,7 @@
           "method": "POST",
           "file": "api/tests/integration.test.ts",
           "line": 19,
-          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+          "test": "complete quote \u2192 order \u2192 sandbox payment \u2192 project \u2192 messages \u2192 revisions \u2192 approval \u2192 invoice \u2192 support"
         }
       ],
       "browser_evidence": [],
@@ -1012,7 +1012,7 @@
           "method": "POST",
           "file": "api/tests/integration.test.ts",
           "line": 19,
-          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+          "test": "complete quote \u2192 order \u2192 sandbox payment \u2192 project \u2192 messages \u2192 revisions \u2192 approval \u2192 invoice \u2192 support"
         }
       ],
       "browser_evidence": [],
@@ -1377,7 +1377,7 @@
       ],
       "source_sha256": "e8a9cb85784658e063e0c9e51de82a301de10646f2f7f9f0b6e143f24e224cc4",
       "status": "PARTIAL",
-      "processing": "Loading saved records…; local lock/disabled controls.",
+      "processing": "Loading saved records\u2026; local lock/disabled controls.",
       "duplicate_guard": "No remote mutation.",
       "success": "Saved rows replace the list.",
       "failure": "Previous outcome cleared; authoritative rejection displayed. Network/timeout explicitly says uncertain; confirmed save with refresh failure is distinguished.",
@@ -1406,7 +1406,7 @@
       ],
       "source_sha256": "e8a9cb85784658e063e0c9e51de82a301de10646f2f7f9f0b6e143f24e224cc4",
       "status": "PARTIAL",
-      "processing": "Uploading private media…; ref lock and disabled inputs/buttons.",
+      "processing": "Uploading private media\u2026; ref lock and disabled inputs/buttons.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Private media uploaded.",
       "failure": "Previous outcome cleared; authoritative rejection displayed. Network/timeout explicitly says uncertain; confirmed save with refresh failure is distinguished.",
@@ -1435,7 +1435,7 @@
       ],
       "source_sha256": "e8a9cb85784658e063e0c9e51de82a301de10646f2f7f9f0b6e143f24e224cc4",
       "status": "PARTIAL",
-      "processing": "Saving media permission…; publication rights checkbox; lock.",
+      "processing": "Saving media permission\u2026; publication rights checkbox; lock.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Media publication setting saved.",
       "failure": "Previous outcome cleared; authoritative rejection displayed. Network/timeout explicitly says uncertain; confirmed save with refresh failure is distinguished.",
@@ -1471,7 +1471,7 @@
       ],
       "source_sha256": "e8a9cb85784658e063e0c9e51de82a301de10646f2f7f9f0b6e143f24e224cc4",
       "status": "PARTIAL",
-      "processing": "Confirm dialog; Saving media permission…; lock.",
+      "processing": "Confirm dialog; Saving media permission\u2026; lock.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Media publication setting saved.",
       "failure": "Previous outcome cleared; authoritative rejection displayed. Network/timeout explicitly says uncertain; confirmed save with refresh failure is distinguished.",
@@ -1507,7 +1507,7 @@
       ],
       "source_sha256": "e8a9cb85784658e063e0c9e51de82a301de10646f2f7f9f0b6e143f24e224cc4",
       "status": "PARTIAL",
-      "processing": "Loading saved records…; lock.",
+      "processing": "Loading saved records\u2026; lock.",
       "duplicate_guard": "No remote mutation.",
       "success": "Saved rows replace the list.",
       "failure": "Previous outcome cleared; authoritative rejection displayed. Network/timeout explicitly says uncertain; confirmed save with refresh failure is distinguished.",
@@ -1536,7 +1536,7 @@
       ],
       "source_sha256": "e8a9cb85784658e063e0c9e51de82a301de10646f2f7f9f0b6e143f24e224cc4",
       "status": "PARTIAL",
-      "processing": "Saving redirect…; ref lock and disabled fieldset.",
+      "processing": "Saving redirect\u2026; ref lock and disabled fieldset.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Redirect saved.",
       "failure": "Previous outcome cleared; authoritative rejection displayed. Network/timeout explicitly says uncertain; confirmed save with refresh failure is distinguished.",
@@ -1578,7 +1578,7 @@
       ],
       "source_sha256": "e8a9cb85784658e063e0c9e51de82a301de10646f2f7f9f0b6e143f24e224cc4",
       "status": "PARTIAL",
-      "processing": "Confirm dialog; Disabling redirect…; lock.",
+      "processing": "Confirm dialog; Disabling redirect\u2026; lock.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Redirect disabled.",
       "failure": "Previous outcome cleared; authoritative rejection displayed. Network/timeout explicitly says uncertain; confirmed save with refresh failure is distinguished.",
@@ -1611,7 +1611,7 @@
       ],
       "source_sha256": "e8a9cb85784658e063e0c9e51de82a301de10646f2f7f9f0b6e143f24e224cc4",
       "status": "PARTIAL",
-      "processing": "Loading saved records…; lock.",
+      "processing": "Loading saved records\u2026; lock.",
       "duplicate_guard": "No remote mutation.",
       "success": "Old error cleared after authoritative refreshed list.",
       "failure": "Previous outcome cleared; authoritative rejection displayed. Network/timeout explicitly says uncertain; confirmed save with refresh failure is distinguished.",
@@ -1633,7 +1633,7 @@
       "action": "Search candidate review inventory",
       "kind": "client_only",
       "routes": [],
-      "source_sha256": "34c16f3427cf130de03c0e45cffe0fbca165d238dfa15f06e397de601ebd54fb",
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
       "processing": "Synchronous local state update; no remote request.",
       "duplicate_guard": "No remote mutation.",
@@ -1655,7 +1655,7 @@
       "action": "Select eligible/clear review selection",
       "kind": "client_only",
       "routes": [],
-      "source_sha256": "34c16f3427cf130de03c0e45cffe0fbca165d238dfa15f06e397de601ebd54fb",
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
       "processing": "Synchronous local state update; no remote request.",
       "duplicate_guard": "No remote mutation.",
@@ -1677,7 +1677,7 @@
       "action": "Open review transcription editor",
       "kind": "client_only",
       "routes": [],
-      "source_sha256": "34c16f3427cf130de03c0e45cffe0fbca165d238dfa15f06e397de601ebd54fb",
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
       "processing": "Synchronous local state update; no remote request.",
       "duplicate_guard": "No remote mutation.",
@@ -1704,7 +1704,7 @@
           "path": "/review-candidates/:id/evidence"
         }
       ],
-      "source_sha256": "34c16f3427cf130de03c0e45cffe0fbca165d238dfa15f06e397de601ebd54fb",
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
       "processing": "Shared request toast only unless stated below; no component-specific browser sign-off.",
       "duplicate_guard": "No remote mutation.",
@@ -1731,7 +1731,7 @@
           "path": "/review-candidates/:id"
         }
       ],
-      "source_sha256": "34c16f3427cf130de03c0e45cffe0fbca165d238dfa15f06e397de601ebd54fb",
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
       "processing": "Busy flag disables mutation buttons; batch decisions require confirm dialog.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
@@ -1760,7 +1760,7 @@
           "path": "/review-candidates/batch"
         }
       ],
-      "source_sha256": "34c16f3427cf130de03c0e45cffe0fbca165d238dfa15f06e397de601ebd54fb",
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
       "processing": "Busy flag disables mutation buttons; batch decisions require confirm dialog.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
@@ -1850,7 +1850,7 @@
           "path": "/review-candidates/batch"
         }
       ],
-      "source_sha256": "34c16f3427cf130de03c0e45cffe0fbca165d238dfa15f06e397de601ebd54fb",
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
       "processing": "Busy flag disables mutation buttons; batch decisions require confirm dialog.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
@@ -1940,7 +1940,7 @@
           "path": "/review-candidates/batch"
         }
       ],
-      "source_sha256": "34c16f3427cf130de03c0e45cffe0fbca165d238dfa15f06e397de601ebd54fb",
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
       "processing": "Busy flag disables mutation buttons; batch decisions require confirm dialog.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
@@ -2030,7 +2030,7 @@
           "path": "/review-candidates/batch"
         }
       ],
-      "source_sha256": "34c16f3427cf130de03c0e45cffe0fbca165d238dfa15f06e397de601ebd54fb",
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
       "processing": "Busy flag disables mutation buttons; batch decisions require confirm dialog.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
@@ -2120,7 +2120,7 @@
           "path": "/review-candidates/batch"
         }
       ],
-      "source_sha256": "34c16f3427cf130de03c0e45cffe0fbca165d238dfa15f06e397de601ebd54fb",
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
       "processing": "Busy flag disables mutation buttons; batch decisions require confirm dialog.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
@@ -2212,7 +2212,7 @@
       ],
       "source_sha256": "641347149dfb0e2ae76f43f3acbd3bfb35227882be30f808d9975c5f49563dc1",
       "status": "PARTIAL",
-      "processing": "Busy guard, disabled upload/save and Saving private inventory… status.",
+      "processing": "Busy guard, disabled upload/save and Saving private inventory\u2026 status.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Import added/changed/unchanged counts or Source decision saved. No public content was changed.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -2276,7 +2276,7 @@
       ],
       "source_sha256": "641347149dfb0e2ae76f43f3acbd3bfb35227882be30f808d9975c5f49563dc1",
       "status": "PARTIAL",
-      "processing": "Busy guard, disabled upload/save and Saving private inventory… status.",
+      "processing": "Busy guard, disabled upload/save and Saving private inventory\u2026 status.",
       "duplicate_guard": "Identical in-flight requests coalesce in api(); component controls require separate verification.",
       "success": "Import added/changed/unchanged counts or Source decision saved. No public content was changed.",
       "failure": "Authoritative API errors appear inline; network/timeouts also announce an uncertain result. Check persisted state before retrying uncertain mutations.",
@@ -4489,7 +4489,7 @@
       ],
       "source_sha256": "ec309e7e2cdb4d13c10c74f682f4f8ca9ad0aa4ae4d94ac79190d3e0e8fbaadd",
       "status": "PARTIAL",
-      "processing": "Loading this invoice’s history…; prior events cleared before request.",
+      "processing": "Loading this invoice\u2019s history\u2026; prior events cleared before request.",
       "duplicate_guard": "History clicks are not disabled; response ordering not guarded.",
       "failure": "Dedicated history error with explanation; no previous invoice content.",
       "recovery": "Retry invoice history button; closed/outdated responses ignored.",
@@ -5253,19 +5253,19 @@
           "method": "POST",
           "file": "api/tests/integration.test.ts",
           "line": 19,
-          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+          "test": "complete quote \u2192 order \u2192 sandbox payment \u2192 project \u2192 messages \u2192 revisions \u2192 approval \u2192 invoice \u2192 support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
           "line": 19,
-          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+          "test": "complete quote \u2192 order \u2192 sandbox payment \u2192 project \u2192 messages \u2192 revisions \u2192 approval \u2192 invoice \u2192 support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
           "line": 19,
-          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+          "test": "complete quote \u2192 order \u2192 sandbox payment \u2192 project \u2192 messages \u2192 revisions \u2192 approval \u2192 invoice \u2192 support"
         },
         {
           "method": "POST",
@@ -5340,19 +5340,19 @@
           "method": "POST",
           "file": "api/tests/integration.test.ts",
           "line": 19,
-          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+          "test": "complete quote \u2192 order \u2192 sandbox payment \u2192 project \u2192 messages \u2192 revisions \u2192 approval \u2192 invoice \u2192 support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
           "line": 19,
-          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+          "test": "complete quote \u2192 order \u2192 sandbox payment \u2192 project \u2192 messages \u2192 revisions \u2192 approval \u2192 invoice \u2192 support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
           "line": 19,
-          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+          "test": "complete quote \u2192 order \u2192 sandbox payment \u2192 project \u2192 messages \u2192 revisions \u2192 approval \u2192 invoice \u2192 support"
         },
         {
           "method": "POST",
@@ -5436,7 +5436,7 @@
       ],
       "source_sha256": "d08cae4d3444b7dfd86fce092650c8d36ea4c158296172b3cd3fbb8608b3be82",
       "status": "PARTIAL",
-      "processing": "Loading support replies…; refresh disabled while read/send busy.",
+      "processing": "Loading support replies\u2026; refresh disabled while read/send busy.",
       "duplicate_guard": "Refresh reads can overlap.",
       "failure": "Dedicated read error cleared after successful refresh; action error preserved.",
       "recovery": "Refresh replies button.",
@@ -5466,7 +5466,7 @@
       ],
       "source_sha256": "d08cae4d3444b7dfd86fce092650c8d36ea4c158296172b3cd3fbb8608b3be82",
       "status": "PARTIAL",
-      "processing": "Saving reply…; disabled fields/button.",
+      "processing": "Saving reply\u2026; disabled fields/button.",
       "duplicate_guard": "Synchronous ref guard plus shared identical-request coalescing.",
       "failure": "Action error retains reply text and explains uncertain retry.",
       "recovery": "Refresh history before retrying an uncertain send.",
@@ -5776,6 +5776,199 @@
       "browser_evidence": [],
       "confirmation": "Explicit saved-draft publication confirmation.",
       "automated_test_references": [],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "review-workspace-11",
+      "component": "src/components/review-workspace.tsx",
+      "line": 1,
+      "action": "Load or refresh captured order feedback",
+      "kind": "remote_read",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/review-candidates/source-feedback"
+        }
+      ],
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
+      "status": "PARTIAL",
+      "processing": "Loading captured order feedback\u2026; disabled controls and synchronous operation lock.",
+      "duplicate_guard": "Synchronous component ref lock plus disabled controls; identical shared mutations coalesce.",
+      "success": "Eligible source rows and explicit skipped-reason counts replace the list.",
+      "failure": "Inline authoritative read error.",
+      "recovery": "Load captured feedback/Refresh captured feedback can retry; no import is automatic.",
+      "navigation": "Same private owner workspace; evidence/history stays inside the editor.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        "Executed review-source-ui-browser/report.json:22local current-component mocked-API checks; no production import or server permission claim."
+      ],
+      "outstanding": [
+        "Server permissions, persistence and production behavior require separate API/deployment evidence; no full per-action failure matrix signed off."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "review-workspace-12",
+      "component": "src/components/review-workspace.tsx",
+      "line": 1,
+      "action": "Select or clear unlinked feedback sources",
+      "kind": "client_only",
+      "routes": [],
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
+      "status": "PARTIAL",
+      "processing": "Synchronous selection state; disabled while a request is pending.",
+      "duplicate_guard": "No remote mutation.",
+      "success": "Only unmatched/unimported sources are selected; clear selection disables import.",
+      "failure": "Ambiguous and previously imported sources are disabled.",
+      "recovery": "Inspect source text and select individual eligible records.",
+      "navigation": "Same private owner workspace; evidence/history stays inside the editor.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        "Executed review-source-ui-browser/report.json:22local current-component mocked-API checks; no production import or server permission claim."
+      ],
+      "outstanding": [
+        "Server permissions, persistence and production behavior require separate API/deployment evidence; no full per-action failure matrix signed off."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "review-workspace-13",
+      "component": "src/components/review-workspace.tsx",
+      "line": 1,
+      "action": "Import explicitly selected feedback privately",
+      "kind": "mutation",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/review-candidates/import-source-feedback"
+        }
+      ],
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
+      "status": "PARTIAL",
+      "processing": "Native confirmation; Importing selected private feedback\u2026; disabled controls and ref lock.",
+      "duplicate_guard": "Synchronous component ref lock plus disabled controls; identical shared mutations coalesce.",
+      "success": "Server acknowledgement shown; candidates/source links refresh; selection clears.",
+      "failure": "Authoritative rejection or explicitly uncertain network/timeout message. Saved mutation and failed refresh are distinguished.",
+      "recovery": "Reload saved inventory before uncertain retry; server idempotency and permission evidence are separate.",
+      "navigation": "Same private owner workspace; evidence/history stays inside the editor.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        "Executed review-source-ui-browser/report.json:22local current-component mocked-API checks; no production import or server permission claim."
+      ],
+      "outstanding": [
+        "Server permissions, persistence and production behavior require separate API/deployment evidence; no full per-action failure matrix signed off."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "review-workspace-14",
+      "component": "src/components/review-workspace.tsx",
+      "line": 1,
+      "action": "Filter review candidate source collection",
+      "kind": "client_only",
+      "routes": [],
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
+      "status": "PARTIAL",
+      "processing": "Synchronous selector state.",
+      "duplicate_guard": "No remote mutation.",
+      "success": "Archive and additional feedback views separate without changing counts or publication.",
+      "failure": "No network mutation.",
+      "recovery": "Switch collection or clear search.",
+      "navigation": "Same private owner workspace; evidence/history stays inside the editor.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        "Executed review-source-ui-browser/report.json:22local current-component mocked-API checks; no production import or server permission claim."
+      ],
+      "outstanding": [
+        "Server permissions, persistence and production behavior require separate API/deployment evidence; no full per-action failure matrix signed off."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "review-workspace-15",
+      "component": "src/components/review-workspace.tsx",
+      "line": 1,
+      "action": "Preview private captured feedback evidence",
+      "kind": "remote_read",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/review-candidates/:id/source-evidence"
+        }
+      ],
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
+      "status": "PARTIAL",
+      "processing": "Loading private feedback evidence\u2026; disabled preview and mutation controls.",
+      "duplicate_guard": "Synchronous component ref lock plus disabled controls; identical shared mutations coalesce.",
+      "success": "Captured text, documented username/rating and source date render as escaped text.",
+      "failure": "Inline error in the editor; reviewed fields are preserved.",
+      "recovery": "Retry preview, or close and reload inventory. Archive PNG evidence remains on its separate existing route.",
+      "navigation": "Same private owner workspace; evidence/history stays inside the editor.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        "Executed review-source-ui-browser/report.json:22local current-component mocked-API checks; no production import or server permission claim."
+      ],
+      "outstanding": [
+        "Server permissions, persistence and production behavior require separate API/deployment evidence; no full per-action failure matrix signed off."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "review-workspace-16",
+      "component": "src/components/review-workspace.tsx",
+      "line": 1,
+      "action": "Read saved candidate decision history",
+      "kind": "remote_read",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/review-candidates/:id/history"
+        }
+      ],
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
+      "status": "PARTIAL",
+      "processing": "Loading saved review decisions\u2026; operation lock.",
+      "duplicate_guard": "Synchronous component ref lock plus disabled controls; identical shared mutations coalesce.",
+      "success": "Actual recorded events/revisions render with truthful migration-baseline/import explanation.",
+      "failure": "Inline read error without fabricated history.",
+      "recovery": "Retry the history read; earlier decisions are not reconstructed.",
+      "navigation": "Same private owner workspace; evidence/history stays inside the editor.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        "Executed review-source-ui-browser/report.json:22local current-component mocked-API checks; no production import or server permission claim."
+      ],
+      "outstanding": [
+        "Server permissions, persistence and production behavior require separate API/deployment evidence; no full per-action failure matrix signed off."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "review-workspace-17",
+      "component": "src/components/review-workspace.tsx",
+      "line": 1,
+      "action": "Reload saved review inventory after an error",
+      "kind": "remote_read",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/review-candidates"
+        }
+      ],
+      "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
+      "status": "PARTIAL",
+      "processing": "Reloading saved review inventory\u2026; operation lock.",
+      "duplicate_guard": "Synchronous component ref lock plus disabled controls; identical shared mutations coalesce.",
+      "success": "Successful read replaces saved candidates and clears the resolved error.",
+      "failure": "Authoritative or uncertain connection error remains visible.",
+      "recovery": "Reconnect/sign in if necessary, then reload before retrying a mutation.",
+      "navigation": "Same private owner workspace; evidence/history stays inside the editor.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        "Executed review-source-ui-browser/report.json:22local current-component mocked-API checks; no production import or server permission claim."
+      ],
+      "outstanding": [
+        "Server permissions, persistence and production behavior require separate API/deployment evidence; no full per-action failure matrix signed off."
+      ],
       "full_failure_matrix_verified": false
     }
   ]

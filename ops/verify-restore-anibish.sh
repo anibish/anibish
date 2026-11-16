@@ -22,7 +22,15 @@ trap cleanup EXIT
 gpg --batch --quiet --pinentry-mode loopback --passphrase-file "$root/secrets/backup-passphrase" --decrypt "$archive" | tar -xf - -C "$task_dir"
 docker exec "$db" createdb -U anibish "$restore_db"
 docker exec -i "$db" pg_restore -U anibish -d "$restore_db" --no-owner --exit-on-error < "$task_dir/database.dump"
-for table in users services cms_pages leads orders payments; do
+for table in users services cms_pages leads orders payments review_candidates portfolio_sources portfolio_source_history legal_versions legal_consents mail_drafts organization_billing_profiles review_candidate_sources review_candidate_versions; do
+ if [[ "$(docker exec "$db" psql -U anibish -d "$restore_db" -Atc "SELECT to_regclass('public.$table') IS NOT NULL")" != "t" ]]; then
+  if [[ "${ANIBISH_RESTORE_REQUIRE_LATEST_SCHEMA:-0}" == 1 ]]; then
+   echo "Required restore table missing: $table" >&2
+   exit 1
+  fi
+  echo "Table not present in this older backup: $table"
+  continue
+ fi
  restored=$(docker exec "$db" psql -U anibish -d "$restore_db" -Atc "SELECT count(*) FROM $table")
  echo "Verified restore: $table ($restored records)"
 done
