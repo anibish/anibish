@@ -1,20 +1,20 @@
 {
   "summary": {
     "status": "PARTIAL",
-    "sourceSnapshot": "Current review-source import follow-up; completed releases278b559 and21b5033 verified separately in production. New import deployment verification pending.",
-    "scope": "Enumerated meaningful operations in 21 public/account/CMS/business components; generated dashboard forms and remaining project variants are not yet exhaustive.",
-    "uiOperations": 162,
+    "sourceSnapshot": "Current public availability follow-up; completed review-source release dd4b5fd independently verified in production.",
+    "scope": "Enumerated meaningful operations in22 public/account/CMS/business components; generated dashboard forms and remaining project variants are not yet exhaustive.",
+    "uiOperations": 163,
     "mutationOperations": 80,
-    "readOperations": 31,
+    "readOperations": 32,
     "clientOperations": 45,
     "downloadOperations": 6,
-    "actionsWithScopedBrowserEvidence": 59,
+    "actionsWithScopedBrowserEvidence": 60,
     "browserPending": 103,
     "fullFailureMatricesSignedOff": 0,
-    "feedbackRegressionChecksExecuted": 84,
+    "feedbackRegressionChecksExecuted": 94,
     "registeredMutationRoutes": 113,
     "coverageNote": "Scoped browser references prove only the named executed checks. API test references are source mappings, not blanket positive/negative/browser passes.",
-    "components": 21,
+    "components": 22,
     "integratedApiTestGroupsPassed": 72
   },
   "findings": [
@@ -5968,6 +5968,38 @@
       ],
       "outstanding": [
         "Server permissions, persistence and production behavior require separate API/deployment evidence; no full per-action failure matrix signed off."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "site-error-retry",
+      "component": "src/app/error.tsx",
+      "line": 4,
+      "action": "Retry a temporarily unavailable published view",
+      "kind": "read",
+      "routes": [],
+      "source_sha256": "fcc62c7d5786663eacb4f61cfa2eb3a19e74b56c75595d48e210e55d610e5488",
+      "status": "VERIFIED LOCALLY",
+      "processing": "Loading status, aria-busy and disabled retry while React transition runs.",
+      "duplicate_guard": "Disabled button during pending transition.",
+      "success": "A fresh authoritative response replaces the error boundary; no invented content.",
+      "failure": "Recoverable unavailable view remains; no empty catalogue or stale publication snapshot.",
+      "recovery": "Try again refetches through Next retry(); Back to the studio offers navigation.",
+      "navigation": "Recovered current route, or explicit homepage link.",
+      "automated_test_references": [
+        {
+          "file": "src/lib/tests/site-server.test.ts",
+          "test": "Ten bounded loader/freshness/error-classification tests"
+        }
+      ],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/site-availability-browser/report.json",
+          "scope": "Ten actual isolated production-mode Next browser checks, including real refetch and mobile controls; not a production fault injection."
+        }
+      ],
+      "outstanding": [
+        "Complete expired-session/duplicate/persistence matrix does not apply wholesale to this public read; full per-action audit remains unsigned."
       ],
       "full_failure_matrix_verified": false
     }
