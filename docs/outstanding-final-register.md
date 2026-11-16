@@ -41,3 +41,9 @@ Follow-up ready: 48 API groups pass; transactional order/project/invoice event e
 - GitHub main d991ade preserves the historical case studies; current application runtime bfe25b09e7c506ec78ce35146e921033efaac7c1. Uncommitted candidate changes are not yet deployed.
 
 Remaining breadth: provider Drafts write-back, genuine bounce/complaint rehearsal, dedicated attachment malware scanning, automated approved offsite destination, monitoring alert delivery, customer billing profile and access deactivation, advanced scheduling, and exhaustive action-by-action mapping. Payments remain sandbox-only.
+
+## Account lifecycle release candidate
+
+VERIFIED LOCALLY: organization-scoped billing profile, owner/billing-manager writes, optimistic revision conflicts, explicit reload; customer password/MFA-confirmed deactivation, session/token revocation, recovery/login denial, retained consent/audit history and sole-owner protection. Studio accounts cannot use customer deactivation. Existing closure requests are idempotent. No data erasure or automatic access restoration is implied. Six browser workflow checks and six viewport widths pass. Migration 029 is additive and does not change credentials, MFA enrollment or historical records.
+
+Mail/career release 87ab3bfa006ab19754dfb14dba65b82a8148fede is VERIFIED IN PRODUCTION through Coolify fd8ed060-bb8a-4ce4-b5ac-927bbc566c92; runtime file hashes match GitHub. Owner MFA session verified real private draft creation/update/reload/archive/restore without sending. Latest pre-migration encrypted backup anibish-20261116T023143Z.tar.gpg passed isolated restore. Action inventory expanded to 112 registered mutations; full per-action mapping remains PARTIAL.
