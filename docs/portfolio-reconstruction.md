@@ -35,12 +35,12 @@ Private repository case studies, confidential customer scopes, raw order identif
 
 ## Executed validation
 
-- 48 API/security integration groups, including private source idempotency and owner-edit preservation.
+- 55 API/security integration groups, including private source idempotency and owner-edit preservation.
 - Fresh-database migration rehearsal passed: all 46 migration-rehearsal groups, zero failures.
 - 30 public desktop/mobile layout checks at 1440, 1280, 768, 390, 360 and 320 pixels; three search/empty/reset checks.
 - Five local owner source/editor workflow checks and six admin width checks.
 - TypeScript, lint and production build executed. Screenshots and raw evidence remain ignored locally.
-- Live approved disposable accounts: registration, recipient verification, secure login, cross-tenant messages/files/support, quote scope acceptance, order/project persistence, sandbox invoice PDF, recovery and session revocation verified. Delivery revision, version-two approval, milestone updates and final acceptance also passed in production. Full task/dependency and customer browser rehearsal remain incomplete.
+- Live approved disposable accounts: registration, recipient verification, secure login, cross-tenant messages/files/support, quote scope acceptance, order/project persistence, sandbox invoice PDF, recovery and session revocation verified. Delivery revision, version-two approval, milestone updates and final acceptance also passed in production. Thirty-six production customer layout checks and two UI login/logout journeys passed; advanced task/dependency production breadth remains partial.
 
 ## Outstanding
 
@@ -48,6 +48,12 @@ Finish 56 Fiverr detail inspections after owner resolves the human challenge; co
 
 ## Production release evidence
 
-9e521538ecef8a3b460b1ffcb36400038b1f755e deployed through Coolify job 216613c4-7a34-47e1-a803-3a6c6477fdac. Runtime server/source-module SHA-256 fingerprints match the committed source. Public API confirms seven portfolio entries, six recognition records, 74 reviews and 33 non-anonymous reviewer identities. All 103 private source records imported through the actual MFA owner session. Thirty live layout checks and three directory interaction checks passed; HTTPS and www canonical redirect verified.
+9e521538ecef8a3b460b1ffcb36400038b1f755e deployed through Coolify job 216613c4-7a34-47e1-a803-3a6c6477fdac. Runtime server/source-module SHA-256 fingerprints match the committed source. Public API confirms nine portfolio entries (including restored historical routes), six recognition records, 74 reviews and 33 non-anonymous reviewer identities. All 103 private source records imported through the actual MFA owner session. Thirty live layout checks and three directory interaction checks passed; HTTPS and www canonical redirect verified.
 
-Follow-up adds grouped private draft preparation and transactional, duplicate-safe quote/order/project/finalized-invoice notifications. Forty-eight local integration groups pass. Ten grouped private product drafts are prepared; they are not approved public case studies.
+Follow-up adds grouped private draft preparation and transactional, duplicate-safe quote/order/project/finalized-invoice notifications. Fifty-five local integration groups pass. Ten grouped private product drafts are prepared; they are not approved public case studies.
+
+## Latest portfolio follow-up
+
+Nine published case studies are live; both historical routes (SSL Scanner and responsive websites) are restored as CMS records with their genuine review associations. Fourteen unpublished grouped drafts now exist: ten product candidates and four freelance customer collections built from 40 inspected orders. Collections are not asserted to be unique projects. Source imports are idempotent and preserve owner edits; 103 private sources are linked without publishing private repository URLs, order identifiers or delivery files. Publication rights/roles for these draft products still require owner review.
+
+The exact current review reconciliation is in review-reconciliation.md: 74 published distinct reviews, one excluded duplicate, 33 corroborated public usernames, 36 Fiverr-attributed and 38 neutral reviews. Seven captured order reviews still need archive reconciliation; they are not counted as seven new distinct reviews.

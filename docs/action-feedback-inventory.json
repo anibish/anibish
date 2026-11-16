@@ -1,6 +1,7 @@
 {
   "enumeration": "Fastify registered routes; each expansion checked with hasRoute",
   "registeredMutationRoutes": 112,
+  "routesWithDirectTestReferences": 65,
   "fullMatrixSignedOff": 0,
   "nonMutatingUxInventory": "PARTIAL",
   "actions": [
@@ -11,12 +12,38 @@
       "candidateComponents": [
         "src/components/customer-account.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "PUT",
+          "file": "api/tests/integration.test.ts",
+          "line": 113,
+          "test": "billing profiles are organization-scoped, role protected and reject stale edits"
+        },
+        {
+          "method": "PUT",
+          "file": "api/tests/integration.test.ts",
+          "line": 113,
+          "test": "billing profiles are organization-scoped, role protected and reject stale edits"
+        },
+        {
+          "method": "PUT",
+          "file": "api/tests/integration.test.ts",
+          "line": 113,
+          "test": "billing profiles are organization-scoped, role protected and reject stale edits"
+        },
+        {
+          "method": "PUT",
+          "file": "api/tests/integration.test.ts",
+          "line": 113,
+          "test": "billing profiles are organization-scoped, role protected and reject stale edits"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -26,12 +53,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -41,12 +69,26 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 23,
+          "test": "services require explicit price approval; fixed checkout replays safely"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 66,
+          "test": "service editor round-trips the canonical pricing model through create, read, edit and archive"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -56,12 +98,20 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "DELETE",
+          "file": "api/tests/integration.test.ts",
+          "line": 66,
+          "test": "service editor round-trips the canonical pricing model through create, read, edit and archive"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -71,12 +121,26 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 23,
+          "test": "services require explicit price approval; fixed checkout replays safely"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 66,
+          "test": "service editor round-trips the canonical pricing model through create, read, edit and archive"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -86,12 +150,13 @@
       "candidateComponents": [
         "src/components/membership.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -101,12 +166,20 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 117,
+          "test": "closure requests are idempotent and sole owners cannot strand active organization members"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -116,12 +189,44 @@
       "candidateComponents": [
         "src/components/customer-account.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 115,
+          "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 115,
+          "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 115,
+          "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 115,
+          "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 117,
+          "test": "closure requests are idempotent and sole owners cannot strand active organization members"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -131,12 +236,50 @@
       "candidateComponents": [
         "src/components/account.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 18,
+          "test": "CSRF protection, credentials, single-use tokens and revoked sessions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 18,
+          "test": "CSRF protection, credentials, single-use tokens and revoked sessions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 82,
+          "test": "password changes revoke sessions, preserve preferences and queue security notification"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 82,
+          "test": "password changes revoke sessions, preserve preferences and queue security notification"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 115,
+          "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 115,
+          "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -147,12 +290,13 @@
         "src/components/account.tsx",
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -162,12 +306,26 @@
       "candidateComponents": [
         "src/components/mfa-recovery.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 88,
+          "test": "MFA recovery codes require password and TOTP, are hashed and can be used only once"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 88,
+          "test": "MFA recovery codes require password and TOTP, are hashed and can be used only once"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -177,12 +335,20 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 115,
+          "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -192,12 +358,20 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 115,
+          "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -207,12 +381,13 @@
       "candidateComponents": [
         "src/components/membership.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -222,12 +397,26 @@
       "candidateComponents": [
         "src/components/account-security.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 82,
+          "test": "password changes revoke sessions, preserve preferences and queue security notification"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 82,
+          "test": "password changes revoke sessions, preserve preferences and queue security notification"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -238,12 +427,44 @@
         "src/components/account-security.tsx",
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 21,
+          "test": "member roles cannot grant themselves administrative privileges"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 63,
+          "test": "notification preferences persist and suppress optional customer email updates"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 63,
+          "test": "notification preferences persist and suppress optional customer email updates"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 82,
+          "test": "password changes revoke sessions, preserve preferences and queue security notification"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 82,
+          "test": "password changes revoke sessions, preserve preferences and queue security notification"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -253,12 +474,32 @@
       "candidateComponents": [
         "src/components/account.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 18,
+          "test": "CSRF protection, credentials, single-use tokens and revoked sessions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 115,
+          "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 115,
+          "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -268,12 +509,13 @@
       "candidateComponents": [
         "src/components/account.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -283,12 +525,13 @@
       "candidateComponents": [
         "src/components/membership.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -298,12 +541,32 @@
       "candidateComponents": [
         "src/components/account.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 18,
+          "test": "CSRF protection, credentials, single-use tokens and revoked sessions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 18,
+          "test": "CSRF protection, credentials, single-use tokens and revoked sessions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 115,
+          "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -313,12 +576,13 @@
       "candidateComponents": [
         "src/components/account.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -330,12 +594,32 @@
         "src/components/public-pages.tsx",
         "src/components/studio.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 23,
+          "test": "services require explicit price approval; fixed checkout replays safely"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 23,
+          "test": "services require explicit price approval; fixed checkout replays safely"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 23,
+          "test": "services require explicit price approval; fixed checkout replays safely"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -345,12 +629,20 @@
       "candidateComponents": [
         "src/components/cms-tools.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 35,
+          "test": "internal attachments remain private and mismatched image payloads are rejected"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -362,12 +654,26 @@
         "src/components/portfolio-sources.tsx",
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 27,
+          "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 32,
+          "test": "CMS gallery approval is enforced and redirect cycles are rejected"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -379,12 +685,26 @@
         "src/components/portfolio-sources.tsx",
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 27,
+          "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 27,
+          "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -396,12 +716,20 @@
         "src/components/portfolio-sources.tsx",
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 27,
+          "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -413,12 +741,44 @@
         "src/components/portfolio-sources.tsx",
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 27,
+          "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 27,
+          "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 27,
+          "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 32,
+          "test": "CMS gallery approval is enforced and redirect cycles are rejected"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 101,
+          "test": "private source imports group related records into unpublished drafts without overwriting manual edits"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -428,12 +788,26 @@
       "candidateComponents": [
         "src/components/cms-tools.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 32,
+          "test": "CMS gallery approval is enforced and redirect cycles are rejected"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 32,
+          "test": "CMS gallery approval is enforced and redirect cycles are rejected"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -443,12 +817,13 @@
       "candidateComponents": [
         "src/components/cms-tools.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -458,12 +833,26 @@
       "candidateComponents": [
         "src/components/message-thread.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 31,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 35,
+          "test": "internal attachments remain private and mismatched image payloads are rejected"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -473,12 +862,13 @@
       "candidateComponents": [
         "src/components/message-thread.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -488,12 +878,13 @@
       "candidateComponents": [
         "src/components/message-thread.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -503,12 +894,68 @@
       "candidateComponents": [
         "src/components/message-thread.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 31,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 31,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 31,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 31,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 35,
+          "test": "internal attachments remain private and mismatched image payloads are rejected"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 35,
+          "test": "internal attachments remain private and mismatched image payloads are rejected"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -518,12 +965,32 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 37,
+          "test": "final project acceptance requires approved delivery and completed milestones"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -533,12 +1000,38 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 37,
+          "test": "final project acceptance requires approved delivery and completed milestones"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -548,12 +1041,56 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 74,
+          "test": "private email cache, attachments and drafts require MFA Super Admin"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 77,
+          "test": "private composition preserves cc and attachments, bounds payloads, and isolates signatures"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 77,
+          "test": "private composition preserves cc and attachments, bounds payloads, and isolates signatures"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 105,
+          "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 111,
+          "test": "private draft creation replays safely after lost responses and refuses conflicting content"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 111,
+          "test": "private draft creation replays safely after lost responses and refuses conflicting content"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 111,
+          "test": "private draft creation replays safely after lost responses and refuses conflicting content"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -563,12 +1100,32 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "PUT",
+          "file": "api/tests/integration.test.ts",
+          "line": 105,
+          "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
+        },
+        {
+          "method": "PUT",
+          "file": "api/tests/integration.test.ts",
+          "line": 105,
+          "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
+        },
+        {
+          "method": "PUT",
+          "file": "api/tests/integration.test.ts",
+          "line": 105,
+          "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -578,12 +1135,20 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 105,
+          "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -593,12 +1158,20 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 105,
+          "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -608,12 +1181,13 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -623,12 +1197,13 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -638,12 +1213,13 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -653,12 +1229,20 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 86,
+          "test": "linked correspondence history remains owner-private and preserves explicit source references"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -668,12 +1252,13 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -683,12 +1268,38 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 78,
+          "test": "email CRM conversion copies only explicit summaries and keeps original correspondence private"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 78,
+          "test": "email CRM conversion copies only explicit summaries and keeps original correspondence private"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 78,
+          "test": "email CRM conversion copies only explicit summaries and keeps original correspondence private"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 78,
+          "test": "email CRM conversion copies only explicit summaries and keeps original correspondence private"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -698,12 +1309,26 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "PUT",
+          "file": "api/tests/integration.test.ts",
+          "line": 83,
+          "test": "mail retention, thread history and template operations require privileged MFA"
+        },
+        {
+          "method": "PUT",
+          "file": "api/tests/integration.test.ts",
+          "line": 83,
+          "test": "mail retention, thread history and template operations require privileged MFA"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -713,12 +1338,26 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 76,
+          "test": "unverified email transport never claims to send"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 76,
+          "test": "unverified email transport never claims to send"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -728,12 +1367,20 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "PUT",
+          "file": "api/tests/integration.test.ts",
+          "line": 77,
+          "test": "private composition preserves cc and attachments, bounds payloads, and isolates signatures"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -743,12 +1390,20 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 76,
+          "test": "unverified email transport never claims to send"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -760,12 +1415,20 @@
         "src/components/operations.tsx",
         "src/components/public-pages.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -777,12 +1440,13 @@
         "src/components/message-thread.tsx",
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -792,12 +1456,20 @@
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 26,
+          "test": "manual sandbox transfer verification and recurring bills are idempotent"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -807,12 +1479,20 @@
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 26,
+          "test": "manual sandbox transfer verification and recurring bills are idempotent"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -822,12 +1502,32 @@
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 24,
+          "test": "itemized invoices finalize sequentially, remain immutable, and isolate customers"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 24,
+          "test": "itemized invoices finalize sequentially, remain immutable, and isolate customers"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 103,
+          "test": "quote and invoice business events enqueue atomically once across repeated decisions"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -837,12 +1537,20 @@
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 24,
+          "test": "itemized invoices finalize sequentially, remain immutable, and isolate customers"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -852,12 +1560,32 @@
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 24,
+          "test": "itemized invoices finalize sequentially, remain immutable, and isolate customers"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 24,
+          "test": "itemized invoices finalize sequentially, remain immutable, and isolate customers"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 103,
+          "test": "quote and invoice business events enqueue atomically once across repeated decisions"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -867,12 +1595,20 @@
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 26,
+          "test": "manual sandbox transfer verification and recurring bills are idempotent"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -882,12 +1618,32 @@
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 26,
+          "test": "manual sandbox transfer verification and recurring bills are idempotent"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 26,
+          "test": "manual sandbox transfer verification and recurring bills are idempotent"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 26,
+          "test": "manual sandbox transfer verification and recurring bills are idempotent"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -897,12 +1653,32 @@
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 33,
+          "test": "refund recording creates one scoped currency-labelled credit note"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 33,
+          "test": "refund recording creates one scoped currency-labelled credit note"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 33,
+          "test": "refund recording creates one scoped currency-labelled credit note"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -912,12 +1688,13 @@
       "candidateComponents": [
         "src/components/membership.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -927,12 +1704,13 @@
       "candidateComponents": [
         "src/components/account.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -942,12 +1720,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -957,12 +1736,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -972,12 +1752,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -987,12 +1768,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1007,12 +1789,20 @@
         "src/components/policy-acceptance.tsx",
         "src/components/studio.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "PUT",
+          "file": "api/tests/integration.test.ts",
+          "line": 71,
+          "test": "legal drafts are owner-only, sanitized, versioned and accepted immutably"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1027,12 +1817,13 @@
         "src/components/policy-acceptance.tsx",
         "src/components/studio.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1047,12 +1838,26 @@
         "src/components/policy-acceptance.tsx",
         "src/components/studio.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 71,
+          "test": "legal drafts are owner-only, sanitized, versioned and accepted immutably"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 71,
+          "test": "legal drafts are owner-only, sanitized, versioned and accepted immutably"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1067,12 +1872,13 @@
         "src/components/policy-acceptance.tsx",
         "src/components/studio.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1082,12 +1888,20 @@
       "candidateComponents": [
         "src/components/policy-acceptance.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 81,
+          "test": "refund policies use the versioned owner editor and marketing consent is independent"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1098,12 +1912,13 @@
         "src/components/membership.tsx",
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1113,12 +1928,26 @@
       "candidateComponents": [
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 37,
+          "test": "final project acceptance requires approved delivery and completed milestones"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 89,
+          "test": "project, milestone and support events use their configured transactional templates"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1128,12 +1957,13 @@
       "candidateComponents": [
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1143,12 +1973,26 @@
       "candidateComponents": [
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 89,
+          "test": "project, milestone and support events use their configured transactional templates"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 89,
+          "test": "project, milestone and support events use their configured transactional templates"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1159,12 +2003,20 @@
         "src/components/notification-operations.tsx",
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 80,
+          "test": "Brevo callbacks authenticate, correlate, deduplicate and preserve terminal suppression"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1174,12 +2026,13 @@
       "candidateComponents": [
         "src/components/notification-operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1189,12 +2042,13 @@
       "candidateComponents": [
         "src/components/notification-operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1204,12 +2058,20 @@
       "candidateComponents": [
         "src/components/notification-operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 83,
+          "test": "mail retention, thread history and template operations require privileged MFA"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1219,12 +2081,13 @@
       "candidateComponents": [
         "src/components/notification-operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1234,12 +2097,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1247,12 +2111,13 @@
       "url": "/notifications/webhooks/brevo",
       "registration": "api/notifications.ts:5",
       "candidateComponents": [],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1262,12 +2127,38 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1275,12 +2166,13 @@
       "url": "/payments/webhook/sandbox",
       "registration": "api/finance.ts:23",
       "candidateComponents": [],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1291,12 +2183,20 @@
         "src/components/operations.tsx",
         "src/components/portfolio-sources.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "PATCH",
+          "file": "api/tests/integration.test.ts",
+          "line": 97,
+          "test": "portfolio evidence imports are MFA-owner-only, idempotent and preserve owner clearance"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1306,12 +2206,50 @@
       "candidateComponents": [
         "src/components/portfolio-sources.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 97,
+          "test": "portfolio evidence imports are MFA-owner-only, idempotent and preserve owner clearance"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 97,
+          "test": "portfolio evidence imports are MFA-owner-only, idempotent and preserve owner clearance"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 97,
+          "test": "portfolio evidence imports are MFA-owner-only, idempotent and preserve owner clearance"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 99,
+          "test": "published portfolio foundation has meaningful cited content and private source routes remain isolated"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 101,
+          "test": "private source imports group related records into unpublished drafts without overwriting manual edits"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 101,
+          "test": "private source imports group related records into unpublished drafts without overwriting manual edits"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1321,12 +2259,50 @@
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 20,
+          "test": "database boundary rejects cross-organization project references"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 31,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 37,
+          "test": "final project acceptance requires approved delivery and completed milestones"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 78,
+          "test": "email CRM conversion copies only explicit summaries and keeps original correspondence private"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 86,
+          "test": "linked correspondence history remains owner-private and preserves explicit source references"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 89,
+          "test": "project, milestone and support events use their configured transactional templates"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1338,12 +2314,13 @@
         "src/components/operations.tsx",
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1355,12 +2332,13 @@
         "src/components/operations.tsx",
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1372,12 +2350,13 @@
         "src/components/operations.tsx",
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1389,12 +2368,38 @@
         "src/components/operations.tsx",
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 37,
+          "test": "final project acceptance requires approved delivery and completed milestones"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 37,
+          "test": "final project acceptance requires approved delivery and completed milestones"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 37,
+          "test": "final project acceptance requires approved delivery and completed milestones"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 37,
+          "test": "final project acceptance requires approved delivery and completed milestones"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1406,12 +2411,13 @@
         "src/components/operations.tsx",
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1423,12 +2429,20 @@
         "src/components/operations.tsx",
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 31,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1438,12 +2452,32 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 103,
+          "test": "quote and invoice business events enqueue atomically once across repeated decisions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 109,
+          "test": "accepted quotation replays do not append duplicate production consent records"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1453,12 +2487,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1468,12 +2503,56 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 103,
+          "test": "quote and invoice business events enqueue atomically once across repeated decisions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 103,
+          "test": "quote and invoice business events enqueue atomically once across repeated decisions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 103,
+          "test": "quote and invoice business events enqueue atomically once across repeated decisions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 109,
+          "test": "accepted quotation replays do not append duplicate production consent records"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1483,12 +2562,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1498,12 +2578,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1513,12 +2594,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1528,12 +2610,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1543,12 +2626,13 @@
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1561,12 +2645,20 @@
         "src/components/public-pages.tsx",
         "src/components/studio.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 33,
+          "test": "refund recording creates one scoped currency-labelled credit note"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1576,12 +2668,13 @@
       "candidateComponents": [
         "src/components/review-workspace.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1591,12 +2684,74 @@
       "candidateComponents": [
         "src/components/review-workspace.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 79,
+          "test": "review bulk publication enforces clearance atomically and denies customer access"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 79,
+          "test": "review bulk publication enforces clearance atomically and denies customer access"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 79,
+          "test": "review bulk publication enforces clearance atomically and denies customer access"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 79,
+          "test": "review bulk publication enforces clearance atomically and denies customer access"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 79,
+          "test": "review bulk publication enforces clearance atomically and denies customer access"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 90,
+          "test": "two distinct occurrences from one review source can publish without duplicating legacy excerpts"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 90,
+          "test": "two distinct occurrences from one review source can publish without duplicating legacy excerpts"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 93,
+          "test": "older published review snapshots gain identities without changing their text"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 93,
+          "test": "older published review snapshots gain identities without changing their text"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 93,
+          "test": "older published review snapshots gain identities without changing their text"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1606,12 +2761,26 @@
       "candidateComponents": [
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 31,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1621,12 +2790,13 @@
       "candidateComponents": [
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1636,12 +2806,13 @@
       "candidateComponents": [
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1651,12 +2822,32 @@
       "candidateComponents": [
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 31,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 31,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 31,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1666,12 +2857,13 @@
       "candidateComponents": [
         "src/components/project-workbench.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1681,12 +2873,44 @@
       "candidateComponents": [
         "src/components/ticket-thread.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 19,
+          "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 36,
+          "test": "support replies preserve privacy and measure only customer-visible staff responses"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 63,
+          "test": "notification preferences persist and suppress optional customer email updates"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 89,
+          "test": "project, milestone and support events use their configured transactional templates"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1696,12 +2920,13 @@
       "candidateComponents": [
         "src/components/ticket-thread.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1711,12 +2936,13 @@
       "candidateComponents": [
         "src/components/ticket-thread.tsx"
       ],
+      "automatedTestReferences": [],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     },
     {
@@ -1726,12 +2952,32 @@
       "candidateComponents": [
         "src/components/ticket-thread.tsx"
       ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 36,
+          "test": "support replies preserve privacy and measure only customer-visible staff responses"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 36,
+          "test": "support replies preserve privacy and measure only customer-visible staff responses"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 89,
+          "test": "project, milestone and support events use their configured transactional templates"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
       "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
       "navigation": "Per-action verification pending",
-      "automatedEvidence": "55 executed integration groups; complete per-route mapping pending",
+      "automatedEvidence": "55 executed integration groups; direct request references mapped; positive/negative coverage still requires review",
       "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
     }
   ]
