@@ -89,3 +89,10 @@ The trusted `api/portfolio-draft-import.ts` accepts an owner-private input file 
 New passwords use versioned, bounded scrypt parameters. Existing issued hashes remain verifiable and upgrade during a successful login only after all enabled factors and locked credential-state checks pass. Do not reset passwords or MFA to migrate hashes. Runtime images omit global npm/npx after dependency installation; build stages retain their tools. Verify the actual deployed image and application startup, not only the dependency lockfile.
 
 Retention previews use fixed documented timestamps and explicit owner-approved basis/period fields. Legal holds default to active; previews never delete data or authorize provider operations. Unknown external backup coverage is reported as unknown rather than a zero candidate count. Retention execution remains disabled.
+
+
+## Source-only security follow-up0.6.1
+
+New registration, password change, reset and initial owner enrollment screen a modest local common-password and account-context list. Screening does not query an external service or normalize the bytes ultimately hashed. Existing password verification and guarded legacy rehash remain compatible; no password or MFA reset is part of deployment.
+
+Mailbox progress is derived from persisted current-generation bodies and explicit oversized-message exclusions, rather than assuming every UID below a cursor was downloaded. Interrupted or omitted bodies remain retryable, including historical gaps. Unexpected response UIDs are ignored, retained bodies are preserved, and previously evicted bodies are backfilled only after a verified fetch. Physical cache eviction remains disabled. No new schema or provider credential is needed.

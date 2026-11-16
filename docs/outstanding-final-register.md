@@ -10,6 +10,8 @@ VERIFIED LOCALLY: guarded, idempotent private portfolio draft import; MFA-only s
 
 PARTIAL/BLOCKED: new delivery descriptions require owner clearance; private legal drafts require explicit adoption; destructive retention/erasure execution, provider agreements/residency assurances, independent security assessment and approved automated offsite recovery are not implied by these controls. No legal-compliance certification or live-payment activation is asserted.
 
+The0.6.0 release is VERIFIED IN PRODUCTION atbe521ca3974793dd03908fb9c59f2bbb520459e3: six healthy services,043–044 migrations/preflight successful,42read-only production checks, complete public23/82/6collections, and96private drafts imported with an unchanged public collection. All136completed orders are now associated:40public/96private; replay created no duplicates. Both exact deployed API/web dependency images scanned with zero known findings. These scoped results are not host-wide assurance or ASVS certification. Source-only0.6.1 adds local new-password screening and durable mailbox-gap recovery; its test/deployment status is recorded after its own checks.
+
 | Requirement | Status | Executed evidence and exact remaining work |
 |---|---|---|
 | Typography | VERIFIED IN PRODUCTION |30 computed baseline/production samples exactly+25%;156 earlier application checks; six-width public/specialist/customer checks. No font shrinking, zoom or transform scaling introduced. |

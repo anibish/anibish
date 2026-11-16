@@ -1,6 +1,7 @@
 import {stdin,stdout} from 'node:process';
 import {pool,transaction} from './db';
-import {hashPassword,mfaSecret,verifyTotp,encryptSecret} from './security';
+import {mfaSecret,verifyTotp,encryptSecret} from './security';
+import {hashNewPassword,validateNewPassword} from './password-policy';
 async function hidden(prompt:string){
  if(!stdin.isTTY)throw new Error('Owner enrollment requires a private interactive terminal.');
  stdout.write(prompt);stdin.setRawMode(true);stdin.resume();
@@ -13,12 +14,13 @@ async function enroll(){
  const password=await hidden('New owner password (14–128 characters): ');
  if(password.length<14)throw new Error('Use at least 14 characters.');
  if(password!==await hidden('Repeat password: '))throw new Error('Passwords did not match.');
+ validateNewPassword(password,{email:'mail@anibish.com',name:'Anil Bishnoi',organization:'Anibish'});
  const secret=mfaSecret();
  stdout.write('\nAdd this secret manually to your authenticator. Keep it private; it is shown only in this terminal.\n'+secret+'\n');
  let verified=false,verifiedStep=0;
  for(let attempt=0;attempt<3;attempt++)if(verifyTotp(secret,(await hidden('Authenticator code: ')).trim())){verified=true;verifiedStep=Math.floor(Date.now()/30000);break}
  if(!verified)throw new Error('Authenticator verification failed. No account was created.');
- const passwordHash=await hashPassword(password),encryptedSecret=encryptSecret(secret);
+ const passwordHash=await hashNewPassword(password),encryptedSecret=encryptSecret(secret);
  await transaction(async db=>{
   await db.query('SELECT pg_advisory_xact_lock(871464)');
   if((await db.query('SELECT 1 FROM users WHERE global_role IS NOT NULL')).rowCount)throw new Error('A privileged account was enrolled concurrently.');

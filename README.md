@@ -1,6 +1,6 @@
 # ANIBISH · Software engineering studio
 
-A premium Apple-inspired public studio and connected client/admin application. Next.js App Router, React, TypeScript, Tailwind, Fastify, PostgreSQL, Drizzle and Redis. Public website: https://anibish.com. Source version 0.6.0. Dedicated Coolify containers run on the existing VPS; unrelated applications are preserved.
+A premium Apple-inspired public studio and connected client/admin application. Next.js App Router, React, TypeScript, Tailwind, Fastify, PostgreSQL, Drizzle and Redis. Public website: https://anibish.com. Source version 0.6.1. Dedicated Coolify containers run on the existing VPS; unrelated applications are preserved.
 
 **The master brief is not fully complete.** Public enquiries work in production. MFA-protected owner administration and the approved customer workflows are live; legal publication, consent and security gates remain enforced; see [feature coverage](docs/feature-coverage.md).
 
