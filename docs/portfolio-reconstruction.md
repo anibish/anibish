@@ -35,13 +35,19 @@ Private repository case studies, confidential customer scopes, raw order identif
 
 ## Executed validation
 
-- 46 API/security integration groups, including private source idempotency and owner-edit preservation.
-- Fresh-database migration rehearsal passed: all 46 groups, zero failures.
+- 48 API/security integration groups, including private source idempotency and owner-edit preservation.
+- Fresh-database migration rehearsal passed: all 46 migration-rehearsal groups, zero failures.
 - 30 public desktop/mobile layout checks at 1440, 1280, 768, 390, 360 and 320 pixels; three search/empty/reset checks.
 - Five local owner source/editor workflow checks and six admin width checks.
 - TypeScript, lint and production build executed. Screenshots and raw evidence remain ignored locally.
-- Live approved disposable accounts: registration, recipient verification, secure login, cross-tenant messages/files/support, quote scope acceptance, order/project persistence, sandbox invoice PDF, recovery and session revocation verified. Full delivery/task/approval and customer browser rehearsal remain incomplete.
+- Live approved disposable accounts: registration, recipient verification, secure login, cross-tenant messages/files/support, quote scope acceptance, order/project persistence, sandbox invoice PDF, recovery and session revocation verified. Delivery revision, version-two approval, milestone updates and final acceptance also passed in production. Full task/dependency and customer browser rehearsal remain incomplete.
 
 ## Outstanding
 
 Finish 56 Fiverr detail inspections after owner resolves the human challenge; complete buyer/status reconciliation; inspect remaining review sections; reconcile all 75 occurrences against the complete order inventory; create/group curated product and freelance case studies; acquire approved screenshots; complete per-action browser audit; complete remaining master modules. No claim of full platform completion.
+
+## Production release evidence
+
+9e521538ecef8a3b460b1ffcb36400038b1f755e deployed through Coolify job 216613c4-7a34-47e1-a803-3a6c6477fdac. Runtime server/source-module SHA-256 fingerprints match the committed source. Public API confirms seven portfolio entries, six recognition records, 74 reviews and 33 non-anonymous reviewer identities. All 103 private source records imported through the actual MFA owner session. Thirty live layout checks and three directory interaction checks passed; HTTPS and www canonical redirect verified.
+
+Follow-up adds grouped private draft preparation and transactional, duplicate-safe quote/order/project/finalized-invoice notifications. Forty-eight local integration groups pass. Ten grouped private product drafts are prepared; they are not approved public case studies.
