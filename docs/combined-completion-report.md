@@ -1,3 +1,5 @@
+> Current production status and exact remaining work: [accelerated-production-completion.md](accelerated-production-completion.md) and [outstanding-final-register.md](outstanding-final-register.md). The earlier release evidence below is historical.
+
 # Combined release report — 16 November 2026
 
 The verified launch work is live. The expanded brief remains **PARTIAL**, with the outstanding items listed below. No untested feature is certified as complete.
