@@ -6,8 +6,12 @@ project=xz0yo1hnzb8pe6nwuhvfe5tl
 db=$(docker ps -q --filter "label=com.docker.compose.project=$project" --filter label=com.docker.compose.service=postgres)
 api=$(docker ps -q --filter "label=com.docker.compose.project=$project" --filter label=com.docker.compose.service=api)
 [[ -n "$db" && -n "$api" ]]
-archive=$(find "$root/backups" -maxdepth 1 -name 'anibish-*.tar.gpg' -type f | sort | tail -1)
-[[ -n "$archive" ]]
+archive=${1:-}
+if [[ -z "$archive" ]]; then
+ archive=$(find "$root/backups" -maxdepth 1 -name 'anibish-*.tar.gpg' -type f | sort | tail -1)
+fi
+[[ "$archive" == "$root/backups/"anibish-*.tar.gpg && -f "$archive" && ! -L "$archive" ]]
+[[ -f "$archive.sha256" && ! -L "$archive.sha256" ]]
 sha256sum -c "$archive.sha256"
 task_dir=$(mktemp -d "$root/.restore-check.XXXXXX")
 restore_db="anibish_restore_$(date -u +%Y%m%d%H%M%S)"
@@ -22,7 +26,7 @@ trap cleanup EXIT
 gpg --batch --quiet --pinentry-mode loopback --passphrase-file "$root/secrets/backup-passphrase" --decrypt "$archive" | tar -xf - -C "$task_dir"
 docker exec "$db" createdb -U anibish "$restore_db"
 docker exec -i "$db" pg_restore -U anibish -d "$restore_db" --no-owner --exit-on-error < "$task_dir/database.dump"
-for table in users services cms_pages leads orders payments review_candidates portfolio_sources portfolio_source_history legal_versions legal_consents mail_drafts organization_billing_profiles review_candidate_sources review_candidate_versions mail_draft_sync_jobs mail_draft_sync_events tasks messages project_history; do
+for table in users services cms_pages leads orders payments review_candidates portfolio_sources portfolio_source_history legal_versions legal_consents mail_drafts organization_billing_profiles review_candidate_sources review_candidate_versions mail_draft_sync_jobs mail_draft_sync_events tasks messages project_history compliance_records compliance_events compliance_incidents compliance_retention_runs compliance_notices security_request_events privacy_requests privacy_request_events privacy_exports file_scan_records file_scan_events; do
  if [[ "$(docker exec "$db" psql -U anibish -d "$restore_db" -Atc "SELECT to_regclass('public.$table') IS NOT NULL")" != "t" ]]; then
   if [[ "${ANIBISH_RESTORE_REQUIRE_LATEST_SCHEMA:-0}" == 1 ]]; then
    echo "Required restore table missing: $table" >&2
@@ -34,6 +38,13 @@ for table in users services cms_pages leads orders payments review_candidates po
  restored=$(docker exec "$db" psql -U anibish -d "$restore_db" -Atc "SELECT count(*) FROM $table")
  echo "Verified restore: $table ($restored records)"
 done
+if [[ "${ANIBISH_RESTORE_REQUIRE_LATEST_SCHEMA:-0}" == 1 ]]; then
+ for field in users:mfa_last_step sessions:last_activity_at sessions:host_cookie_required; do
+  table=${field%%:*}; column=${field#*:}
+  [[ "$(docker exec "$db" psql -U anibish -d "$restore_db" -Atc "SELECT EXISTS(SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='$table' AND column_name='$column')")" == t ]] || { echo 'Latest authentication restore schema is incomplete.' >&2; exit 1; }
+ done
+ echo 'Verified latest authentication replay, idle and cookie-migration columns.'
+fi
 [[ -f "$task_dir/runtime-secrets.json" ]]
 docker exec -i -e ANIBISH_RESTORE_DB="$restore_db" "$api" node -e '
 const fs=require("fs"),crypto=require("crypto"),pg=require("pg");

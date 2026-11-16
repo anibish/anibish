@@ -1,6 +1,6 @@
 {
   "name": "anibish-platform",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": true,
   "scripts": {
     "dev": "next dev --webpack --hostname 0.0.0.0",
@@ -63,5 +63,10 @@
     "tailwindcss": "^4.1.0",
     "typescript": "^5.7.0"
   },
-  "type": "module"
+  "type": "module",
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "11.0.1"
+    }
+  }
 }

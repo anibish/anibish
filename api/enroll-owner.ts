@@ -15,14 +15,14 @@ async function enroll(){
  if(password!==await hidden('Repeat password: '))throw new Error('Passwords did not match.');
  const secret=mfaSecret();
  stdout.write('\nAdd this secret manually to your authenticator. Keep it private; it is shown only in this terminal.\n'+secret+'\n');
- let verified=false;
- for(let attempt=0;attempt<3;attempt++)if(verifyTotp(secret,(await hidden('Authenticator code: ')).trim())){verified=true;break}
+ let verified=false,verifiedStep=0;
+ for(let attempt=0;attempt<3;attempt++)if(verifyTotp(secret,(await hidden('Authenticator code: ')).trim())){verified=true;verifiedStep=Math.floor(Date.now()/30000);break}
  if(!verified)throw new Error('Authenticator verification failed. No account was created.');
  const passwordHash=await hashPassword(password),encryptedSecret=encryptSecret(secret);
  await transaction(async db=>{
   await db.query('SELECT pg_advisory_xact_lock(871464)');
   if((await db.query('SELECT 1 FROM users WHERE global_role IS NOT NULL')).rowCount)throw new Error('A privileged account was enrolled concurrently.');
-  const [user]=(await db.query("INSERT INTO users(name,email,password_hash,verified,global_role,mfa_secret,mfa_enabled) VALUES('Anil Bishnoi','mail@anibish.com',$1,true,'super_admin',$2,true) RETURNING id",[passwordHash,encryptedSecret])).rows;
+  const [user]=(await db.query("INSERT INTO users(name,email,password_hash,verified,global_role,mfa_secret,mfa_enabled,mfa_last_step) VALUES('Anil Bishnoi','mail@anibish.com',$1,true,'super_admin',$2,true,$3) RETURNING id",[passwordHash,encryptedSecret,verifiedStep])).rows;
   const [org]=(await db.query("INSERT INTO organizations(name) VALUES('ANIBISH Studio') RETURNING id")).rows;
   await db.query("INSERT INTO memberships(user_id,org_id,role) VALUES($1,$2,'owner')",[user.id,org.id]);
   await db.query("INSERT INTO security_events(user_id,event,detail) VALUES($1,'owner.enrolled',$2)",[user.id,JSON.stringify({method:'trusted_ssh_interactive',mfa_tested:true,email_attestation:'Owner attested business contact during root enrollment; SMTP verification not claimed.'})]);

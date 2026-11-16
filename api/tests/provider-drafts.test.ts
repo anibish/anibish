@@ -1,3 +1,5 @@
+import {freshTotp as totp,fixtureInject} from './auth-factor-fixture';
+import {accountTokenFromLink} from './account-link-fixture';
 import {after,before,test} from 'node:test';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
@@ -5,7 +7,7 @@ import type {ImapFlow} from 'imapflow';
 import {pool} from '../db';
 import {migrate} from '../migrate';
 import {buildServer} from '../server';
-import {totp} from '../security';
+
 import type {Actor} from '../context';
 import {enqueueProviderDraft,getProviderDraftState,processProviderDraftJobs,requestProviderDraftReconcile,type ProviderDraftTransport} from '../provider-drafts';
 
@@ -14,10 +16,10 @@ const headers={origin:'http://localhost:3000','x-studio-client':'web','content-t
 const ip='127.44.'+parseInt(suffix.slice(0,2),16)+'.'+parseInt(suffix.slice(2,4),16);
 let app:Awaited<ReturnType<typeof buildServer>>,owner:Actor,ownerCookie='',customerCookie='',unenrolledCookie='';
 const savedEnvironment:Record<string,string|undefined>={};
-async function call(method:'GET'|'POST'|'PUT',url:string,body:unknown={},cookie=ownerCookie){return app.inject({method,url,remoteAddress:ip,headers:{...headers,...(cookie?{cookie}:{})},...(method==='GET'?{}:{payload:JSON.stringify(body)})});}
+async function call(method:'GET'|'POST'|'PUT',url:string,body:unknown={},cookie=ownerCookie){return fixtureInject(app,{method,url,remoteAddress:ip,headers:{...headers,...(cookie?{cookie}:{})},...(method==='GET'?{}:{payload:JSON.stringify(body)})});}
 async function register(name:string){
  const email=`draft-${name}-${suffix}@example.test`,created=await call('POST','/auth/register',{name,email,password},'');assert.equal(created.statusCode,201,created.body);
- const token=new URL('http://localhost'+created.json().development_link).searchParams.get('token');assert.equal((await call('POST','/auth/token',{token},'')).statusCode,200);
+ const token=accountTokenFromLink(created.json().development_link);assert.equal((await call('POST','/auth/token',{token},'')).statusCode,200);
  const login=await call('POST','/auth/login',{email,password},'');assert.equal(login.statusCode,200,login.body);const cookie=String(login.headers['set-cookie']);
  return {cookie,user:(await call('GET','/auth/me',{},cookie)).json().user};
 }
@@ -26,7 +28,7 @@ before(async()=>{
  await migrate();app=await buildServer();const admin=await register('owner'),customer=await register('customer'),unenrolled=await register('unenrolled');
  for(const u of[admin,unenrolled])await pool.query("UPDATE users SET global_role='super_admin' WHERE id=$1",[u.user.id]);
  ownerCookie=admin.cookie;customerCookie=customer.cookie;unenrolledCookie=unenrolled.cookie;
- const setup=(await call('POST','/auth/mfa/setup')).json();assert.equal((await call('POST','/auth/mfa/verify',{code:totp(setup.secret)})).statusCode,200);
+ const setup=(await call('POST','/auth/mfa/setup',{password})).json();assert.equal((await call('POST','/auth/mfa/verify',{password,code:totp(setup.secret)})).statusCode,200);
  owner={...admin.user,global_role:'super_admin',mfa_enabled:true,mfa_verified:true};
  for(const key of['ANIBISH_MAIL_ENABLED','ANIBISH_INFO_IMAP_PASSWORD','ANIBISH_MAIL_IMAP_PASSWORD'])savedEnvironment[key]=process.env[key];
  process.env.ANIBISH_MAIL_ENABLED='true';process.env.ANIBISH_INFO_IMAP_PASSWORD='QA-ONLY-NOT-A-PROVIDER-CREDENTIAL';process.env.ANIBISH_MAIL_IMAP_PASSWORD='QA-ONLY-NOT-A-PROVIDER-CREDENTIAL';

@@ -1,16 +1,18 @@
+import {freshTotp as totp,fixtureInject} from './auth-factor-fixture';
+import {accountTokenFromLink} from './account-link-fixture';
 import {after,before,test} from 'node:test';
 import assert from 'node:assert/strict';
 import {randomBytes,randomUUID,createHash,createHmac,createDecipheriv} from 'node:crypto';
 import {buildServer} from '../server';
 import {pool} from '../db';
 import {migrate} from '../migrate';
-import {totp} from '../security';
+
 import {runComplianceReminders} from '../compliance';
 let app:Awaited<ReturnType<typeof buildServer>>;
 const suffix=randomUUID().slice(0,8),password='Governance-isolated-QA-'+randomUUID(),headers={origin:'http://localhost:3000','x-studio-client':'web','content-type':'application/json'};
 let address=0;
-async function request(method:'GET'|'POST'|'PATCH'|'DELETE',path:string,body:unknown={},cookie=''){return app.inject({method,url:path,headers:{...headers,...(cookie?{cookie}:{})},remoteAddress:'127.61.'+Math.floor(++address/250)+'.'+address%250,...(method==='GET'?{}:{payload:JSON.stringify(body)})});}
-async function account(label:string,role?:string,enroll=false){const email='governance-'+label+'-'+suffix+'@example.test';const created=await request('POST','/auth/register',{name:label,email,password,organization:'Governance QA '+label});assert.equal(created.statusCode,201,created.body);const token=new URL('http://localhost'+created.json().development_link).searchParams.get('token');assert.equal((await request('POST','/auth/token',{token})).statusCode,200);const signed=await request('POST','/auth/login',{email,password});assert.equal(signed.statusCode,200,signed.body);const cookie=String(signed.headers['set-cookie']),user=(await request('GET','/auth/me',{},cookie)).json().user;if(role)await pool.query('UPDATE users SET global_role=$1 WHERE id=$2',[role,user.id]);if(enroll){const setup=(await request('POST','/auth/mfa/setup',{},cookie)).json();assert.equal((await request('POST','/auth/mfa/verify',{code:totp(setup.secret)},cookie)).statusCode,200);}return{cookie,user};}
+async function request(method:'GET'|'POST'|'PATCH'|'DELETE',path:string,body:unknown={},cookie=''){return fixtureInject(app,{method,url:path,headers:{...headers,...(cookie?{cookie}:{})},remoteAddress:'127.61.'+Math.floor(++address/250)+'.'+address%250,...(method==='GET'?{}:{payload:JSON.stringify(body)})});}
+async function account(label:string,role?:string,enroll=false){const email='governance-'+label+'-'+suffix+'@example.test';const created=await request('POST','/auth/register',{name:label,email,password,organization:'Governance QA '+label});assert.equal(created.statusCode,201,created.body);const token=accountTokenFromLink(created.json().development_link);assert.equal((await request('POST','/auth/token',{token})).statusCode,200);const signed=await request('POST','/auth/login',{email,password});assert.equal(signed.statusCode,200,signed.body);const cookie=String(signed.headers['set-cookie']),user=(await request('GET','/auth/me',{},cookie)).json().user;if(role)await pool.query('UPDATE users SET global_role=$1 WHERE id=$2',[role,user.id]);if(enroll){const setup=(await request('POST','/auth/mfa/setup',{password},cookie)).json();assert.equal((await request('POST','/auth/mfa/verify',{password,code:totp(setup.secret)},cookie)).statusCode,200);}return{cookie,user};}
 let owner:Awaited<ReturnType<typeof account>>,customer:typeof owner,other:typeof owner,staff:typeof owner,unenrolled:typeof owner;
 let eventRecord='',importedId='',privacyId='';
 const record=(extra:Record<string,unknown>={})=>({client_reference:randomUUID(),kind:'risk',title:'Synthetic private governance assessment '+suffix,status:'open',data:{scope:'Isolated synthetic evidence'},assessment_note:'An explicit synthetic assessment note.',...extra});

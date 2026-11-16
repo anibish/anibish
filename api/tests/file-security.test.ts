@@ -1,3 +1,5 @@
+import {freshTotp as totp,fixtureInject} from './auth-factor-fixture';
+import {accountTokenFromLink} from './account-link-fixture';
 import {after,before,test} from 'node:test';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
@@ -7,7 +9,7 @@ import {resolve} from 'node:path';
 import {buildServer} from '../server';
 import {pool} from '../db';
 import {migrate} from '../migrate';
-import {totp} from '../security';
+
 import {enqueueFileScan,fileSecurityStatus,fileTypeEvidence,requireCleanComposition,runFileScanBatch,safeFileName,scanWithClamd} from '../file-security';
 import {syncMailbox} from '../mail-centre';
 import type {ImapFlow} from 'imapflow';
@@ -19,11 +21,11 @@ const ip='127.49.'+parseInt(suffix.slice(0,2),16)+'.'+parseInt(suffix.slice(2,4)
 const savedEnv={CLAMAV_HOST:process.env.CLAMAV_HOST,CLAMAV_PORT:process.env.CLAMAV_PORT,CLAMAV_POLICY_CONFIRMED:process.env.CLAMAV_POLICY_CONFIRMED,ANIBISH_MAIL_ENABLED:process.env.ANIBISH_MAIL_ENABLED};
 let signatureDate=new Date(),replyMode='clean',streams=0;
 async function call(method:'GET'|'POST'|'PATCH',url:string,body:unknown={},cookie=''){
- return app.inject({method,url,remoteAddress:ip,headers:{...headers,...(cookie?{cookie}:{})},...(method==='GET'?{}:{payload:JSON.stringify(body)})});
+ return fixtureInject(app,{method,url,remoteAddress:ip,headers:{...headers,...(cookie?{cookie}:{})},...(method==='GET'?{}:{payload:JSON.stringify(body)})});
 }
 async function account(name:string){
  const email=`file-security-${name}-${suffix}@example.test`,created=await call('POST','/auth/register',{name,email,password});assert.equal(created.statusCode,201,created.body);
- const token=new URL('http://localhost'+created.json().development_link).searchParams.get('token');assert.equal((await call('POST','/auth/token',{token})).statusCode,200);
+ const token=accountTokenFromLink(created.json().development_link);assert.equal((await call('POST','/auth/token',{token})).statusCode,200);
  const login=await call('POST','/auth/login',{email,password});assert.equal(login.statusCode,200,login.body);
  const cookie=String(login.headers['set-cookie']),user=(await call('GET','/auth/me',{},cookie)).json().user;return {cookie,user};
 }
@@ -32,7 +34,7 @@ before(async()=>{
  if(!process.env.DATABASE_URL?.includes('anibish_qa'))throw Error('File security tests require the dedicated anibish_qa database.');
  await migrate();app=await buildServer();owner=await account('owner');customer=await account('customer');other=await account('other');noMfa=await account('no-mfa');
  for(const user of[owner,noMfa])await pool.query("UPDATE users SET global_role='super_admin' WHERE id=$1",[user.user.id]);
- const setup=(await call('POST','/auth/mfa/setup',{},owner.cookie)).json();assert.equal((await call('POST','/auth/mfa/verify',{code:totp(setup.secret)},owner.cookie)).statusCode,200);
+ const setup=(await call('POST','/auth/mfa/setup',{password},owner.cookie)).json();assert.equal((await call('POST','/auth/mfa/verify',{password,code:totp(setup.secret)},owner.cookie)).statusCode,200);
  clamd=createServer(socket=>{let pending=Buffer.alloc(0),streaming=false;const chunks:Buffer[]=[];socket.on('data',chunk=>{pending=Buffer.concat([pending,chunk]);if(!streaming){const end=pending.indexOf(0);if(end<0)return;const command=pending.subarray(0,end).toString();pending=pending.subarray(end+1);if(command==='zVERSION'){socket.end('ClamAV 1.5.4/99999/'+signatureDate.toUTCString()+'\0');return;}assert.equal(command,'zINSTREAM');streaming=true;streams++;}while(pending.length>=4){const length=pending.readUInt32BE(0);if(pending.length<4+length)return;chunks.push(pending.subarray(4,4+length));pending=pending.subarray(4+length);if(length===0){const body=Buffer.concat(chunks);socket.end(replyMode==='limit'?'INSTREAM size limit exceeded. ERROR\0':replyMode==='encrypted'?'stream: Heuristics.Encrypted.Zip FOUND\0':replyMode==='malware'||body.includes('blocked-fixture')?'stream: Synthetic-Test-Match FOUND\0':'stream: OK\0');return;}}});});
  await new Promise<void>(r=>clamd.listen(0,'127.0.0.1',r));process.env.CLAMAV_HOST='127.0.0.1';process.env.CLAMAV_PORT=String((clamd.address() as {port:number}).port);process.env.CLAMAV_POLICY_CONFIRMED='true';
 });
@@ -77,7 +79,7 @@ test('scanner unavailability and timeout never become clean or release a pending
 test('actual multipart uploads preserve mismatched bytes in quarantine and report pending safe archives',async()=>{
  const upload=async(name:string,mime:string,bytes:Buffer)=>{
   const boundary='qa-'+randomUUID(),payload=Buffer.concat([Buffer.from('--'+boundary+'\r\nContent-Disposition: form-data; name="file"; filename="'+name+'"\r\nContent-Type: '+mime+'\r\n\r\n'),bytes,Buffer.from('\r\n--'+boundary+'--\r\n')]);
-  return app.inject({method:'POST',url:'/files',remoteAddress:ip,headers:{...headers,cookie:customer.cookie,'content-type':'multipart/form-data; boundary='+boundary},payload});
+  return fixtureInject(app,{method:'POST',url:'/files',remoteAddress:ip,headers:{...headers,cookie:customer.cookie,'content-type':'multipart/form-data; boundary='+boundary},payload});
  };
  const bad=await upload('photo.png','image/png',Buffer.from('plain source text'));assert.equal(bad.statusCode,200,bad.body);assert.equal(bad.json().scan_status,'blocked');assert.equal(bad.json().scan_reason,'MIME_MAGIC_MISMATCH');
  const persisted=(await pool.query('SELECT storage_key FROM files WHERE id=$1',[bad.json().id])).rows[0];assert.deepEqual(await readFile(resolve(process.env.STORAGE_DIR||'storage',persisted.storage_key)),Buffer.from('plain source text'));

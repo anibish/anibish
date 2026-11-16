@@ -1,20 +1,22 @@
+import {freshTotp as totp,fixtureInject} from './auth-factor-fixture';
+import {accountTokenFromLink} from './account-link-fixture';
 import {after,before,test} from 'node:test';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
 import {buildServer} from '../server';
 import {pool} from '../db';
 import {migrate} from '../migrate';
-import {totp} from '../security';
+
 let app:Awaited<ReturnType<typeof buildServer>>;
 const suffix=randomUUID().slice(0,8),password='Isolated-cookie-policy-'+randomUUID();
 const ip='127.42.'+parseInt(suffix.slice(0,2),16)+'.'+parseInt(suffix.slice(2,4),16),headers={'x-studio-client':'web',origin:'http://localhost:3000','content-type':'application/json'};
 let ownerCookie='',customerCookie='',unenrolledCookie='',prior:unknown[],migrated:unknown[],cookieExisted=false;
-async function call(method:'GET'|'POST'|'PUT',url:string,body:unknown={},cookie=ownerCookie){return app.inject({method,url,remoteAddress:ip,headers:{...headers,...(cookie?{cookie}:{})},...(method==='GET'?{}:{payload:JSON.stringify(body)})});}
+async function call(method:'GET'|'POST'|'PUT',url:string,body:unknown={},cookie=ownerCookie){return fixtureInject(app,{method,url,remoteAddress:ip,headers:{...headers,...(cookie?{cookie}:{})},...(method==='GET'?{}:{payload:JSON.stringify(body)})});}
 async function account(name:string,staff=false,mfa=false){
  const email=`cookie-policy-${name}-${suffix}@example.test`,r=await call('POST','/auth/register',{name,email,password,organization:'Isolated cookie policy '+name},'');assert.equal(r.statusCode,201,r.body);
- const token=new URL('http://localhost'+r.json().development_link).searchParams.get('token');assert.equal((await call('POST','/auth/token',{token},'')).statusCode,200);
+ const token=accountTokenFromLink(r.json().development_link);assert.equal((await call('POST','/auth/token',{token},'')).statusCode,200);
  const login=await call('POST','/auth/login',{email,password},'');assert.equal(login.statusCode,200,login.body);const cookie=String(login.headers['set-cookie']);
- if(staff){await pool.query("UPDATE users SET global_role='super_admin' WHERE email=$1",[email]);if(mfa){const setup=(await call('POST','/auth/mfa/setup',{},cookie)).json();assert.equal((await call('POST','/auth/mfa/verify',{code:totp(setup.secret)},cookie)).statusCode,200);}}
+ if(staff){await pool.query("UPDATE users SET global_role='super_admin' WHERE email=$1",[email]);if(mfa){const setup=(await call('POST','/auth/mfa/setup',{password},cookie)).json();assert.equal((await call('POST','/auth/mfa/verify',{password,code:totp(setup.secret)},cookie)).statusCode,200);}}
  return cookie;
 }
 async function snapshot(){return(await pool.query("SELECT * FROM (SELECT 'version' AS kind,to_jsonb(v) AS record FROM legal_versions v WHERE policy IN('privacy','terms','refunds') UNION ALL SELECT 'draft',to_jsonb(d) FROM legal_drafts d WHERE policy IN('privacy','terms','refunds') UNION ALL SELECT 'state',to_jsonb(s) FROM legal_policy_state s WHERE policy IN('privacy','terms','refunds')) AS snapshots ORDER BY kind,record::text")).rows;}

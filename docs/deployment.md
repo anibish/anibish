@@ -1,4 +1,4 @@
-# Deployment and recovery — version 0.5.0
+# Deployment and recovery — version 0.5.1
 
 Production uses Coolify application `xz0yo1hnzb8pe6nwuhvfe5tl`, project ANIBISH, production environment, repository `anibish/anibish`, branch `main`, Docker Compose file `ops/coolify-compose.yaml`. No GitHub Actions. Canonical website https://anibish.com; same-origin `/api`; no separate API DNS record.
 
@@ -8,7 +8,7 @@ Dedicated web, Fastify API, worker, migration job, PostgreSQL 16 and Redis 7 con
 
 Coolify stores independent encrypted `ANIBISH_DB_PASSWORD`, `ANIBISH_MFA_KEY` and `ANIBISH_SANDBOX_SECRET`. Never copy another project's secrets. `PAYMENT_MODE=sandbox` is enforced. `ANIBISH_LAUNCH_STAGE` defaults to `public`. Do not change the stage merely to make screens accessible.
 
-Public mode permits health checks, published content/services and persistent enquiries. Admin mode additionally requires an enrolled, verified, MFA-enabled super admin at startup and rejects customer login. Full mode requires separate customer gate verification. Customer registration, financial operations and privileged mutations remain unavailable publicly in the initial launch.
+Public mode permits health checks, published content/services and persistent enquiries. Admin mode additionally requires an enrolled, verified, MFA-enabled super admin at startup and rejects customer login. Full mode requires separate customer gate verification. Those initial-launch gates are historical. Customer core access has subsequently passed its own scoped production rehearsal; do not change the configured stage or infer legal approval from this document. Financial processing remains sandbox-only.
 
 Private review originals live at `/data/anibish/review-evidence`, mounted read-only into this API. Only authorized MFA staff may fetch evidence, with source hash verification. Public media requires explicit rights approval; original customer screenshots are not approved.
 
@@ -16,7 +16,7 @@ Private review originals live at `/data/anibish/review-evidence`, mounted read-o
 
 The interactive command has a local PTY regression check (`python3 scripts/enrollment-journey.py`) that verifies the hidden-password flow, TOTP and transactional owner/audit creation in a temporary QA database.
 
-The owner must run the following in a private interactive terminal after the enrollment source is deployed. Do not paste passwords or authenticator secrets into chat, files or logs. The command verifies a new password twice and a real authenticator code before inserting the first owner. It refuses to replace any privileged user.
+First-time enrollment only: the owner runs the following in a private interactive terminal after deployment. Existing enrolled owners must not repeat enrollment or reset working factors. Do not paste passwords or authenticator secrets into chat, files or logs. The command verifies a new password twice and a real authenticator code before inserting the first owner. It refuses to replace any privileged user.
 
 ```sh
 ssh -t estiva-vps 'api=$(docker ps -q --filter label=com.docker.compose.project=xz0yo1hnzb8pe6nwuhvfe5tl --filter label=com.docker.compose.service=api); docker exec -it "$api" ./node_modules/.bin/tsx api/enroll-owner.ts'
@@ -30,7 +30,7 @@ Only the worker receives optional dedicated `ANIBISH_SMTP_HOST`, `ANIBISH_SMTP_P
 
 ## Deploy / rollback
 
-Commit reviewed code, push only `main`, trigger this application's Coolify deployment, then inspect migration exit status and all five running health checks. Never restart unrelated applications or run broad Docker cleanup. Validate HTTPS, www 301, published content, forms and persisted records. Roll back this application to the prior verified Git commit if critical regressions occur. Database schema rollback needs an isolated restore plan, not blind reverse SQL. Current migrations are additive.
+Commit reviewed code, push only `main`, trigger this application's Coolify deployment, then inspect migration exit status and all six dedicated running health checks. Never restart unrelated applications or run broad Docker cleanup. Validate HTTPS, www 301, published content, forms and persisted records. Roll back this application to the prior verified Git commit if critical regressions occur. Database schema rollback needs an isolated restore plan, not blind reverse SQL. Current migrations are additive.
 
 ## Encrypted backup / restore
 
@@ -67,3 +67,15 @@ Runtime image tags and selected API file hashes must match the deployed code com
 The additive migrations create the private governance register, customer privacy cases, attachment scan evidence and a disabled Cookie Policy draft. They preserve current published legal versions. The dedicated scanner has no published port and uses a pinned upstream image, capped resources and an isolated update network. API startup requires a successful public-media preflight. Keep the scanner out of resource-heavy build windows and verify it resumes afterward. Unavailable or stale scanning never releases unverified bytes.
 
 Private policy drafts, risk assessments, provider contracts, incident evidence and recovery material must remain outside this repository. Register imports preserve existing owner records. Retention execution and regulator transmission remain disabled; a timer or evidence count is not a compliance certification.
+
+## Security hardening release042
+
+The additive authentication migration preserves enrolled factors and existing sessions. Secure cookie upgrades accept the existing verified session and move it to a host-only cookie; do not reset owner MFA or credentials. Session activity must reflect visible user interaction rather than background polling. Keep one-use factor checks and password confirmation enabled.
+
+Application scripts use a fresh response nonce. Validate hydration, client navigation and policy editing after changes; do not restore broad inline-script permission to hide failures. Browser policy reports are untrusted, size/rate bounded and stripped of URLs, snippets and nonces before persistence. Private API responses disable caching.
+
+File uploads enforce storage/count/headroom and concurrency limits before persistence; prior files and quarantined bytes still count. Capacity rejection must provide a recoverable error. Preserve all originals and do not free capacity by deleting customer files automatically. Both application Dockerfiles require the vendor-fixed system library; verify the built package version and dependency audit in each release.
+
+The trusted initial-control assessment CLI accepts private evidence files, requires an explicit dry-run/apply mode, preserves official requirement provenance and never overwrites owner or later revisions. It records an assistant assessment, never owner/legal approval or independent certification. Its input files and findings remain private.
+
+Quota/session environment defaults are documented in `.env.example` and forwarded by the dedicated Compose configuration. Project-file byte ceilings are250MiB per user,1GiB per organization and5GiB application-wide; record ceilings are200/1000/10000, with5GiB free-disk reserve and at most two concurrent buffered uploads per API process. These quotas do not claim to cover provider mail storage or every backup volume. Staff/customer idle windows default to15/30minutes and the absolute session limit to12hours. The server validates intervals; user-activity signals do not prove human presence against an already compromised same-origin client.

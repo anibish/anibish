@@ -1,3 +1,5 @@
+import {freshTotp as totp,fixtureInject} from './auth-factor-fixture';
+import {accountTokenFromLink} from './account-link-fixture';
 import {test,before,after} from 'node:test';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
@@ -5,16 +7,16 @@ import {readFile} from 'node:fs/promises';
 import {buildServer} from '../server';
 import {pool} from '../db';
 import {migrate} from '../migrate';
-import {totp} from '../security';
+
 let app:Awaited<ReturnType<typeof buildServer>>;
 const suffix=randomUUID().replaceAll('-','').slice(0,10),password='Message-QA-'+randomUUID(),remoteAddress='127.21.'+parseInt(suffix.slice(0,2),16)+'.'+parseInt(suffix.slice(2,4),16);
 const headers={origin:'http://localhost:3000','x-studio-client':'web','content-type':'application/json'};
-async function request(method:string,path:string,body:unknown={},cookie=''){return app.inject({method:method as 'GET'|'POST',url:path,headers:{...headers,...cookie?{cookie}:{}},remoteAddress,...method==='GET'?{}:{payload:JSON.stringify(body)}})}
-async function account(label:string){const email=label+'-'+suffix+'@example.test';const created=await request('POST','/auth/register',{name:label,email,password});assert.equal(created.statusCode,201,created.body);const token=new URL('http://localhost'+created.json().development_link).searchParams.get('token');assert.equal((await request('POST','/auth/token',{token})).statusCode,200);const signed=await request('POST','/auth/login',{email,password});assert.equal(signed.statusCode,200,signed.body);const cookie=signed.headers['set-cookie'] as string;return {cookie,user:(await request('GET','/auth/me',{},cookie)).json().user}}
+async function request(method:string,path:string,body:unknown={},cookie=''){return fixtureInject(app,{method:method as 'GET'|'POST',url:path,headers:{...headers,...cookie?{cookie}:{}},remoteAddress,...method==='GET'?{}:{payload:JSON.stringify(body)}})}
+async function account(label:string){const email=label+'-'+suffix+'@example.test';const created=await request('POST','/auth/register',{name:label,email,password});assert.equal(created.statusCode,201,created.body);const token=accountTokenFromLink(created.json().development_link);assert.equal((await request('POST','/auth/token',{token})).statusCode,200);const signed=await request('POST','/auth/login',{email,password});assert.equal(signed.statusCode,200,signed.body);const cookie=signed.headers['set-cookie'] as string;return {cookie,user:(await request('GET','/auth/me',{},cookie)).json().user}}
 let one:Awaited<ReturnType<typeof account>>,two:typeof one,admin:typeof one;
 async function thread(org:string,title:string){return (await pool.query('INSERT INTO conversations(org_id,title) VALUES($1,$2) RETURNING *',[org,title+' '+suffix])).rows[0]}
-async function upload(cookie:string,org:string,internal=false){const boundary='message-'+randomUUID(),payload=`--${boundary}\r\nContent-Disposition: form-data; name="org_id"\r\n\r\n${org}\r\n--${boundary}\r\nContent-Disposition: form-data; name="internal"\r\n\r\n${internal}\r\n--${boundary}\r\nContent-Disposition: form-data; name="file"; filename="retry-fixture.txt"\r\nContent-Type: text/plain\r\n\r\nPrivate synthetic message attachment.\r\n--${boundary}--\r\n`;const r=await app.inject({method:'POST',url:'/files',headers:{...headers,cookie,'content-type':'multipart/form-data; boundary='+boundary},remoteAddress,payload});assert.equal(r.statusCode,200,r.body);return r.json()}
-before(async()=>{if(!process.env.DATABASE_URL?.includes('anibish_qa'))throw Error('Dedicated QA database required.');await migrate();app=await buildServer();one=await account('message-customer-one');two=await account('message-customer-two');admin=await account('message-admin');await pool.query("UPDATE users SET global_role='super_admin' WHERE id=$1",[admin.user.id]);const setup=(await request('POST','/auth/mfa/setup',{},admin.cookie)).json();assert.equal((await request('POST','/auth/mfa/verify',{code:totp(setup.secret)},admin.cookie)).statusCode,200)});
+async function upload(cookie:string,org:string,internal=false){const boundary='message-'+randomUUID(),payload=`--${boundary}\r\nContent-Disposition: form-data; name="org_id"\r\n\r\n${org}\r\n--${boundary}\r\nContent-Disposition: form-data; name="internal"\r\n\r\n${internal}\r\n--${boundary}\r\nContent-Disposition: form-data; name="file"; filename="retry-fixture.txt"\r\nContent-Type: text/plain\r\n\r\nPrivate synthetic message attachment.\r\n--${boundary}--\r\n`;const r=await fixtureInject(app,{method:'POST',url:'/files',headers:{...headers,cookie,'content-type':'multipart/form-data; boundary='+boundary},remoteAddress,payload});assert.equal(r.statusCode,200,r.body);return r.json()}
+before(async()=>{if(!process.env.DATABASE_URL?.includes('anibish_qa'))throw Error('Dedicated QA database required.');await migrate();app=await buildServer();one=await account('message-customer-one');two=await account('message-customer-two');admin=await account('message-admin');await pool.query("UPDATE users SET global_role='super_admin' WHERE id=$1",[admin.user.id]);const setup=(await request('POST','/auth/mfa/setup',{password},admin.cookie)).json();assert.equal((await request('POST','/auth/mfa/verify',{password,code:totp(setup.secret)},admin.cookie)).statusCode,200)});
 after(async()=>{await app?.close();await pool.end()});
 
 test('concurrent identical send references create one persistent message, audit and notification event',async()=>{

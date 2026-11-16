@@ -1,28 +1,26 @@
 # Feature register — 16 November 2026
 
-Executed evidence is scoped; a working screen does not prove every requirement. See outstanding-final-register.md and action-feedback-audit.md for remaining work.
+This is a scoped verification register. Historical reports below remain evidence snapshots; they do not replace the latest outstanding register. A screen, source assessment or SMTP acceptance does not prove every business requirement or recipient delivery.
 
-| Module | Status | Evidence / limit |
+| Module | Status | Verified scope and remaining work |
 |---|---|---|
-| Typography | VERIFIED IN PRODUCTION | Approved 25% computed increase preserved; six-width regression evidence. |
-| Public pages / services / leads | VERIFIED IN PRODUCTION | HTTPS, persisted enquiry/quotation capture, real confirmation/admin notification. |
-| Portfolio | VERIFIED IN PRODUCTION / PARTIAL inventory | Nine published database-backed case studies, six recognition records; 23 repositories inventoried, 80/136 Fiverr detail pages inspected. Fourteen private grouped drafts await clearance; remaining order access blocked by human verification. |
-| Reviews | VERIFIED IN PRODUCTION | 74 originals, 75 occurrences, 74 distinct public reviews, one duplicate excluded; 33 corroborated public usernames; original images private. |
-| Legal / consent | VERIFIED IN PRODUCTION | Owner-published Privacy v2, Terms v1, Refunds v1; immutable versions and mandatory versioned consent. No independent legal-review claim. |
-| Authentication / customer portal | VERIFIED IN PRODUCTION / PARTIAL breadth | Two approved independent test organizations, actual verification/recovery mail, secure login/logout, tenant restrictions; 14 production workflow checks and 36 layout checks. Billing profile and password/MFA-protected customer deactivation pass local tests; production verification passed for billing, access deactivation and two-organization restrictions. Retention review/data erasure remain separate. |
-| CRM / quotes / orders | VERIFIED IN PRODUCTION | Persisted zero-value synthetic acceptance creates one order/project; replay does not duplicate event jobs. Broader CRM/reporting locally tested. |
-| Projects / messages / deliveries / support | VERIFIED IN PRODUCTION / PARTIAL breadth | Actual messages, scoped files, support, versioned revision/approval and final acceptance. Advanced resource scheduling remains incomplete. |
-| CMS / administration | VERIFIED IN PRODUCTION / PARTIAL breadth | Owner MFA, structured content, legal/review/portfolio editors, source inventory, revisions, publication and audit. Some content types retain generic structured editors. |
-| Email Centre | VERIFIED IN PRODUCTION / PARTIAL breadth | Two real Hostinger accounts, full resumable UID history, folders, search, relationship threading and private CRM links. Private draft creation/update/reload/archive/restore now verified in the production owner session; attachment forwarding and failure matrix verified locally. Provider Drafts write-back remains incomplete. |
-| Brevo notifications | VERIFIED IN PRODUCTION / PARTIAL event rehearsal | Dedicated authenticated callback, actual delivery events, verification/recovery receipts, 18 QA event types delivered. Local bounce/complaint/suppression/idempotency tests; genuine provider bounce/complaint rehearsal outstanding. |
-| Billing | VERIFIED LOCALLY / limited production sandbox | Draft PDF tested in production; immutable numbering, partial allocation, signed sandbox events, refunds, recurring schedules and reports locally tested. No real-money processing. |
-| Action feedback | PARTIAL | 112 actual registered mutation routes inventoried; 67 have direct integration-test references; full per-action failure matrix not signed off. Scoped browser fault and production workflows documented separately. |
-| Backup / operations | VERIFIED IN PRODUCTION / PARTIAL recovery breadth | Encrypted backup, checksum and isolated restore including MFA and private originals. No approved automated offsite destination or full replacement-VPS rehearsal. |
-| Monitoring / security | PARTIAL | Dedicated health checks, owner MFA, isolation and upload validation; alert delivery and dedicated malware scanner unverified/unavailable. No independent penetration-test claim. |
+| Typography | VERIFIED IN PRODUCTION | Approved1.25 computed scale preserved; public, customer and owner layouts checked at six widths. |
+| Public pages/services/leads | VERIFIED IN PRODUCTION | HTTPS,26service areas, persisted enquiry/quotation capture and actual provider-delivered notifications. |
+| Portfolio/reviews | VERIFIED IN PRODUCTION |23published cases, six recognition records,82approved public reviews;74private originals/75historical occurrences/one duplicate.23repositories and136individual completed-order pages inspected; no136-unique-project claim. |
+| Legal/consent | VERIFIED IN PRODUCTION / PARTIAL updated policies | Existing owner-published Privacyv2/Termsv1/Refundsv1 preserved; version/hash/workflow consent and material reacceptance. Refreshed compliance documents and disabled Cookie draft require owner/legal approval. |
+| Customer portal | VERIFIED IN PRODUCTION / PARTIAL breadth | Two-account isolated order/project/message/file/support workflows; later privacy request/export rehearsal with actual owner response. Temporary QA access retired; no real payments enabled. |
+| CRM/projects/delivery/support | VERIFIED IN PRODUCTION / PARTIAL breadth | Persisted scoped workflows, histories, versioned delivery/revisions/acceptance. Resource scheduling and complete per-action negative-path coverage remain partial. |
+| CMS/administration | VERIFIED IN PRODUCTION / PARTIAL specialist breadth | Owner MFA, structured records, source imports, review/portfolio/legal controls, revisions and auditing. Several types use structured editors. |
+| Email Centre | VERIFIED IN PRODUCTION / PARTIAL breadth | Both Hostinger accounts preserved;12folders synchronized, resumable UID history, search/threading/private links. Provider Drafts write-back and failure handling have scoped executed evidence; complete mailbox action matrix remains partial. |
+| Brevo | VERIFIED IN PRODUCTION / PARTIAL event coverage | Authenticated callbacks and actual delivered events for20of32registered transactional templates.12lack production-delivery proof; genuine bounce/complaint rehearsal remains outstanding. |
+| Finance | VERIFIED LOCALLY / limited production sandbox | Invoicing/PDF, immutable numbering, allocations, signed sandbox events and reports tested. Live-money processing remains disabled. |
+| Compliance centre/privacy | VERIFIED IN PRODUCTION / PARTIAL fulfillment | MFA-only governance and incident controls, immutable history, scoped customer requests and password/MFA-confirmed one-use self exports. Erasure/restriction execution and legal determinations remain incomplete. |
+| File protection | VERIFIED IN PRODUCTION | Dedicated native ClamAV, bounded fail-closed checks, quarantine/rescanning and authorized downloads. Original evidence hashes preserved. This is not a complete malware guarantee. |
+| ASVS | PARTIAL |345official5.0.0 controls privately registered. Initial source/evidence assessment distinguishes executed proof from incomplete controls and external evidence; no certification/full-standard pass. |
+| Action feedback | PARTIAL | Shared processing/error/uncertainty handling and scoped browser workflows. Full per-action network/timeout/session/duplicate failure matrix remains incomplete. |
+| Backup/monitoring | VERIFIED IN PRODUCTION / PARTIAL assurance | Encrypted checksum/decrypt/isolated restore, dedicated health checks and delivered owner compliance notices. Automated offsite destination, verified infrastructure-alert destination and full replacement-VPS rehearsal remain unavailable/unverified. |
 
-Final implementation: 56 API groups, build, lint and both type checks pass locally. Counts from earlier reports are historical and must not be added as if they were a single new run. Both approved synthetic customer accounts have been deactivated, with zero sessions/tokens; consent/audit history is retained. No credentials or private order details belong in this report.
-
-Final implementation runtime: c35a1cd9eac407435e61db6a44fd92feef7fcc3c, verified through Coolify 76f688a9-5659-4c49-aecc-cfef2bf9694e. Final contact/quote browser submissions persisted in the owner inbox; two confirmations delivered, two admin alerts remain provider-requested/unconfirmed. See accelerated-production-completion.md for exact current limits.
+Release0.5.0 passed155API/integration groups, frontend/API typechecks, lint and build;60scoped production layouts and37read-only production checks passed. Both approved customer aliases were retired again after the9-group production privacy rehearsal, retaining clearly marked consent/audit history. Subsequent hardening and current runtime identifiers are tracked in the outstanding register and private owner report. Do not add historical counts as one new run. Credentials, private findings and evidence stay outside Git.
 
 ## Latest portfolio and reliability follow-up
 

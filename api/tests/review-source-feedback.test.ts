@@ -1,23 +1,25 @@
+import {freshTotp as totp,fixtureInject} from './auth-factor-fixture';
+import {accountTokenFromLink} from './account-link-fixture';
 import {after,before,test} from 'node:test';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
 import {buildServer} from '../server';
 import {pool} from '../db';
 import {migrate} from '../migrate';
-import {totp} from '../security';
+
 
 let app:Awaited<ReturnType<typeof buildServer>>;
 const suffix=randomUUID().slice(0,8),password='Local-source-review-'+randomUUID();
 const headers={'x-studio-client':'web',origin:'http://localhost:3000'};
 const ip='127.28.'+parseInt(suffix.slice(0,2),16)+'.'+parseInt(suffix.slice(2,4),16);
 async function call(method:'GET'|'POST'|'PATCH',url:string,body:unknown={},cookie=''){
- return app.inject({method,url,remoteAddress:ip,headers:{...headers,'content-type':'application/json',...(cookie?{cookie}:{})},...(method==='GET'?{}:{payload:JSON.stringify(body)})});
+ return fixtureInject(app,{method,url,remoteAddress:ip,headers:{...headers,'content-type':'application/json',...(cookie?{cookie}:{})},...(method==='GET'?{}:{payload:JSON.stringify(body)})});
 }
 async function account(name:string){
  const email=`review-${name}-${suffix}@example.test`;
  const created=await call('POST','/auth/register',{name,email,password,organization:'Isolated review import '+suffix});
  assert.equal(created.statusCode,201,created.body);
- const token=new URL('http://localhost'+created.json().development_link).searchParams.get('token');
+ const token=accountTokenFromLink(created.json().development_link);
  assert.equal((await call('POST','/auth/token',{token})).statusCode,200);
  const login=await call('POST','/auth/login',{email,password});assert.equal(login.statusCode,200,login.body);
  const cookie=String(login.headers['set-cookie']),user=(await call('GET','/auth/me',{},cookie)).json().user;
@@ -32,8 +34,8 @@ before(async()=>{
  await migrate();app=await buildServer();
  owner=await account('owner');customer=await account('customer');unverifiedOwner=await account('owner-no-mfa');
  for(const user of[owner,unverifiedOwner])await pool.query("UPDATE users SET global_role='super_admin' WHERE id=$1",[user.user.id]);
- const setup=(await call('POST','/auth/mfa/setup',{},owner.cookie)).json();
- assert.equal((await call('POST','/auth/mfa/verify',{code:totp(setup.secret)},owner.cookie)).statusCode,200);
+ const setup=(await call('POST','/auth/mfa/setup',{password},owner.cookie)).json();
+ assert.equal((await call('POST','/auth/mfa/verify',{password,code:totp(setup.secret)},owner.cookie)).statusCode,200);
 });
 after(async()=>{await app?.close();await pool.end();});
 

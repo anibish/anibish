@@ -1,23 +1,25 @@
+import {freshTotp as totp,fixtureInject} from './auth-factor-fixture';
+import {accountTokenFromLink} from './account-link-fixture';
 import {after,before,test} from 'node:test';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
 import {buildServer} from '../server';
 import {pool} from '../db';
 import {migrate} from '../migrate';
-import {totp} from '../security';
+
 
 let app:Awaited<ReturnType<typeof buildServer>>;
 const suffix=randomUUID().slice(0,8),password='Local-task-privacy-'+randomUUID();
 const headers={'x-studio-client':'web',origin:'http://localhost:3000','content-type':'application/json'};
 const ip='127.39.'+parseInt(suffix.slice(0,2),16)+'.'+parseInt(suffix.slice(2,4),16);
 async function call(method:'GET'|'POST'|'PATCH',url:string,body:unknown={},cookie=''){
- return app.inject({method,url,remoteAddress:ip,headers:{...headers,...(cookie?{cookie}:{})},...(method==='GET'?{}:{payload:JSON.stringify(body)})});
+ return fixtureInject(app,{method,url,remoteAddress:ip,headers:{...headers,...(cookie?{cookie}:{})},...(method==='GET'?{}:{payload:JSON.stringify(body)})});
 }
 async function account(name:string){
  const email=`task-privacy-${name}-${suffix}@example.test`;
  const created=await call('POST','/auth/register',{name,email,password,organization:'Isolated task privacy '+suffix});
  assert.equal(created.statusCode,201,created.body);
- const token=new URL('http://localhost'+created.json().development_link).searchParams.get('token');
+ const token=accountTokenFromLink(created.json().development_link);
  assert.equal((await call('POST','/auth/token',{token})).statusCode,200);
  const login=await call('POST','/auth/login',{email,password});assert.equal(login.statusCode,200,login.body);
  const cookie=String(login.headers['set-cookie']),user=(await call('GET','/auth/me',{},cookie)).json().user;
@@ -30,8 +32,8 @@ before(async()=>{
  await migrate();app=await buildServer();
  owner=await account('owner');customer=await account('customer');otherCustomer=await account('other-customer');
  await pool.query("UPDATE users SET global_role='super_admin' WHERE id=$1",[owner.user.id]);
- const setup=(await call('POST','/auth/mfa/setup',{},owner.cookie)).json();
- assert.equal((await call('POST','/auth/mfa/verify',{code:totp(setup.secret)},owner.cookie)).statusCode,200);
+ const setup=(await call('POST','/auth/mfa/setup',{password},owner.cookie)).json();
+ assert.equal((await call('POST','/auth/mfa/verify',{password,code:totp(setup.secret)},owner.cookie)).statusCode,200);
  const project=await call('POST','/projects',{title:'Task privacy fixture '+suffix,org_id:customer.user.org_id},owner.cookie);
  assert.equal(project.statusCode,200,project.body);projectId=project.json().id;
 });

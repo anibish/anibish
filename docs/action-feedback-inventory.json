@@ -1,7 +1,7 @@
 {
   "enumeration": "Fastify registered routes; each expansion checked with hasRoute",
-  "registeredMutationRoutes": 116,
-  "routesWithDirectTestReferences": 67,
+  "registeredMutationRoutes": 131,
+  "routesWithDirectTestReferences": 81,
   "fullMatrixSignedOff": 0,
   "nonMutatingUxInventory": "PARTIAL",
   "actions": [
@@ -16,25 +16,25 @@
         {
           "method": "PUT",
           "file": "api/tests/integration.test.ts",
-          "line": 113,
+          "line": 117,
           "test": "billing profiles are organization-scoped, role protected and reject stale edits"
         },
         {
           "method": "PUT",
           "file": "api/tests/integration.test.ts",
-          "line": 113,
+          "line": 117,
           "test": "billing profiles are organization-scoped, role protected and reject stale edits"
         },
         {
           "method": "PUT",
           "file": "api/tests/integration.test.ts",
-          "line": 113,
+          "line": 117,
           "test": "billing profiles are organization-scoped, role protected and reject stale edits"
         },
         {
           "method": "PUT",
           "file": "api/tests/integration.test.ts",
-          "line": 113,
+          "line": 117,
           "test": "billing profiles are organization-scoped, role protected and reject stale edits"
         }
       ],
@@ -49,7 +49,7 @@
     {
       "method": "PATCH",
       "url": "/admin/assets/:id",
-      "registration": "api/server.ts:149",
+      "registration": "api/server.ts:158",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -65,7 +65,7 @@
     {
       "method": "POST",
       "url": "/admin/services",
-      "registration": "api/server.ts:69",
+      "registration": "api/server.ts:77",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -73,13 +73,13 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 23,
+          "line": 27,
           "test": "services require explicit price approval; fixed checkout replays safely"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 66,
+          "line": 70,
           "test": "service editor round-trips the canonical pricing model through create, read, edit and archive"
         }
       ],
@@ -94,7 +94,7 @@
     {
       "method": "DELETE",
       "url": "/admin/services/:id",
-      "registration": "api/server.ts:71",
+      "registration": "api/server.ts:79",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -102,7 +102,7 @@
         {
           "method": "DELETE",
           "file": "api/tests/integration.test.ts",
-          "line": 66,
+          "line": 70,
           "test": "service editor round-trips the canonical pricing model through create, read, edit and archive"
         }
       ],
@@ -117,7 +117,7 @@
     {
       "method": "PATCH",
       "url": "/admin/services/:id",
-      "registration": "api/server.ts:70",
+      "registration": "api/server.ts:78",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -125,13 +125,13 @@
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 23,
+          "line": 27,
           "test": "services require explicit price approval; fixed checkout replays safely"
         },
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 66,
+          "line": 70,
           "test": "service editor round-trips the canonical pricing model through create, read, edit and archive"
         }
       ],
@@ -146,7 +146,7 @@
     {
       "method": "POST",
       "url": "/admin/team",
-      "registration": "api/server.ts:92",
+      "registration": "api/server.ts:100",
       "candidateComponents": [
         "src/components/membership.tsx"
       ],
@@ -161,8 +161,47 @@
     },
     {
       "method": "POST",
-      "url": "/auth/closure",
+      "url": "/auth/activity",
       "registration": "api/server.ts:65",
+      "candidateComponents": [],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 22,
+          "test": "GET polling never extends idle life, explicit activity does, and expired sessions cannot be resurrected"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 22,
+          "test": "GET polling never extends idle life, explicit activity does, and expired sessions cannot be resurrected"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 22,
+          "test": "GET polling never extends idle life, explicit activity does, and expired sessions cannot be resurrected"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 23,
+          "test": "privileged idle threshold is shorter and absolute expiry remains independent of activity"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
+      "url": "/auth/closure",
+      "registration": "api/server.ts:73",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -170,7 +209,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 117,
+          "line": 121,
           "test": "closure requests are idempotent and sole owners cannot strand active organization members"
         }
       ],
@@ -192,32 +231,38 @@
       "automatedTestReferences": [
         {
           "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 20,
+          "test": "privacy exports and all other stateful factor paths share replay prevention"
+        },
+        {
+          "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 115,
+          "line": 119,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 115,
+          "line": 119,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 115,
+          "line": 119,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 115,
+          "line": 119,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 117,
+          "line": 121,
           "test": "closure requests are idempotent and sole owners cannot strand active organization members"
         }
       ],
@@ -232,52 +277,88 @@
     {
       "method": "POST",
       "url": "/auth/login",
-      "registration": "api/server.ts:56",
+      "registration": "api/server.ts:63",
       "candidateComponents": [
         "src/components/account.tsx"
       ],
       "automatedTestReferences": [
         {
           "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 19,
+          "test": "only current-step TOTP is accepted and replay/concurrent login consumes one code exactly once"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 19,
+          "test": "only current-step TOTP is accepted and replay/concurrent login consumes one code exactly once"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 19,
+          "test": "only current-step TOTP is accepted and replay/concurrent login consumes one code exactly once"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 21,
+          "test": "recovery-code regeneration revokes other sessions and invalidates old lookup factors without changing MFA seed"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 21,
+          "test": "recovery-code regeneration revokes other sessions and invalidates old lookup factors without changing MFA seed"
+        },
+        {
+          "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 18,
+          "line": 21,
           "test": "CSRF protection, credentials, single-use tokens and revoked sessions"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 18,
+          "line": 21,
           "test": "CSRF protection, credentials, single-use tokens and revoked sessions"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 82,
+          "line": 86,
           "test": "password changes revoke sessions, preserve preferences and queue security notification"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 82,
+          "line": 86,
           "test": "password changes revoke sessions, preserve preferences and queue security notification"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 115,
+          "line": 119,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 115,
+          "line": 119,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 56,
+          "line": 58,
           "test": "definitive validation and expired-session rejection cannot insert a message or erase an earlier saved send"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
         }
       ],
       "status": "PARTIAL",
@@ -291,7 +372,7 @@
     {
       "method": "POST",
       "url": "/auth/logout",
-      "registration": "api/server.ts:58",
+      "registration": "api/server.ts:66",
       "candidateComponents": [
         "src/components/account.tsx",
         "src/components/operations.tsx"
@@ -315,14 +396,32 @@
       "automatedTestReferences": [
         {
           "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 20,
+          "test": "privacy exports and all other stateful factor paths share replay prevention"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 21,
+          "test": "recovery-code regeneration revokes other sessions and invalidates old lookup factors without changing MFA seed"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 21,
+          "test": "recovery-code regeneration revokes other sessions and invalidates old lookup factors without changing MFA seed"
+        },
+        {
+          "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 88,
+          "line": 92,
           "test": "MFA recovery codes require password and TOTP, are hashed and can be used only once"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 88,
+          "line": 92,
           "test": "MFA recovery codes require password and TOTP, are hashed and can be used only once"
         }
       ],
@@ -337,16 +436,46 @@
     {
       "method": "POST",
       "url": "/auth/mfa/setup",
-      "registration": "api/server.ts:61",
+      "registration": "api/server.ts:69",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
       "automatedTestReferences": [
         {
           "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 18,
+          "test": "MFA enrollment requires current password, preserves encrypted seeds and rotates/revokes predecessor sessions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 18,
+          "test": "MFA enrollment requires current password, preserves encrypted seeds and rotates/revokes predecessor sessions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 18,
+          "test": "MFA enrollment requires current password, preserves encrypted seeds and rotates/revokes predecessor sessions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 18,
+          "test": "MFA enrollment requires current password, preserves encrypted seeds and rotates/revokes predecessor sessions"
+        },
+        {
+          "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 115,
+          "line": 119,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
         }
       ],
       "status": "PARTIAL",
@@ -360,16 +489,40 @@
     {
       "method": "POST",
       "url": "/auth/mfa/verify",
-      "registration": "api/server.ts:62",
+      "registration": "api/server.ts:70",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
       "automatedTestReferences": [
         {
           "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 18,
+          "test": "MFA enrollment requires current password, preserves encrypted seeds and rotates/revokes predecessor sessions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 18,
+          "test": "MFA enrollment requires current password, preserves encrypted seeds and rotates/revokes predecessor sessions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 20,
+          "test": "privacy exports and all other stateful factor paths share replay prevention"
+        },
+        {
+          "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 115,
+          "line": 119,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
         }
       ],
       "status": "PARTIAL",
@@ -383,7 +536,7 @@
     {
       "method": "POST",
       "url": "/auth/organization",
-      "registration": "api/server.ts:90",
+      "registration": "api/server.ts:98",
       "candidateComponents": [
         "src/components/membership.tsx"
       ],
@@ -399,21 +552,27 @@
     {
       "method": "POST",
       "url": "/auth/password",
-      "registration": "api/server.ts:64",
+      "registration": "api/server.ts:72",
       "candidateComponents": [
         "src/components/account-security.tsx"
       ],
       "automatedTestReferences": [
         {
           "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 20,
+          "test": "privacy exports and all other stateful factor paths share replay prevention"
+        },
+        {
+          "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 82,
+          "line": 86,
           "test": "password changes revoke sessions, preserve preferences and queue security notification"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 82,
+          "line": 86,
           "test": "password changes revoke sessions, preserve preferences and queue security notification"
         }
       ],
@@ -428,7 +587,7 @@
     {
       "method": "PATCH",
       "url": "/auth/profile",
-      "registration": "api/server.ts:63",
+      "registration": "api/server.ts:71",
       "candidateComponents": [
         "src/components/account-security.tsx",
         "src/components/operations.tsx"
@@ -437,31 +596,31 @@
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 21,
+          "line": 24,
           "test": "member roles cannot grant themselves administrative privileges"
         },
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 63,
+          "line": 67,
           "test": "notification preferences persist and suppress optional customer email updates"
         },
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 63,
+          "line": 67,
           "test": "notification preferences persist and suppress optional customer email updates"
         },
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 82,
+          "line": 86,
           "test": "password changes revoke sessions, preserve preferences and queue security notification"
         },
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 82,
+          "line": 86,
           "test": "password changes revoke sessions, preserve preferences and queue security notification"
         }
       ],
@@ -476,7 +635,7 @@
     {
       "method": "POST",
       "url": "/auth/recover",
-      "registration": "api/server.ts:55",
+      "registration": "api/server.ts:62",
       "candidateComponents": [
         "src/components/account.tsx"
       ],
@@ -484,19 +643,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 18,
+          "line": 21,
           "test": "CSRF protection, credentials, single-use tokens and revoked sessions"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 115,
+          "line": 119,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 115,
+          "line": 119,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
         }
       ],
@@ -511,7 +670,7 @@
     {
       "method": "POST",
       "url": "/auth/register",
-      "registration": "api/server.ts:52",
+      "registration": "api/server.ts:59",
       "candidateComponents": [
         "src/components/account.tsx"
       ],
@@ -527,7 +686,7 @@
     {
       "method": "DELETE",
       "url": "/auth/sessions/:id",
-      "registration": "api/server.ts:60",
+      "registration": "api/server.ts:68",
       "candidateComponents": [
         "src/components/membership.tsx"
       ],
@@ -543,7 +702,7 @@
     {
       "method": "POST",
       "url": "/auth/token",
-      "registration": "api/server.ts:53",
+      "registration": "api/server.ts:60",
       "candidateComponents": [
         "src/components/account.tsx"
       ],
@@ -551,19 +710,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 18,
+          "line": 21,
           "test": "CSRF protection, credentials, single-use tokens and revoked sessions"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 18,
+          "line": 21,
           "test": "CSRF protection, credentials, single-use tokens and revoked sessions"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 115,
+          "line": 119,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
         }
       ],
@@ -578,7 +737,7 @@
     {
       "method": "POST",
       "url": "/auth/verification/resend",
-      "registration": "api/server.ts:54",
+      "registration": "api/server.ts:61",
       "candidateComponents": [
         "src/components/account.tsx"
       ],
@@ -594,7 +753,7 @@
     {
       "method": "POST",
       "url": "/checkout",
-      "registration": "api/server.ts:104",
+      "registration": "api/server.ts:112",
       "candidateComponents": [
         "src/components/commerce.tsx",
         "src/components/public-pages.tsx",
@@ -604,19 +763,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 23,
+          "line": 27,
           "test": "services require explicit price approval; fixed checkout replays safely"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 23,
+          "line": 27,
           "test": "services require explicit price approval; fixed checkout replays safely"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 23,
+          "line": 27,
           "test": "services require explicit price approval; fixed checkout replays safely"
         }
       ],
@@ -631,7 +790,7 @@
     {
       "method": "POST",
       "url": "/cms/media/:id/approve",
-      "registration": "api/cms.ts:24",
+      "registration": "api/cms.ts:25",
       "candidateComponents": [
         "src/components/cms-tools.tsx"
       ],
@@ -639,8 +798,8 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 35,
-          "test": "internal attachments remain private and mismatched image payloads are rejected"
+          "line": 39,
+          "test": "internal attachments remain private and mismatched image payloads stay quarantined"
         }
       ],
       "status": "PARTIAL",
@@ -654,7 +813,7 @@
     {
       "method": "POST",
       "url": "/cms/pages",
-      "registration": "api/cms.ts:13",
+      "registration": "api/cms.ts:14",
       "candidateComponents": [
         "src/components/cms-workspace.tsx",
         "src/components/portfolio-sources.tsx",
@@ -664,13 +823,13 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 27,
+          "line": 31,
           "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 32,
+          "line": 36,
           "test": "CMS gallery approval is enforced and redirect cycles are rejected"
         }
       ],
@@ -685,7 +844,7 @@
     {
       "method": "PATCH",
       "url": "/cms/pages/:id",
-      "registration": "api/cms.ts:14",
+      "registration": "api/cms.ts:15",
       "candidateComponents": [
         "src/components/cms-workspace.tsx",
         "src/components/portfolio-sources.tsx",
@@ -695,13 +854,13 @@
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 27,
+          "line": 31,
           "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
         },
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 27,
+          "line": 31,
           "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
         }
       ],
@@ -716,7 +875,7 @@
     {
       "method": "POST",
       "url": "/cms/pages/:id/archive",
-      "registration": "api/cms.ts:18",
+      "registration": "api/cms.ts:19",
       "candidateComponents": [
         "src/components/cms-workspace.tsx",
         "src/components/portfolio-sources.tsx",
@@ -726,7 +885,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 27,
+          "line": 31,
           "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
         }
       ],
@@ -741,7 +900,7 @@
     {
       "method": "POST",
       "url": "/cms/pages/:id/publish",
-      "registration": "api/cms.ts:17",
+      "registration": "api/cms.ts:18",
       "candidateComponents": [
         "src/components/cms-workspace.tsx",
         "src/components/portfolio-sources.tsx",
@@ -751,31 +910,31 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 27,
+          "line": 31,
           "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 27,
+          "line": 31,
           "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 27,
+          "line": 31,
           "test": "CMS drafts, published snapshots, revision conflicts and evidence checks work"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 32,
+          "line": 36,
           "test": "CMS gallery approval is enforced and redirect cycles are rejected"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 101,
+          "line": 105,
           "test": "private source imports group related records into unpublished drafts without overwriting manual edits"
         }
       ],
@@ -790,7 +949,7 @@
     {
       "method": "POST",
       "url": "/cms/redirects",
-      "registration": "api/cms.ts:22",
+      "registration": "api/cms.ts:23",
       "candidateComponents": [
         "src/components/cms-tools.tsx"
       ],
@@ -798,13 +957,13 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 32,
+          "line": 36,
           "test": "CMS gallery approval is enforced and redirect cycles are rejected"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 32,
+          "line": 36,
           "test": "CMS gallery approval is enforced and redirect cycles are rejected"
         }
       ],
@@ -819,11 +978,353 @@
     {
       "method": "DELETE",
       "url": "/cms/redirects/:id",
-      "registration": "api/cms.ts:23",
+      "registration": "api/cms.ts:24",
       "candidateComponents": [
         "src/components/cms-tools.tsx"
       ],
       "automatedTestReferences": [],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
+      "url": "/compliance/import",
+      "registration": "api/compliance.ts:29",
+      "candidateComponents": [
+        "src/components/compliance-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 33,
+          "test": "private compliance routes require real Super Admin MFA and prevent customer or lesser-role access"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 52,
+          "test": "evidence imports are idempotent, preserve owner edits and keep policy HTML sanitized"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 55,
+          "test": "evidence imports are idempotent, preserve owner edits and keep policy HTML sanitized"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 128,
+          "test": "worker escalates critical edits, imported high-risk providers, overdue tasks and recorded access changes once"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
+      "url": "/compliance/incidents",
+      "registration": "api/compliance.ts:35",
+      "candidateComponents": [
+        "src/components/compliance-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 69,
+          "test": "incident clocks require reportability and controller awareness with independent six-hour and72-hour deadlines"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 72,
+          "test": "incident clocks require reportability and controller awareness with independent six-hour and72-hour deadlines"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 73,
+          "test": "incident clocks require reportability and controller awareness with independent six-hour and72-hour deadlines"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 74,
+          "test": "incident clocks require reportability and controller awareness with independent six-hour and72-hour deadlines"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 78,
+          "test": "incident create retry has one history record and only generic deduplicated notification jobs"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 78,
+          "test": "incident create retry has one history record and only generic deduplicated notification jobs"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 82,
+          "test": "incident create retry has one history record and only generic deduplicated notification jobs"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 82,
+          "test": "incident create retry has one history record and only generic deduplicated notification jobs"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "PATCH",
+      "url": "/compliance/incidents/:id",
+      "registration": "api/compliance.ts:35",
+      "candidateComponents": [
+        "src/components/compliance-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "PATCH",
+          "file": "api/tests/compliance.test.ts",
+          "line": 70,
+          "test": "incident clocks require reportability and controller awareness with independent six-hour and72-hour deadlines"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/compliance.test.ts",
+          "line": 71,
+          "test": "incident clocks require reportability and controller awareness with independent six-hour and72-hour deadlines"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "PATCH",
+      "url": "/compliance/privacy-requests/:id",
+      "registration": "api/compliance.ts:38",
+      "candidateComponents": [
+        "src/components/compliance-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "PATCH",
+          "file": "api/tests/compliance.test.ts",
+          "line": 88,
+          "test": "owner privacy assessments keep internal reasoning private and publish only deliberate customer responses"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/compliance.test.ts",
+          "line": 88,
+          "test": "owner privacy assessments keep internal reasoning private and publish only deliberate customer responses"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/compliance.test.ts",
+          "line": 91,
+          "test": "owner privacy assessments keep internal reasoning private and publish only deliberate customer responses"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
+      "url": "/compliance/records",
+      "registration": "api/compliance.ts:27",
+      "candidateComponents": [
+        "src/components/compliance-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 32,
+          "test": "private compliance routes require real Super Admin MFA and prevent customer or lesser-role access"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 37,
+          "test": "record create uses one exact client UUID, concurrency is idempotent and changed retries cannot overwrite"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 37,
+          "test": "record create uses one exact client UUID, concurrency is idempotent and changed retries cannot overwrite"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 39,
+          "test": "record create uses one exact client UUID, concurrency is idempotent and changed retries cannot overwrite"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 39,
+          "test": "record create uses one exact client UUID, concurrency is idempotent and changed retries cannot overwrite"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 39,
+          "test": "record create uses one exact client UUID, concurrency is idempotent and changed retries cannot overwrite"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 40,
+          "test": "record create uses one exact client UUID, concurrency is idempotent and changed retries cannot overwrite"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 45,
+          "test": "concurrent record edits enforce persisted revisions and preserve before/after private history"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 56,
+          "test": "evidence imports are idempotent, preserve owner edits and keep policy HTML sanitized"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 57,
+          "test": "evidence imports are idempotent, preserve owner edits and keep policy HTML sanitized"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 97,
+          "test": "retention dry-runs require documented owner approval and never delete data or execute unapproved rules"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 126,
+          "test": "worker escalates critical edits, imported high-risk providers, overdue tasks and recorded access changes once"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 129,
+          "test": "worker escalates critical edits, imported high-risk providers, overdue tasks and recorded access changes once"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "PATCH",
+      "url": "/compliance/records/:id",
+      "registration": "api/compliance.ts:28",
+      "candidateComponents": [
+        "src/components/compliance-workspace.tsx",
+        "src/components/legal-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "PATCH",
+          "file": "api/tests/compliance.test.ts",
+          "line": 46,
+          "test": "concurrent record edits enforce persisted revisions and preserve before/after private history"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/compliance.test.ts",
+          "line": 46,
+          "test": "concurrent record edits enforce persisted revisions and preserve before/after private history"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/compliance.test.ts",
+          "line": 54,
+          "test": "evidence imports are idempotent, preserve owner edits and keep policy HTML sanitized"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/compliance.test.ts",
+          "line": 98,
+          "test": "retention dry-runs require documented owner approval and never delete data or execute unapproved rules"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/compliance.test.ts",
+          "line": 127,
+          "test": "worker escalates critical edits, imported high-risk providers, overdue tasks and recorded access changes once"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
+      "url": "/compliance/retention/dry-run",
+      "registration": "api/compliance.ts:39",
+      "candidateComponents": [
+        "src/components/compliance-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 98,
+          "test": "retention dry-runs require documented owner approval and never delete data or execute unapproved rules"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 99,
+          "test": "retention dry-runs require documented owner approval and never delete data or execute unapproved rules"
+        }
+      ],
       "status": "PARTIAL",
       "processing": "Shared request state; component-specific evidence must be checked",
       "success": "Authoritative response required; exact message mapping pending",
@@ -843,14 +1344,14 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 31,
+          "line": 35,
           "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 35,
-          "test": "internal attachments remain private and mismatched image payloads are rejected"
+          "line": 39,
+          "test": "internal attachments remain private and mismatched image payloads stay quarantined"
         }
       ],
       "status": "PARTIAL",
@@ -896,7 +1397,7 @@
     {
       "method": "POST",
       "url": "/conversations/:id/messages",
-      "registration": "api/server.ts:107",
+      "registration": "api/server.ts:115",
       "candidateComponents": [
         "src/components/message-thread.tsx"
       ],
@@ -904,74 +1405,68 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 31,
-          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
-        },
-        {
-          "method": "POST",
-          "file": "api/tests/integration.test.ts",
-          "line": 31,
-          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
-        },
-        {
-          "method": "POST",
-          "file": "api/tests/integration.test.ts",
-          "line": 31,
-          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
-        },
-        {
-          "method": "POST",
-          "file": "api/tests/integration.test.ts",
-          "line": 31,
+          "line": 35,
           "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
           "line": 35,
-          "test": "internal attachments remain private and mismatched image payloads are rejected"
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
           "line": 35,
-          "test": "internal attachments remain private and mismatched image payloads are rejected"
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 35,
+          "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 39,
+          "test": "internal attachments remain private and mismatched image payloads stay quarantined"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/integration.test.ts",
+          "line": 39,
+          "test": "internal attachments remain private and mismatched image payloads stay quarantined"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 22,
+          "line": 24,
           "test": "concurrent identical send references create one persistent message, audit and notification event"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 22,
+          "line": 24,
           "test": "concurrent identical send references create one persistent message, audit and notification event"
-        },
-        {
-          "method": "POST",
-          "file": "api/tests/message-retry.test.ts",
-          "line": 26,
-          "test": "a lost response can be replayed unchanged, while any changed payload is refused"
         },
         {
           "method": "POST",
@@ -982,32 +1477,14 @@
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 29,
+          "line": 30,
           "test": "a lost response can be replayed unchanged, while any changed payload is refused"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 34,
-          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
-        },
-        {
-          "method": "POST",
-          "file": "api/tests/message-retry.test.ts",
-          "line": 35,
-          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
-        },
-        {
-          "method": "POST",
-          "file": "api/tests/message-retry.test.ts",
-          "line": 35,
-          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
-        },
-        {
-          "method": "POST",
-          "file": "api/tests/message-retry.test.ts",
-          "line": 35,
-          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+          "line": 31,
+          "test": "a lost response can be replayed unchanged, while any changed payload is refused"
         },
         {
           "method": "POST",
@@ -1036,61 +1513,79 @@
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 37,
+          "line": 38,
           "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 37,
+          "line": 39,
           "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 40,
+          "line": 39,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 39,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 39,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 39,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 42,
           "test": "send references are author/conversation scoped and legacy messages remain compatible"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 40,
+          "line": 42,
           "test": "send references are author/conversation scoped and legacy messages remain compatible"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 40,
+          "line": 42,
           "test": "send references are author/conversation scoped and legacy messages remain compatible"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 41,
+          "line": 43,
           "test": "send references are author/conversation scoped and legacy messages remain compatible"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 47,
+          "line": 49,
           "test": "outbox failure rolls back the message and audit; retrying the same key commits once"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 48,
+          "line": 50,
           "test": "outbox failure rolls back the message and audit; retrying the same key commits once"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 52,
-          "test": "definitive validation and expired-session rejection cannot insert a message or erase an earlier saved send"
-        },
-        {
-          "method": "POST",
-          "file": "api/tests/message-retry.test.ts",
-          "line": 53,
+          "line": 54,
           "test": "definitive validation and expired-session rejection cannot insert a message or erase an earlier saved send"
         },
         {
@@ -1108,13 +1603,19 @@
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 60,
+          "line": 59,
+          "test": "definitive validation and expired-session rejection cannot insert a message or erase an earlier saved send"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 62,
           "test": "a confirmed send survives an application restart and still replays the original record"
         },
         {
           "method": "POST",
           "file": "api/tests/message-retry.test.ts",
-          "line": 60,
+          "line": 62,
           "test": "a confirmed send survives an application restart and still replays the original record"
         }
       ],
@@ -1129,7 +1630,7 @@
     {
       "method": "POST",
       "url": "/deliveries",
-      "registration": "api/server.ts:132",
+      "registration": "api/server.ts:141",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -1137,19 +1638,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 37,
+          "line": 41,
           "test": "final project acceptance requires approved delivery and completed milestones"
         }
       ],
@@ -1164,7 +1665,7 @@
     {
       "method": "POST",
       "url": "/deliveries/:id/decision",
-      "registration": "api/server.ts:133",
+      "registration": "api/server.ts:142",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -1172,25 +1673,25 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 37,
+          "line": 41,
           "test": "final project acceptance requires approved delivery and completed milestones"
         }
       ],
@@ -1205,7 +1706,7 @@
     {
       "method": "POST",
       "url": "/email/drafts",
-      "registration": "api/mail-centre.ts:46",
+      "registration": "api/mail-centre.ts:47",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1213,43 +1714,43 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 74,
+          "line": 78,
           "test": "private email cache, attachments and drafts require MFA Super Admin"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 77,
+          "line": 81,
           "test": "private composition preserves cc and attachments, bounds payloads, and isolates signatures"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 77,
+          "line": 81,
           "test": "private composition preserves cc and attachments, bounds payloads, and isolates signatures"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 105,
+          "line": 109,
           "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 111,
+          "line": 115,
           "test": "private draft creation replays safely after lost responses and refuses conflicting content"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 111,
+          "line": 115,
           "test": "private draft creation replays safely after lost responses and refuses conflicting content"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 111,
+          "line": 115,
           "test": "private draft creation replays safely after lost responses and refuses conflicting content"
         }
       ],
@@ -1264,7 +1765,7 @@
     {
       "method": "PUT",
       "url": "/email/drafts/:id",
-      "registration": "api/mail-centre.ts:47",
+      "registration": "api/mail-centre.ts:48",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1272,19 +1773,19 @@
         {
           "method": "PUT",
           "file": "api/tests/integration.test.ts",
-          "line": 105,
+          "line": 109,
           "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
         },
         {
           "method": "PUT",
           "file": "api/tests/integration.test.ts",
-          "line": 105,
+          "line": 109,
           "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
         },
         {
           "method": "PUT",
           "file": "api/tests/integration.test.ts",
-          "line": 105,
+          "line": 109,
           "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
         }
       ],
@@ -1299,7 +1800,7 @@
     {
       "method": "POST",
       "url": "/email/drafts/:id/archive",
-      "registration": "api/mail-centre.ts:48",
+      "registration": "api/mail-centre.ts:49",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1307,7 +1808,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 105,
+          "line": 109,
           "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
         }
       ],
@@ -1322,22 +1823,6 @@
     {
       "method": "POST",
       "url": "/email/drafts/:id/provider-sync",
-      "registration": "api/mail-centre.ts:50",
-      "candidateComponents": [
-        "src/components/email-workspace.tsx"
-      ],
-      "automatedTestReferences": [],
-      "status": "PARTIAL",
-      "processing": "Shared request state; component-specific evidence must be checked",
-      "success": "Authoritative response required; exact message mapping pending",
-      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
-      "navigation": "Per-action verification pending",
-      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
-      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
-    },
-    {
-      "method": "POST",
-      "url": "/email/drafts/:id/provider-sync/reconcile",
       "registration": "api/mail-centre.ts:51",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
@@ -1353,8 +1838,24 @@
     },
     {
       "method": "POST",
+      "url": "/email/drafts/:id/provider-sync/reconcile",
+      "registration": "api/mail-centre.ts:52",
+      "candidateComponents": [
+        "src/components/email-workspace.tsx"
+      ],
+      "automatedTestReferences": [],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
       "url": "/email/drafts/:id/restore",
-      "registration": "api/mail-centre.ts:48",
+      "registration": "api/mail-centre.ts:49",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1362,7 +1863,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 105,
+          "line": 109,
           "test": "private email drafts update once, reject stale editors and archive reversibly without sending"
         }
       ],
@@ -1377,7 +1878,7 @@
     {
       "method": "POST",
       "url": "/email/folders",
-      "registration": "api/mail-centre.ts:33",
+      "registration": "api/mail-centre.ts:34",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1393,7 +1894,7 @@
     {
       "method": "PATCH",
       "url": "/email/messages/:id",
-      "registration": "api/mail-centre.ts:42",
+      "registration": "api/mail-centre.ts:43",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1409,7 +1910,7 @@
     {
       "method": "POST",
       "url": "/email/messages/:id/lead",
-      "registration": "api/mail-centre.ts:60",
+      "registration": "api/mail-centre.ts:61",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1425,7 +1926,7 @@
     {
       "method": "POST",
       "url": "/email/messages/:id/link",
-      "registration": "api/mail-centre.ts:59",
+      "registration": "api/mail-centre.ts:60",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1433,7 +1934,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 86,
+          "line": 90,
           "test": "linked correspondence history remains owner-private and preserves explicit source references"
         }
       ],
@@ -1448,7 +1949,7 @@
     {
       "method": "POST",
       "url": "/email/messages/:id/restore-cache",
-      "registration": "api/mail-centre.ts:39",
+      "registration": "api/mail-centre.ts:40",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1464,7 +1965,7 @@
     {
       "method": "POST",
       "url": "/email/messages/:id/work-item",
-      "registration": "api/mail-centre.ts:61",
+      "registration": "api/mail-centre.ts:62",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1472,25 +1973,25 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 78,
+          "line": 82,
           "test": "email CRM conversion copies only explicit summaries and keeps original correspondence private"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 78,
+          "line": 82,
           "test": "email CRM conversion copies only explicit summaries and keeps original correspondence private"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 78,
+          "line": 82,
           "test": "email CRM conversion copies only explicit summaries and keeps original correspondence private"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 78,
+          "line": 82,
           "test": "email CRM conversion copies only explicit summaries and keeps original correspondence private"
         }
       ],
@@ -1505,7 +2006,7 @@
     {
       "method": "PUT",
       "url": "/email/retention",
-      "registration": "api/mail-centre.ts:32",
+      "registration": "api/mail-centre.ts:33",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1513,13 +2014,13 @@
         {
           "method": "PUT",
           "file": "api/tests/integration.test.ts",
-          "line": 83,
+          "line": 87,
           "test": "mail retention, thread history and template operations require privileged MFA"
         },
         {
           "method": "PUT",
           "file": "api/tests/integration.test.ts",
-          "line": 83,
+          "line": 87,
           "test": "mail retention, thread history and template operations require privileged MFA"
         }
       ],
@@ -1534,7 +2035,7 @@
     {
       "method": "POST",
       "url": "/email/send",
-      "registration": "api/mail-centre.ts:52",
+      "registration": "api/mail-centre.ts:53",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1542,13 +2043,13 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 76,
+          "line": 80,
           "test": "unverified email transport never claims to send"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 76,
+          "line": 80,
           "test": "unverified email transport never claims to send"
         }
       ],
@@ -1563,7 +2064,7 @@
     {
       "method": "PUT",
       "url": "/email/signatures",
-      "registration": "api/mail-centre.ts:44",
+      "registration": "api/mail-centre.ts:45",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1571,7 +2072,7 @@
         {
           "method": "PUT",
           "file": "api/tests/integration.test.ts",
-          "line": 77,
+          "line": 81,
           "test": "private composition preserves cc and attachments, bounds payloads, and isolates signatures"
         }
       ],
@@ -1586,7 +2087,7 @@
     {
       "method": "POST",
       "url": "/email/sync",
-      "registration": "api/mail-centre.ts:37",
+      "registration": "api/mail-centre.ts:38",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1594,7 +2095,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 76,
+          "line": 80,
           "test": "unverified email transport never claims to send"
         }
       ],
@@ -1609,7 +2110,7 @@
     {
       "method": "POST",
       "url": "/enquiries",
-      "registration": "api/server.ts:72",
+      "registration": "api/server.ts:80",
       "candidateComponents": [
         "src/components/extra-pages.tsx",
         "src/components/operations.tsx",
@@ -1619,7 +2120,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         }
       ],
@@ -1634,7 +2135,7 @@
     {
       "method": "POST",
       "url": "/files",
-      "registration": "api/server.ts:130",
+      "registration": "api/server.ts:138",
       "candidateComponents": [
         "src/components/cms-tools.tsx",
         "src/components/message-thread.tsx",
@@ -1652,7 +2153,7 @@
     {
       "method": "POST",
       "url": "/finance/agreements",
-      "registration": "api/finance.ts:26",
+      "registration": "api/finance.ts:27",
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
@@ -1660,7 +2161,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 26,
+          "line": 30,
           "test": "manual sandbox transfer verification and recurring bills are idempotent"
         }
       ],
@@ -1675,7 +2176,7 @@
     {
       "method": "POST",
       "url": "/finance/agreements/:id/cancel",
-      "registration": "api/finance.ts:28",
+      "registration": "api/finance.ts:29",
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
@@ -1683,7 +2184,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 26,
+          "line": 30,
           "test": "manual sandbox transfer verification and recurring bills are idempotent"
         }
       ],
@@ -1698,7 +2199,7 @@
     {
       "method": "POST",
       "url": "/finance/invoices",
-      "registration": "api/finance.ts:16",
+      "registration": "api/finance.ts:17",
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
@@ -1706,19 +2207,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 24,
+          "line": 28,
           "test": "itemized invoices finalize sequentially, remain immutable, and isolate customers"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 24,
+          "line": 28,
           "test": "itemized invoices finalize sequentially, remain immutable, and isolate customers"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 103,
+          "line": 107,
           "test": "quote and invoice business events enqueue atomically once across repeated decisions"
         }
       ],
@@ -1733,7 +2234,7 @@
     {
       "method": "PATCH",
       "url": "/finance/invoices/:id",
-      "registration": "api/finance.ts:17",
+      "registration": "api/finance.ts:18",
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
@@ -1741,7 +2242,7 @@
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 24,
+          "line": 28,
           "test": "itemized invoices finalize sequentially, remain immutable, and isolate customers"
         }
       ],
@@ -1756,7 +2257,7 @@
     {
       "method": "POST",
       "url": "/finance/invoices/:id/finalize",
-      "registration": "api/finance.ts:18",
+      "registration": "api/finance.ts:19",
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
@@ -1764,19 +2265,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 24,
+          "line": 28,
           "test": "itemized invoices finalize sequentially, remain immutable, and isolate customers"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 24,
+          "line": 28,
           "test": "itemized invoices finalize sequentially, remain immutable, and isolate customers"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 103,
+          "line": 107,
           "test": "quote and invoice business events enqueue atomically once across repeated decisions"
         }
       ],
@@ -1791,7 +2292,7 @@
     {
       "method": "POST",
       "url": "/finance/manual-transfers",
-      "registration": "api/finance.ts:20",
+      "registration": "api/finance.ts:21",
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
@@ -1799,7 +2300,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 26,
+          "line": 30,
           "test": "manual sandbox transfer verification and recurring bills are idempotent"
         }
       ],
@@ -1814,7 +2315,7 @@
     {
       "method": "POST",
       "url": "/finance/manual-transfers/:id/verify",
-      "registration": "api/finance.ts:22",
+      "registration": "api/finance.ts:23",
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
@@ -1822,19 +2323,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 26,
+          "line": 30,
           "test": "manual sandbox transfer verification and recurring bills are idempotent"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 26,
+          "line": 30,
           "test": "manual sandbox transfer verification and recurring bills are idempotent"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 26,
+          "line": 30,
           "test": "manual sandbox transfer verification and recurring bills are idempotent"
         }
       ],
@@ -1849,7 +2350,7 @@
     {
       "method": "POST",
       "url": "/finance/refunds/:id/record",
-      "registration": "api/finance.ts:24",
+      "registration": "api/finance.ts:25",
       "candidateComponents": [
         "src/components/finance-workspace.tsx"
       ],
@@ -1857,19 +2358,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 33,
+          "line": 37,
           "test": "refund recording creates one scoped currency-labelled credit note"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 33,
+          "line": 37,
           "test": "refund recording creates one scoped currency-labelled credit note"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 33,
+          "line": 37,
           "test": "refund recording creates one scoped currency-labelled credit note"
         }
       ],
@@ -1884,7 +2385,7 @@
     {
       "method": "POST",
       "url": "/invitations",
-      "registration": "api/server.ts:95",
+      "registration": "api/server.ts:103",
       "candidateComponents": [
         "src/components/membership.tsx"
       ],
@@ -1892,19 +2393,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 119,
+          "line": 123,
           "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 119,
+          "line": 123,
           "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 119,
+          "line": 123,
           "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
         }
       ],
@@ -1919,7 +2420,7 @@
     {
       "method": "POST",
       "url": "/invitations/accept",
-      "registration": "api/server.ts:96",
+      "registration": "api/server.ts:104",
       "candidateComponents": [
         "src/components/account.tsx"
       ],
@@ -1927,19 +2428,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 119,
+          "line": 123,
           "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 119,
+          "line": 123,
           "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 119,
+          "line": 123,
           "test": "invitation retries normalize identity and enqueue exactly once without replacing the original token"
         }
       ],
@@ -2002,7 +2503,7 @@
     {
       "method": "POST",
       "url": "/leads/:id/assign",
-      "registration": "api/server.ts:88",
+      "registration": "api/server.ts:96",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2025,13 +2526,14 @@
         "src/components/legal-workspace.tsx",
         "src/components/operations.tsx",
         "src/components/policy-acceptance.tsx",
+        "src/components/privacy-workspace.tsx",
         "src/components/studio.tsx"
       ],
       "automatedTestReferences": [
         {
           "method": "PUT",
           "file": "api/tests/integration.test.ts",
-          "line": 71,
+          "line": 75,
           "test": "legal drafts are owner-only, sanitized, versioned and accepted immutably"
         }
       ],
@@ -2053,6 +2555,7 @@
         "src/components/legal-workspace.tsx",
         "src/components/operations.tsx",
         "src/components/policy-acceptance.tsx",
+        "src/components/privacy-workspace.tsx",
         "src/components/studio.tsx"
       ],
       "automatedTestReferences": [],
@@ -2074,19 +2577,20 @@
         "src/components/legal-workspace.tsx",
         "src/components/operations.tsx",
         "src/components/policy-acceptance.tsx",
+        "src/components/privacy-workspace.tsx",
         "src/components/studio.tsx"
       ],
       "automatedTestReferences": [
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 71,
+          "line": 75,
           "test": "legal drafts are owner-only, sanitized, versioned and accepted immutably"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 71,
+          "line": 75,
           "test": "legal drafts are owner-only, sanitized, versioned and accepted immutably"
         }
       ],
@@ -2108,6 +2612,7 @@
         "src/components/legal-workspace.tsx",
         "src/components/operations.tsx",
         "src/components/policy-acceptance.tsx",
+        "src/components/privacy-workspace.tsx",
         "src/components/studio.tsx"
       ],
       "automatedTestReferences": [],
@@ -2130,7 +2635,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 81,
+          "line": 85,
           "test": "refund policies use the versioned owner editor and marketing consent is independent"
         }
       ],
@@ -2145,7 +2650,7 @@
     {
       "method": "PATCH",
       "url": "/members/:id",
-      "registration": "api/server.ts:93",
+      "registration": "api/server.ts:101",
       "candidateComponents": [
         "src/components/membership.tsx",
         "src/components/operations.tsx"
@@ -2170,13 +2675,13 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 37,
+          "line": 41,
           "test": "final project acceptance requires approved delivery and completed milestones"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 89,
+          "line": 93,
           "test": "project, milestone and support events use their configured transactional templates"
         }
       ],
@@ -2215,13 +2720,13 @@
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 89,
+          "line": 93,
           "test": "project, milestone and support events use their configured transactional templates"
         },
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 89,
+          "line": 93,
           "test": "project, milestone and support events use their configured transactional templates"
         }
       ],
@@ -2245,7 +2750,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 80,
+          "line": 84,
           "test": "Brevo callbacks authenticate, correlate, deduplicate and preserve terminal suppression"
         }
       ],
@@ -2300,7 +2805,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 83,
+          "line": 87,
           "test": "mail retention, thread history and template operations require privileged MFA"
         }
       ],
@@ -2331,7 +2836,7 @@
     {
       "method": "POST",
       "url": "/notifications/:id/read",
-      "registration": "api/server.ts:138",
+      "registration": "api/server.ts:147",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2361,7 +2866,7 @@
     {
       "method": "POST",
       "url": "/payments/sandbox",
-      "registration": "api/server.ts:134",
+      "registration": "api/server.ts:143",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2369,25 +2874,25 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         }
       ],
@@ -2402,7 +2907,7 @@
     {
       "method": "POST",
       "url": "/payments/webhook/sandbox",
-      "registration": "api/finance.ts:23",
+      "registration": "api/finance.ts:24",
       "candidateComponents": [],
       "automatedTestReferences": [],
       "status": "PARTIAL",
@@ -2425,7 +2930,7 @@
         {
           "method": "PATCH",
           "file": "api/tests/integration.test.ts",
-          "line": 97,
+          "line": 101,
           "test": "portfolio evidence imports are MFA-owner-only, idempotent and preserve owner clearance"
         }
       ],
@@ -2448,38 +2953,368 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 97,
+          "line": 101,
           "test": "portfolio evidence imports are MFA-owner-only, idempotent and preserve owner clearance"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 97,
+          "line": 101,
           "test": "portfolio evidence imports are MFA-owner-only, idempotent and preserve owner clearance"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 97,
+          "line": 101,
           "test": "portfolio evidence imports are MFA-owner-only, idempotent and preserve owner clearance"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 99,
+          "line": 103,
           "test": "published portfolio foundation has meaningful cited content and private source routes remain isolated"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 101,
+          "line": 105,
           "test": "private source imports group related records into unpublished drafts without overwriting manual edits"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 101,
+          "line": 105,
           "test": "private source imports group related records into unpublished drafts without overwriting manual edits"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
+      "url": "/privacy/exports",
+      "registration": "api/privacy.ts:25",
+      "candidateComponents": [
+        "src/components/privacy-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 20,
+          "test": "privacy exports and all other stateful factor paths share replay prevention"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/auth-hardening.test.ts",
+          "line": 20,
+          "test": "privacy exports and all other stateful factor paths share replay prevention"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 23,
+          "test": "eligible export excludes credentials, arbitrary preferences, internal material and other authors or organizations"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 24,
+          "test": "privacy export authorization cannot survive session revocation or active organization switching"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 25,
+          "test": "concurrent one-use download has one winner and repeated password verification is rate limited"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 25,
+          "test": "concurrent one-use download has one winner and repeated password verification is rate limited"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 25,
+          "test": "concurrent one-use download has one winner and repeated password verification is rate limited"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
+      "url": "/privacy/exports/download",
+      "registration": "api/privacy.ts:26",
+      "candidateComponents": [
+        "src/components/privacy-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 22,
+          "test": "export requires verified email, password and enabled MFA; authorization is private, session-bound, expiring and single-use"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 23,
+          "test": "eligible export excludes credentials, arbitrary preferences, internal material and other authors or organizations"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 24,
+          "test": "privacy export authorization cannot survive session revocation or active organization switching"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 24,
+          "test": "privacy export authorization cannot survive session revocation or active organization switching"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 25,
+          "test": "concurrent one-use download has one winner and repeated password verification is rate limited"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 25,
+          "test": "concurrent one-use download has one winner and repeated password verification is rate limited"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
+      "url": "/privacy/marketing/withdraw",
+      "registration": "api/privacy.ts:24",
+      "candidateComponents": [
+        "src/components/privacy-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 21,
+          "test": "profile corrections and marketing withdrawal only change the actor and preserve actual consent decisions"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 21,
+          "test": "profile corrections and marketing withdrawal only change the actor and preserve actual consent decisions"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "PATCH",
+      "url": "/privacy/profile",
+      "registration": "api/privacy.ts:23",
+      "candidateComponents": [
+        "src/components/privacy-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "PATCH",
+          "file": "api/tests/privacy.test.ts",
+          "line": 21,
+          "test": "profile corrections and marketing withdrawal only change the actor and preserve actual consent decisions"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/privacy.test.ts",
+          "line": 21,
+          "test": "profile corrections and marketing withdrawal only change the actor and preserve actual consent decisions"
+        },
+        {
+          "method": "PATCH",
+          "file": "api/tests/privacy.test.ts",
+          "line": 26,
+          "test": "privacy mutations inherit CSRF protection and reject unknown privileged fields"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
+      "url": "/privacy/requests",
+      "registration": "api/privacy.ts:21",
+      "candidateComponents": [
+        "src/components/privacy-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/compliance.test.ts",
+          "line": 86,
+          "test": "owner privacy assessments keep internal reasoning private and publish only deliberate customer responses"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 18,
+          "test": "all supported privacy rights persist with visible history, validation and current session authorization"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 18,
+          "test": "all supported privacy rights persist with visible history, validation and current session authorization"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 19,
+          "test": "privacy request retries are idempotent, payload changes rejected and other users including organization peers isolated"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 19,
+          "test": "privacy request retries are idempotent, payload changes rejected and other users including organization peers isolated"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 19,
+          "test": "privacy request retries are idempotent, payload changes rejected and other users including organization peers isolated"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 26,
+          "test": "privacy mutations inherit CSRF protection and reject unknown privileged fields"
+        }
+      ],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
+      "url": "/privacy/requests/:id/withdraw",
+      "registration": "api/privacy.ts:22",
+      "candidateComponents": [
+        "src/components/privacy-workspace.tsx"
+      ],
+      "automatedTestReferences": [
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 19,
+          "test": "privacy request retries are idempotent, payload changes rejected and other users including organization peers isolated"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 20,
+          "test": "only customer-visible decisions export, withdrawal is revision guarded and history cannot be rewritten"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/privacy.test.ts",
+          "line": 20,
+          "test": "only customer-visible decisions export, withdrawal is revision guarded and history cannot be rewritten"
         }
       ],
       "status": "PARTIAL",
@@ -2501,37 +3336,37 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 20,
+          "line": 23,
           "test": "database boundary rejects cross-organization project references"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 31,
+          "line": 35,
           "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 37,
+          "line": 41,
           "test": "final project acceptance requires approved delivery and completed milestones"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 78,
+          "line": 82,
           "test": "email CRM conversion copies only explicit summaries and keeps original correspondence private"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 86,
+          "line": 90,
           "test": "linked correspondence history remains owner-private and preserves explicit source references"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 89,
+          "line": 93,
           "test": "project, milestone and support events use their configured transactional templates"
         }
       ],
@@ -2610,25 +3445,25 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 37,
+          "line": 41,
           "test": "final project acceptance requires approved delivery and completed milestones"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 37,
+          "line": 41,
           "test": "final project acceptance requires approved delivery and completed milestones"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 37,
+          "line": 41,
           "test": "final project acceptance requires approved delivery and completed milestones"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 37,
+          "line": 41,
           "test": "final project acceptance requires approved delivery and completed milestones"
         }
       ],
@@ -2671,7 +3506,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 31,
+          "line": 35,
           "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
         }
       ],
@@ -2686,7 +3521,7 @@
     {
       "method": "POST",
       "url": "/quotes",
-      "registration": "api/server.ts:98",
+      "registration": "api/server.ts:106",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2694,19 +3529,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 103,
+          "line": 107,
           "test": "quote and invoice business events enqueue atomically once across repeated decisions"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 109,
+          "line": 113,
           "test": "accepted quotation replays do not append duplicate production consent records"
         }
       ],
@@ -2721,7 +3556,7 @@
     {
       "method": "PATCH",
       "url": "/quotes/:id",
-      "registration": "api/server.ts:100",
+      "registration": "api/server.ts:108",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2737,7 +3572,7 @@
     {
       "method": "POST",
       "url": "/quotes/:id/decision",
-      "registration": "api/server.ts:102",
+      "registration": "api/server.ts:110",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2745,43 +3580,43 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 103,
+          "line": 107,
           "test": "quote and invoice business events enqueue atomically once across repeated decisions"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 103,
+          "line": 107,
           "test": "quote and invoice business events enqueue atomically once across repeated decisions"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 103,
+          "line": 107,
           "test": "quote and invoice business events enqueue atomically once across repeated decisions"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 109,
+          "line": 113,
           "test": "accepted quotation replays do not append duplicate production consent records"
         }
       ],
@@ -2796,7 +3631,7 @@
     {
       "method": "POST",
       "url": "/quotes/:id/revise",
-      "registration": "api/server.ts:99",
+      "registration": "api/server.ts:107",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2812,7 +3647,7 @@
     {
       "method": "POST",
       "url": "/quotes/:id/send",
-      "registration": "api/server.ts:101",
+      "registration": "api/server.ts:109",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2828,8 +3663,10 @@
     {
       "method": "POST",
       "url": "/records/:kind",
-      "registration": "api/server.ts:141",
+      "registration": "api/server.ts:150",
       "candidateComponents": [
+        "src/components/compliance-workspace.tsx",
+        "src/components/legal-workspace.tsx",
         "src/components/operations.tsx"
       ],
       "automatedTestReferences": [],
@@ -2844,8 +3681,10 @@
     {
       "method": "DELETE",
       "url": "/records/:kind/:id",
-      "registration": "api/server.ts:143",
+      "registration": "api/server.ts:152",
       "candidateComponents": [
+        "src/components/compliance-workspace.tsx",
+        "src/components/legal-workspace.tsx",
         "src/components/operations.tsx"
       ],
       "automatedTestReferences": [],
@@ -2860,8 +3699,10 @@
     {
       "method": "PATCH",
       "url": "/records/:kind/:id",
-      "registration": "api/server.ts:142",
+      "registration": "api/server.ts:151",
       "candidateComponents": [
+        "src/components/compliance-workspace.tsx",
+        "src/components/legal-workspace.tsx",
         "src/components/operations.tsx"
       ],
       "automatedTestReferences": [],
@@ -2876,7 +3717,7 @@
     {
       "method": "POST",
       "url": "/refunds",
-      "registration": "api/server.ts:135",
+      "registration": "api/server.ts:144",
       "candidateComponents": [
         "src/components/extra-pages.tsx",
         "src/components/finance-workspace.tsx",
@@ -2887,7 +3728,7 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 33,
+          "line": 37,
           "test": "refund recording creates one scoped currency-labelled credit note"
         }
       ],
@@ -2926,61 +3767,61 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 79,
+          "line": 83,
           "test": "review bulk publication enforces clearance atomically and denies customer access"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 79,
+          "line": 83,
           "test": "review bulk publication enforces clearance atomically and denies customer access"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 79,
+          "line": 83,
           "test": "review bulk publication enforces clearance atomically and denies customer access"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 79,
+          "line": 83,
           "test": "review bulk publication enforces clearance atomically and denies customer access"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 79,
+          "line": 83,
           "test": "review bulk publication enforces clearance atomically and denies customer access"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 90,
+          "line": 94,
           "test": "two distinct occurrences from one review source can publish without duplicating legacy excerpts"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 90,
+          "line": 94,
           "test": "two distinct occurrences from one review source can publish without duplicating legacy excerpts"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 93,
+          "line": 97,
           "test": "older published review snapshots gain identities without changing their text"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 93,
+          "line": 97,
           "test": "older published review snapshots gain identities without changing their text"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 93,
+          "line": 97,
           "test": "older published review snapshots gain identities without changing their text"
         }
       ],
@@ -3010,6 +3851,20 @@
     },
     {
       "method": "POST",
+      "url": "/security/csp-report",
+      "registration": "api/security-http.ts:25",
+      "candidateComponents": [],
+      "automatedTestReferences": [],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
       "url": "/tasks",
       "registration": "api/server.ts · generated record family",
       "candidateComponents": [
@@ -3019,13 +3874,13 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 31,
+          "line": 35,
           "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
         }
       ],
@@ -3080,19 +3935,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 31,
+          "line": 35,
           "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 31,
+          "line": 35,
           "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 31,
+          "line": 35,
           "test": "project dependencies reject cycles and cross-project links; private time and attachments isolate tenants"
         }
       ],
@@ -3147,31 +4002,31 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 19,
+          "line": 22,
           "test": "complete quote → order → sandbox payment → project → messages → revisions → approval → invoice → support"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 36,
+          "line": 40,
           "test": "support replies preserve privacy and measure only customer-visible staff responses"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 63,
+          "line": 67,
           "test": "notification preferences persist and suppress optional customer email updates"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 89,
+          "line": 93,
           "test": "project, milestone and support events use their configured transactional templates"
         }
       ],
@@ -3218,7 +4073,7 @@
     {
       "method": "POST",
       "url": "/tickets/:id/replies",
-      "registration": "api/operations-reports.ts:8",
+      "registration": "api/operations-reports.ts:9",
       "candidateComponents": [
         "src/components/ticket-thread.tsx"
       ],
@@ -3226,19 +4081,19 @@
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 36,
+          "line": 40,
           "test": "support replies preserve privacy and measure only customer-visible staff responses"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 36,
+          "line": 40,
           "test": "support replies preserve privacy and measure only customer-visible staff responses"
         },
         {
           "method": "POST",
           "file": "api/tests/integration.test.ts",
-          "line": 89,
+          "line": 93,
           "test": "project, milestone and support events use their configured transactional templates"
         }
       ],
