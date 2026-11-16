@@ -53,3 +53,6 @@ th{position:relative}.table-wrap{position:relative;overscroll-behavior-x:contain
 
 /* Message retry and prepared-file cards keep actions readable beside long content. */
 .message-recovery-feedback{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:start}.message-recovery-feedback>p,.message-recovery-feedback>small{min-width:0;overflow-wrap:anywhere}.message-recovery-feedback>button{justify-self:start;min-width:0;max-width:100%;min-height:44px;white-space:normal;overflow-wrap:normal;word-break:normal}
+
+/* CMS-managed delivery introduction keeps its approved type scale at every width. */
+.freelance-history{display:grid;gap:20px;padding:clamp(24px,4vw,48px);margin-bottom:32px}.freelance-history .eyebrow{margin:0;max-width:100%;text-wrap:balance;overflow-wrap:normal}.freelance-history h2{max-width:26ch;line-height:1.16;text-wrap:balance;overflow-wrap:normal}.freelance-history p{max-width:68ch;line-height:1.75;text-wrap:pretty}.freelance-history>*{min-width:0}
