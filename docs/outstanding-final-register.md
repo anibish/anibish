@@ -28,3 +28,11 @@ Final runtime c35a1cd9eac407435e61db6a44fd92feef7fcc3c is VERIFIED IN PRODUCTION
 - Fiverr's human challenge remains visible in Chrome. Do not bypass it; resume the remaining 56 detail inspections when cleared.
 - Owner review remains required for unpublished portfolio source rights/role wording. Do not expose private source, order IDs, customer messages or delivery files.
 - No approved automated offsite destination; no real-money authorization or verified business/tax/bank details. Continue safe independent work without treating these as approval for unsafe substitutes.
+
+## Approved portfolio continuation
+
+Four additional owner-approved product entries are published through the actual MFA CMS: CarsWhere, 10learn, Bharat Mega Mall and Bishnoi.pro (13 public portfolio entries total). Six further prepared entries remain unpublished after automatic approval review rejected their publication as insufficiently explicit; a concrete six-entry approval request is pending. No API/database workaround was used.
+
+Fiverr verification was cleared; individual inspection resumed and reached119 distinct order IDs at this checkpoint, with customer-filtered reconciliation continuing. No136-detail completion claim yet. Five further reviewer identities and two exact spelling corrections are source-supported and await editor release/application; archive distinct total remains74.
+
+The review editor incorrectly spread a server-only timestamp into strict PATCH validation. An explicit17-field whitelist fixes actual saves while preserving server validation. Six real local editor/negative-metadata checks, frontend/API type checks, lint/build and57API groups pass. Migration030 only seeds four already published public products on fresh installs; existing drafts, revisions and owner edits are never overwritten. Backup anibish-20261116T050630Z.tar.gpg passed checksum/decryption/isolated restore before this release.
