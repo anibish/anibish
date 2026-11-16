@@ -23,6 +23,21 @@ This is the current register. Earlier completion reports are historical snapshot
 | Offsite/monitoring | BLOCKED |No approved automated offsite destination. Four ANIBISH Kuma monitors (group, Website/TLS, API, worker) are active with up heartbeats; zero notification channels are attached. Existing channels belong to10learn/Estiva and were not reused. Dedicated approved alert configuration and delivery rehearsal remain outstanding. No backup transmitted to an unapproved destination. |
 | Security | PARTIAL |Real owner MFA session preserved, role/tenant denial, private file access, secure cookies/headers, QA retirement and encrypted restore verified. No independent penetration audit or actual recovery-code sign-in claim. |
 
+## Privacy and security implementation — source release0.5.0
+
+This source checkpoint has VERIFIED LOCALLY controls; production verification is recorded privately after deployment. Existing public content, the approved typography, active owner MFA and sandbox-only payments are preserved. Internal policies, regulatory assessments, provider details, incident evidence and test credentials are excluded from this public repository.
+
+| Requirement | Source checkpoint status | Scope |
+|---|---|---|
+| Super Admin compliance centre | VERIFIED LOCALLY | MFA-only private registers, revision conflicts, idempotent imports, evidence history, conditional incident clocks and private export. No compliance percentage or certification. |
+| Customer Privacy & Data | VERIFIED LOCALLY | Scoped rights cases and history, profile correction, marketing withdrawal and recent-identity-confirmed one-use exports. Reviewed erasure requests do not automatically delete data. |
+| Attachment protection | VERIFIED LOCALLY | Type/size evidence, quarantine, bounded ClamAV adapter, fresh-signature checks, recurring rescans, private authorized download and public-media startup preflight. Native production scanner verification is a separate release gate. |
+| Cookie and legal drafts | PARTIAL | Cookie CMS policy is disabled until owner publication. Current published policies are preserved. Prepared private drafts require owner/legal review; the editor can load them without publication. |
+| Retention | PARTIAL | Documented owner-approved rules support non-destructive dry runs and legal holds. Destructive execution remains disabled. |
+| ASVS baseline | PARTIAL | Stable5.0.0 control register prepared privately. Per-requirement assessment remains necessary; test groups do not prove the complete standard passes. |
+| Compliance notifications | VERIFIED LOCALLY | Generic deduplicated owner alerts cover requests, deadlines, incidents, critical findings, high-risk providers, access changes and trusted backup/restore failure receipts. SMTP acceptance and recipient delivery remain separate. |
+| External assurances | BLOCKED | Provider contracts/locations, transfer safeguards, approved offsite destination and legal applicability decisions require authoritative external evidence. No blanket residency, storage encryption or compliance claim. |
+
 ## Releases and current gates
 
 Current completed production release isdd4b5fd7a4c06ac8c250073ba663c1f2c68d65c2 through Coolify3f0dbac0-c61d-4979-bbae-bfbcb751afde. All five dedicated services are healthy. Migration032 and the private source-review queue passed72 integrated API groups, frontend/API TypeScript, lint and build. Actual source approval/publication completed afterward;82 reviews and19 portfolio cases are publicly persisted. Private originals, source references and immutable source history remain protected.

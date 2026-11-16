@@ -1,8 +1,8 @@
 # ANIBISH · Software engineering studio
 
-A premium Apple-inspired public studio and connected client/admin application. Next.js App Router, React, TypeScript, Tailwind, Fastify, PostgreSQL, Drizzle and Redis. Public website: https://anibish.com. Source version 0.4.0. Dedicated Coolify containers run on the existing VPS; unrelated applications are preserved.
+A premium Apple-inspired public studio and connected client/admin application. Next.js App Router, React, TypeScript, Tailwind, Fastify, PostgreSQL, Drizzle and Redis. Public website: https://anibish.com. Source version 0.5.0. Dedicated Coolify containers run on the existing VPS; unrelated applications are preserved.
 
-**The master brief is not fully complete.** Public enquiries work in production. MFA-protected owner administration is live; customer workflows remain closed pending legal approval and remaining customer production gates; see [feature coverage](docs/feature-coverage.md).
+**The master brief is not fully complete.** Public enquiries work in production. MFA-protected owner administration and the approved customer workflows are live; legal publication, consent and security gates remain enforced; see [feature coverage](docs/feature-coverage.md).
 
 ## Run locally
 
@@ -31,7 +31,7 @@ Optional `npm run db:seed:local` creates development-only demo accounts with ran
 - `/design-system` — components, theme foundations and linked route index
 - `.local/visual-audit/screenshots/index.html` — private local screenshot gallery
 
-Contact, quote and consultation forms save to the application database, including in public production mode. Quotes create contracts, orders, projects, milestones, conversations and invoices transactionally. Private files, messages, versioned deliveries, customer decisions and sandbox payments persist in PostgreSQL. Sandbox payments never charge funds. Email requests enter a durable database outbox. The worker supports dedicated SMTP credentials, retries and delivery logs; dedicated Brevo SMTP and both Hostinger mailboxes have passed actual VPS send/receive tests. Customer registration remains gated on approved legal policies and customer production validation.
+Contact, quote and consultation forms save to the application database, including in public production mode. Quotes create contracts, orders, projects, milestones, conversations and invoices transactionally. Private files, messages, versioned deliveries, customer decisions and sandbox payments persist in PostgreSQL. Sandbox payments never charge funds. Email requests enter a durable database outbox. The worker supports dedicated SMTP credentials, retries and delivery logs; dedicated Brevo SMTP and both Hostinger mailboxes have passed actual VPS send/receive tests. Customer production access passed the approved legal/consent and two-organization production rehearsal; the policy and security gates remain enforced. Disposable test accounts are retired.
 
 All bundled prices are labelled placeholders. Fixed service ordering requires a published service with explicit owner price approval. Professional facts and awards awaiting the missing profile PDF are clearly identified. Legal publication is controlled by the owner; remaining drafts require review. See [current outstanding register](docs/outstanding-final-register.md) for the latest production evidence.
 
@@ -67,3 +67,5 @@ The isolated production Docker/Coolify topology has been deployed and its encryp
 ## Public launch (0.2.0)
 
 `ops/coolify-compose.yaml` is the isolated production topology. The first launch used `LAUNCH_STAGE=public`. Current production uses `LAUNCH_STAGE=admin`: verified MFA studio accounts can administer the application; customer registration, checkout and incoming sandbox webhooks remain closed. Public enquiries remain persistent. Raw customer screenshots and generated private captures were removed from the intended publication history; originals remain private. CMS publication snapshots, invoice finalization, signed sandbox callbacks and the notification worker have automated coverage. See `docs/launch-register.md` for the current gates.
+
+Privacy & Data at `/dashboard/privacy` supports identity-confirmed personal exports, scoped requests and consent history. `/admin/compliance` is reserved for a verified Super Admin MFA session. The private governance register records evidence, assessments, incidents and retention dry runs without asserting certification. Legal review drafts and internal policies are maintained privately. Attachment release requires valid type evidence and a fresh successful malware scan; failure remains quarantined.

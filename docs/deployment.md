@@ -1,4 +1,4 @@
-# Deployment and recovery — version 0.3.3
+# Deployment and recovery — version 0.5.0
 
 Production uses Coolify application `xz0yo1hnzb8pe6nwuhvfe5tl`, project ANIBISH, production environment, repository `anibish/anibish`, branch `main`, Docker Compose file `ops/coolify-compose.yaml`. No GitHub Actions. Canonical website https://anibish.com; same-origin `/api`; no separate API DNS record.
 
@@ -48,6 +48,22 @@ Run build, both TypeScript checks, lint and API tests. `scripts/continuation-jou
 
 Dedicated credentials are stored in encrypted ANIBISH Coolify variables, never in the repository. Hostinger uses full mailbox usernames with TLS IMAP 993 and SMTP 465; Brevo uses its dedicated SMTP login/key and required STARTTLS 587. `ANIBISH_MAIL_ENABLED` gates private correspondence and synchronization. Only the notification worker receives Brevo SMTP configuration. Mail credentials are included only within the encrypted recovery archive; restore `mail-runtime-secrets.json` privately into the dedicated application variables. Do not print recovery configuration.
 
-The worker refreshes each inbox every two minutes; the interface refreshes its private cache every 30 seconds and on reconnect. Synchronization deliberately fetches the latest 100 messages per selected folder, rather than claiming a complete provider history. Owner-only folder selection can synchronize other provider folders. Full retention administration remains pending. HTML is sanitized and remote images removed; attachments are download-only and not malware-scanned. Outgoing composition accepts three attachments totaling at most 600 KB.
+The worker refreshes each inbox every two minutes; the interface refreshes its private cache every 30 seconds and on reconnect. Synchronization paginates provider history using stable folder and UID validity identifiers, then resumes incrementally. Owner-only folder selection can synchronize other provider folders. Full retention administration remains pending. HTML is sanitized and remote images removed; attachments are download-only and require fresh validated scanner evidence. Outgoing composition accepts three attachments totaling at most 600 KB.
 
-`outbox.status=sent` means SMTP accepted, not recipient delivery. Interrupted/ambiguous sends are marked `unknown` and require investigation rather than automatic resend. Email Centre send identifiers are idempotent and preserve ambiguous state. Production `.test` and `.invalid` recipient jobs are suppressed. Provider event callbacks, bounce suppression and a complete customer recovery launch rehearsal remain pending. Do not enable registration or real payments based on SMTP acceptance alone.
+`outbox.status=sent` means SMTP accepted, not recipient delivery. Interrupted/ambiguous sends are marked `unknown` and require investigation rather than automatic resend. Email Centre send identifiers are idempotent and preserve ambiguous state. Production `.test` and `.invalid` recipient jobs are suppressed. Authenticated provider callbacks, bounce/suppression handling and the scoped customer launch rehearsal are implemented; SMTP acceptance remains distinct from recipient delivery. Do not enable registration or real payments based on SMTP acceptance alone.
+
+## Operational release033–036
+
+Take and verify the encrypted backup before migrations. Migration033 adds immutable provider-draft source snapshots and a durable job/event queue;034 adds nullable author/conversation-scoped message idempotency;035 adds task planning dates/revisions/history without moving commitments;036 only inserts missing explicitly approved public collection records. Existing owner CMS drafts, published snapshots and archives are never overwritten by the seed.
+
+Provider Drafts sync is an explicit Super Admin MFA operation and is separate from SMTP sending. An uncertain APPEND acknowledgement requires reconciliation of the existing job; never blindly create another copy. Verified old copies may move only to verified provider Trash with native MOVE. No fallback EXPUNGE or purge is allowed. Missing capability retains the old copy with diagnostics.
+
+Use the strict latest-schema restore check after deployment to cover mail draft jobs/events, task schedules, messages, project history, original reviews and real MFA recovery configuration. The backup archive and all credentials remain private. No new automated offsite destination has been approved.
+
+Runtime image tags and selected API file hashes must match the deployed code commit. A later documentation-only main commit is reported separately. Public availability recovery has no stale publication cache; an authoritative unpublication must remain unpublished.
+
+## Privacy and file-security release038–041
+
+The additive migrations create the private governance register, customer privacy cases, attachment scan evidence and a disabled Cookie Policy draft. They preserve current published legal versions. The dedicated scanner has no published port and uses a pinned upstream image, capped resources and an isolated update network. API startup requires a successful public-media preflight. Keep the scanner out of resource-heavy build windows and verify it resumes afterward. Unavailable or stale scanning never releases unverified bytes.
+
+Private policy drafts, risk assessments, provider contracts, incident evidence and recovery material must remain outside this repository. Register imports preserve existing owner records. Retention execution and regulator transmission remain disabled; a timer or evidence count is not a compliance certification.

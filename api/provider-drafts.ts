@@ -1,3 +1,4 @@
+import {requireCleanComposition} from './file-security';
 import {createHash} from 'node:crypto';
 import nodemailer from 'nodemailer';
 import type {ImapFlow} from 'imapflow';
@@ -35,6 +36,7 @@ export async function enqueueProviderDraft(draftId:string,expectedRevision:numbe
   if((await db.query("SELECT 1 FROM mail_draft_sync_jobs WHERE draft_id=$1 AND status IN('uncertain','processing','reconcile_pending') LIMIT 1",[draftId])).rowCount)fail(409,'An earlier provider result needs reconciliation before a newer copy can be created.');
   if(/[\r\n]/.test(draft.recipient+draft.subject))fail(400,'Remove line breaks from the recipient and subject before provider sync. The private draft is unchanged.');
   const source={mailbox:draft.mailbox,recipient:draft.recipient,subject:draft.subject,body:draft.body,extras:{cc:draft.extras?.cc||[],attachments:draft.extras?.attachments||[]}};
+  await requireCleanComposition(source.extras.attachments);
   const hash=sha(JSON.stringify(source)),messageId=`<draft-${draftId}-r${expectedRevision}@anibish.com>`;
   const composer=nodemailer.createTransport({streamTransport:true,buffer:true});
   const compiled=await composer.sendMail({from:{name:'Anibish',address:draft.mailbox+'@anibish.com'},to:draft.recipient||undefined,cc:source.extras.cc,subject:draft.subject,text:draft.body,messageId,date:new Date(draft.updated_at),headers:{'X-Anibish-Draft-ID':draftId,'X-Anibish-Draft-Revision':String(expectedRevision),'X-Anibish-Draft-Content-Hash':hash},attachments:source.extras.attachments.map((f:{name:string;base64:string})=>({filename:f.name,content:Buffer.from(f.base64,'base64')}))});

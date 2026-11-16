@@ -48,6 +48,12 @@ services:
       ANIBISH_BREVO_WEBHOOK_TOKEN: ${ANIBISH_BREVO_WEBHOOK_TOKEN:-}
       ANIBISH_INFO_IMAP_PASSWORD: ${ANIBISH_INFO_IMAP_PASSWORD:-}
       ANIBISH_MAIL_IMAP_PASSWORD: ${ANIBISH_MAIL_IMAP_PASSWORD:-}
+      ANIBISH_SECURITY_LOGGING: "true"
+      CLAMAV_HOST: file_scanner
+      CLAMAV_PORT: "3310"
+      CLAMAV_POLICY_CONFIRMED: ${ANIBISH_CLAMAV_POLICY_CONFIRMED:-false}
+      CLAMAV_TIMEOUT_MS: "30000"
+      CLAMAV_MAX_SIGNATURE_AGE_HOURS: "72"
     volumes:
       - anibish_files:/app/storage
       - /data/anibish/review-evidence:/app/evidence:ro
@@ -61,6 +67,8 @@ services:
         condition: service_completed_successfully
       redis:
         condition: service_healthy
+      attachment_preflight:
+        condition: service_completed_successfully
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
       interval: 20s
@@ -93,6 +101,53 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
+  file_scanner:
+    build:
+      context: .
+      dockerfile: ops/clamav/Dockerfile
+    restart: unless-stopped
+    mem_limit: 3g
+    cpus: 0.35
+    pids_limit: 80
+    security_opt: ["no-new-privileges:true"]
+    environment:
+      CLAMAV_MAX_SIGNATURE_AGE_HOURS: "72"
+    volumes:
+      - anibish_scanner_definitions:/var/lib/clamav
+    tmpfs:
+      - /tmp:size=134217728,noexec,nosuid,nodev
+    networks:
+      - private
+      - scanner_updates
+    labels:
+      traefik.enable: "false"
+    healthcheck:
+      test: ["CMD", "/usr/local/bin/anibish-scanner-health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 180s
+      retries: 6
+  attachment_preflight:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    command: ["./node_modules/.bin/tsx", "api/file-security-preflight.ts"]
+    environment: *api_environment
+    volumes:
+      - anibish_files:/app/storage:ro
+    networks:
+      - private
+    restart: "no"
+    mem_limit: 192m
+    cpus: 0.25
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      file_scanner:
+        condition: service_healthy
+    labels:
+      traefik.enable: "false"
+
   migrate:
     restart: "no"
     build:
@@ -142,9 +197,11 @@ services:
       retries: 10
 networks:
   default: {}
+  scanner_updates: {}
   private:
     internal: true
 volumes:
   anibish_database: {}
   anibish_redis: {}
   anibish_files: {}
+  anibish_scanner_definitions: {}

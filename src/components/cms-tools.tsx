@@ -1,4 +1,5 @@
 'use client';
+import SecureFileDownload from './secure-file-download';
 import {useRef,useState} from 'react';
 import {api,send} from '@/lib/api';
 import {confirmAction} from './action-feedback';
@@ -30,11 +31,11 @@ export default function CmsTools(){
    {message&&<p role="status" className="feedback success">{message}</p>}
    {tool==='media'?<>
     <Notice>Files are private by default. Public image delivery requires explicit confirmation of publication rights. Original review evidence remains private.</Notice>
-    <form onSubmit={e=>{e.preventDefault();const form=e.currentTarget;void save('Uploading private media…',()=>api('/files',{method:'POST',body:new FormData(form)}),'Private media uploaded.',()=>form.reset())}}>
+    <form onSubmit={e=>{e.preventDefault();const form=e.currentTarget;void save('Uploading private media…',()=>api('/files',{method:'POST',body:new FormData(form)}),'Private media saved. A verified malware scan and separate publication approval are required before public delivery.',()=>form.reset())}}>
      <Field label="Upload private media"><input name="file" required type="file" accept=".png,.jpg,.jpeg,.webp,.pdf" disabled={busy}/></Field><button className="button small" disabled={busy}>Upload media</button>
     </form>
     <div className="table-wrap"><table><thead><tr><th>Media</th><th>Reference</th><th>Publication control</th></tr></thead><tbody>{rows.filter(r=>String(r.mime).startsWith('image/')||r.mime==='application/pdf').map(r=><tr key={String(r.id)}>
-     <td><a target="_blank" rel="noreferrer" href={'/api/files/'+r.id+'/download'}>{String(r.name)}</a><small>{String(r.mime)} · {String(r.size)} bytes</small></td><td><code>{String(r.id)}</code><small>Use this reference in a page gallery.</small></td>
+     <td><SecureFileDownload href={'/api/files/'+r.id+'/download'} name={String(r.name)} status={String(r.scan_status||'pending')}/><small>{String(r.mime)} · {String(r.size)} bytes</small></td><td><code>{String(r.id)}</code><small>Use this reference in a page gallery.</small></td>
      <td><form onSubmit={async e=>{e.preventDefault();const f=new FormData(e.currentTarget),approved=f.get('action')==='approve';if(!approved&&!await confirmAction('Revoke public delivery for this media? Published pages using it may no longer display the image.'))return;await save('Saving media permission…',()=>api('/cms/media/'+r.id+'/approve',{method:'POST',body:send({publication_rights_confirmed:true,approved})}),'Media publication setting saved.')}}>
       <label className="checkbox"><input required type="checkbox" disabled={busy}/>I confirm publication rights for this file.</label><select name="action" disabled={busy} aria-label={'Publication action for '+r.name}><option value="approve">Approve public delivery</option><option value="revoke">Revoke public delivery</option></select><button className="button secondary small" disabled={busy}>Save media permission</button>
      </form></td>
