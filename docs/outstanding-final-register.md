@@ -15,7 +15,7 @@ Preserve production owner MFA, working mail credentials, sandbox billing and iso
 | Backup | VERIFIED IN PRODUCTION | 90-day retention with minimum seven/pins tested; anibish-20261115T225212Z.tar.gpg checksum/decrypt/isolated restore, MFA and 74 originals verified; automated offsite destination unavailable |
 | Functional release | VERIFIED IN PRODUCTION / follow-up pending | 44 API groups; legal/mail/auth 12 browser steps; review bulk workflow and 30 specialist width checks; 28019a5 deployed via 651eeb9b; 30 production gate checks passed; private correspondence and recovery-code follow-up pending; seven isolated production-mode customer checks passed with actual mailbox receipts |
 
-Real payments remain disabled. Unapproved policies, additional reviews and customer production access remain safely gated. See review-reconciliation.md, legal-owner-drafts.md and action-feedback-audit.md for exact limits.
+Real payments remain disabled. Historical paragraphs below describe earlier checkpoints; the latest follow-up section supersedes their release counts and activation status. See review-reconciliation.md, legal-owner-drafts.md and action-feedback-audit.md for exact limits.
 
 ## Current security correction
 
@@ -28,3 +28,16 @@ All 23 accessible GitHub repositories inventoried (11 public, 12 private; four f
 Portfolio release: database-bound directory/case studies, seven verified foundation entries, six accurately attributed recognitions, owner-only private inventory and specialist editor implemented. 33 exact review/rating matches support public usernames. 46 local API groups; 30 public layout checks, three filter checks, five editor/source workflow checks and six admin width checks. Production release 9e521538ecef8a3b460b1ffcb36400038b1f755e verified: seven portfolio entries, six recognition records, 74 reviews, 33 verified public usernames, 136 historical completed-order count. Live 30 layout checks plus three filter checks passed. Private owner import contains 103 sources. Fiverr 80/136 individual detail inspections; remaining 56 blocked by human challenge, not silently omitted. See portfolio-reconstruction.md.
 
 Follow-up ready: 48 API groups pass; transactional order/project/invoice event enqueueing is idempotent; source import can create grouped unpublished drafts without overwriting owner edits. Ten private product drafts prepared for owner review. Production disposable workflow has 13 checks through revised delivery, milestone completion and final acceptance; recovery messages confirmed in Gmail. No real payment collected.
+
+## Current verified follow-up — 16 November
+
+- Production portfolio: nine published entries, including both preserved historical case studies; six recognition records; 74 published distinct reviews, 33 source-corroborated public reviewer usernames. Original evidence stays private.
+- Private source inventory: 103 imported records (23 GitHub repositories, 80 inspected Fiverr order pages); ten grouped product drafts and four grouped freelance collections await publication clearance. The remaining 56 Fiverr pages require the marketplace's human verification. The 136 completed-order list is not 136 unique projects.
+- Customer production workflow: fourteen scoped checks, actual verification/recovery receipt, two-organization isolation, quote/order/project persistence, versioned revision and approval, final acceptance and idempotent order/project notification delivery. Thirty-six customer layout checks and two UI login/logout journeys passed. Approved disposable accounts remain pending retirement after final regression.
+- Legal: owner-published Privacy v2, Terms v1 and Refund/Cancellation v1 are live. Customer access is enabled; this does not imply independent legal review.
+- Current local candidate: 52 API integration groups, frontend/API type checks, lint and build pass. Draft create/update/archive/restore, optimistic conflicts, lost-response idempotency and forwarding attachments implemented; expanded browser fault matrix passed 13 checks and six widths with no email sent. About/experience/consultation passed 18 layout checks and three directory filters.
+- Actual route inventory now enumerates 110 registered mutations. Full per-action failure-matrix mapping remains PARTIAL; no blanket verification claim.
+- Latest verified encrypted restore: anibish-20261116T010130Z.tar.gpg. Fresh release backup anibish-20261116T022420Z.tar.gpg also passed checksum, decryption and isolated restore.
+- GitHub main d991ade preserves the historical case studies; current application runtime bfe25b09e7c506ec78ce35146e921033efaac7c1. Uncommitted candidate changes are not yet deployed.
+
+Remaining breadth: provider Drafts write-back, genuine bounce/complaint rehearsal, dedicated attachment malware scanning, automated approved offsite destination, monitoring alert delivery, customer billing profile and access deactivation, advanced scheduling, and exhaustive action-by-action mapping. Payments remain sandbox-only.
