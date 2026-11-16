@@ -119,3 +119,38 @@ test('closure requests are idempotent and sole owners cannot strand active organ
 test('invitation retries normalize identity and enqueue exactly once without replacing the original token',async()=>{const idempotency_key=randomUUID(),email=two.email,payload={email:email.toUpperCase(),role:'member',idempotency_key};const results=await Promise.all([request('POST','/invitations',payload,one.cookie),request('POST','/invitations',payload,one.cookie)]);for(const r of results)assert.equal(r.statusCode,200,r.body);assert.equal(results[0].json().id,results[1].json().id);assert.equal((await pool.query("SELECT count(*) FROM records WHERE org_id=$1 AND kind='invitation' AND data->>'idempotency_key'=$2",[one.me.org_id,idempotency_key])).rows[0].count,'1');assert.equal((await pool.query("SELECT count(*) FROM outbox WHERE recipient=$1 AND template='organization_invitation'",[email])).rows[0].count,'1');assert.equal((await request('POST','/invitations',{...payload,role:'owner'},one.cookie)).statusCode,409);const original=results.map(r=>r.json()).find(r=>r.development_token);assert.ok(original);await pool.query('UPDATE records SET title=upper(title) WHERE id=$1',[original.id]);assert.equal((await request('POST','/invitations/accept',{token:original.development_token},one.cookie)).statusCode,400);assert.equal((await request('POST','/invitations/accept',{token:original.development_token},two.cookie)).statusCode,200);assert.equal((await request('POST','/invitations/accept',{token:original.development_token},two.cookie)).statusCode,400)});
 
 test('approved public products seed meaningful cases without replacing owner edits',async()=>{const slugs=['portfolio/10learn','portfolio/bharat-mega-mall','portfolio/bishnoi-pro','portfolio/carswhere'];const pages=(await request('GET','/public/site')).json().pages;for(const slug of slugs){const page=pages.find((p:{slug:string})=>p.slug===slug);assert.ok(page,slug);assert.ok(page.content.body.length>200);assert.ok(page.content.features.length>=3);assert.ok(page.content.role&&page.content.project_status);assert.equal(page.content.evidence_attested,true);assert.equal(JSON.stringify(page.content).includes('github.com/anibish/'),false)}const db=await pool.connect();try{await db.query('BEGIN');await db.query("UPDATE cms_pages SET content=jsonb_set(content,'{body}','\"Owner manual change\"'),revision=revision+1 WHERE slug=$1",[slugs[0]]);const {readFile}=await import('node:fs/promises');await db.query(await readFile(new URL('../migrations/030_approved_public_products.sql',import.meta.url),'utf8'));assert.equal((await db.query('SELECT content FROM cms_pages WHERE slug=$1',[slugs[0]])).rows[0].content.body,'Owner manual change');await db.query('ROLLBACK')}finally{db.release()}});
+
+test('six remaining approved product seeds recover fresh content and preserve all owner publication states',async()=>{
+ const slugs=['portfolio/civilpro','portfolio/estiva','portfolio/gadgetswhere','portfolio/local-ai-audio-tools','portfolio/origin-dating','portfolio/social6'];
+ const pages=(await request('GET','/public/site')).json().pages;
+ for(const slug of slugs){
+  const page=pages.find((p:{slug:string})=>p.slug===slug);
+  assert.ok(page,slug);assert.ok(page.content.body.length>200);assert.ok(page.content.features.length>=3);
+  assert.ok(page.content.role&&page.content.project_status);assert.equal(page.content.evidence_attested,true);
+  assert.equal(page.seo.canonical,'https://anibish.com/'+slug);
+  assert.doesNotMatch(JSON.stringify(page.content),/github\.com|postgresql:\/\/|localhost|\.local\/|source_facts|order_id|baseline_content_sha256/i);
+  for(const source of page.content.sources)assert.ok(['https://estiva.in/','https://gadgetswhere.com/'].includes(source.url));
+ }
+ const {readFile}=await import('node:fs/promises');
+ const migration=await readFile(new URL('../migrations/031_remaining_approved_public_products.sql',import.meta.url),'utf8');
+ const db=await pool.connect();
+ try{
+  await db.query('BEGIN');
+  // A temporary copy exercises recovery from empty CMS storage without modifying the shared QA records.
+  await db.query('CREATE TEMP TABLE cms_pages (LIKE public.cms_pages INCLUDING ALL) ON COMMIT DROP');
+  await db.query('SET LOCAL search_path=pg_temp,public');
+  await db.query(migration);
+  const fresh=(await db.query('SELECT * FROM cms_pages ORDER BY slug')).rows;
+  assert.deepEqual(fresh.map(p=>p.slug),slugs);
+  for(const row of fresh){assert.equal(row.state,'published');assert.equal(row.revision,1);assert.deepEqual(row.published_content,row.content);assert.deepEqual(row.published_seo,row.seo);assert.ok(row.published_at)}
+  await db.query(migration);
+  assert.deepEqual((await db.query('SELECT * FROM cms_pages ORDER BY slug')).rows,fresh,'Fresh recovery replay must retain IDs, revisions and snapshots.');
+  // Reimports must respect owners who edited, unpublished or archived an approved seed later.
+  for(const [i,slug] of slugs.entries())await db.query("UPDATE cms_pages SET title=$1,state=$2,content=$3,published_content=$4,seo=$5,published_seo=$6,revision=$7,updated_at='2027-01-02T03:04:05Z',published_at=$8 WHERE slug=$9",[
+   'Owner-edited '+slug,['draft','published','archived'][i%3],{body:'Owner working copy '+i,media_ids:[randomUUID()]},{body:'Owner prior public copy '+i},{title:'Owner draft SEO '+i},{title:'Owner published SEO '+i},17+i,i%3===0?null:'2026-11-16T00:00:00Z',slug
+  ]);
+  const edited=(await db.query('SELECT * FROM cms_pages ORDER BY slug')).rows;
+  await db.query(migration);
+  assert.deepEqual((await db.query('SELECT * FROM cms_pages ORDER BY slug')).rows,edited,'Recovery must never republish or overwrite owner edits.');
+ }finally{await db.query('ROLLBACK');db.release()}
+});

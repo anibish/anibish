@@ -23,3 +23,9 @@ Executed evidence is scoped; a working screen does not prove every requirement. 
 Final implementation: 56 API groups, build, lint and both type checks pass locally. Counts from earlier reports are historical and must not be added as if they were a single new run. Both approved synthetic customer accounts have been deactivated, with zero sessions/tokens; consent/audit history is retained. No credentials or private order details belong in this report.
 
 Final implementation runtime: c35a1cd9eac407435e61db6a44fd92feef7fcc3c, verified through Coolify 76f688a9-5659-4c49-aecc-cfef2bf9694e. Final contact/quote browser submissions persisted in the owner inbox; two confirmations delivered, two admin alerts remain provider-requested/unconfirmed. See accelerated-production-completion.md for exact current limits.
+
+## Latest portfolio and reliability follow-up
+
+- VERIFIED IN PRODUCTION content:19 portfolio cases, six recognition records,74 distinct reviews (56 named records /24 usernames;61 Fiverr/13 neutral), four approved product screenshots and162 private sources.136 completed Fiverr detail pages inspected; three cancelled extras excluded. Metadata completeness remains PARTIAL.
+- VERIFIED LOCALLY release code:64 API groups, TypeScript, lint/build; safe migration031 preserves existing CMS decisions; authenticated late-provider acceptance prevents duplicate email retries.36 new scoped feedback browser checks cover CMS/media, invoice history, messaging and support.
+- Action audit:155 discovered UI operations in21components;43 scoped browser references,112 pending,0 complete per-action failure matrices. This does not claim all actions verified. See action-feedback-ui-inventory.json and outstanding-final-register.md.

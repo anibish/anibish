@@ -1,8 +1,8 @@
-# Launch gates — 16 November 2026
+# Launch gates — current state, 16 November 2026
 
-- Gate A: Public website deployed with HTTPS. Persistent enquiries, services, source-backed portfolio content and six owner-approved anonymized review excerpts. Final deployment proof is in `completion-report.md`.
-- Gate B: BLOCKED production enablement. Local customer workflows and isolation passed; real email verification/recovery and production user tests remain outstanding. Customer accounts remain disabled.
-- Gate C: VERIFIED owner administration. Owner password/authenticator enrollment is verified in production, with audit record and encrypted restore of the actual MFA record. Admin-only deployment and actual production MFA sign-in are verified. Anonymous admin requests are denied and the owner session can access the inbox, CMS and audit records. Actual production service creation, editing, reload persistence and archival passed. Customer access remains disabled.
-- Gate D: Sandbox only. Real-money checkout remains disabled; no merchant, legal/tax or live payment credentials are invented.
+- Gate A: VERIFIED IN PRODUCTION. HTTPS public website, persistent enquiries, services,19 published portfolio cases, six recognition records and74 distinct owner-cleared reviews. Raw evidence stays private.
+- Gate B: VERIFIED IN PRODUCTION core / PARTIAL breadth. Registration, verification, recovery, login/logout and two-organization workflows were exercised in production after owner policy publication. Both approved temporary QA aliases are now disabled with zero sessions/tokens. Advanced scheduling and exhaustive per-action failure coverage remain incomplete.
+- Gate C: VERIFIED IN PRODUCTION core. Actual owner MFA session, server role checks, audit records, scoped files and encrypted isolated restore verified. No independent penetration audit or actual recovery-code login claim.
+- Gate D: Sandbox only. Real-money checkout remains disabled; no real transactions, merchant/tax/bank details or live-payment permission are inferred.
 
-Sanitized source is published to the authorized public repository. Raw images, credentials, database dumps and private captures are excluded from publication history. DNS exports prove only the apex A record and its TTL changed; unrelated email, application and status records were preserved.
+Current detailed feature status and remaining gates: outstanding-final-register.md. Earlier completion reports are dated historical evidence, not current gate overrides. Credentials, private repositories, raw orders and review originals remain excluded from Git. DNS/email/status records were not changed by this release.
