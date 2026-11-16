@@ -48,3 +48,5 @@ th{position:relative}.table-wrap{position:relative;overscroll-behavior-x:contain
 
 /* Keep the closed mobile drawer out of both rendering and keyboard focus. */
 @media(max-width:760px){.sidebar:not(.open){visibility:hidden;pointer-events:none}.sidebar.open{visibility:visible}.checkbox>span{min-width:0}}
+/* Portfolio status text remains readable with the approved typography scale. */
+.portfolio-case-intro>*{min-width:0}.portfolio-case-intro h1{overflow-wrap:anywhere}.portfolio-card-meta{align-items:flex-start;flex-wrap:wrap}.portfolio-case-intro .pill-row .badge,.portfolio-card-meta .badge{white-space:normal;max-width:100%;overflow-wrap:anywhere}

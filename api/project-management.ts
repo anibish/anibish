@@ -4,7 +4,50 @@ import {pool,transaction} from './db';
 import {fail} from './security';
 import type {DomainContext} from './context';
 const uid=z.string().uuid();
+const planningDate=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(value=>{
+ const date=new Date(value+'T00:00:00Z');
+ return !Number.isNaN(date.getTime())&&date.toISOString().slice(0,10)===value;
+},'Enter a real calendar date.');
+type PlannedDependency={id:string;title:string;status:string;due_date:string|null};
+type PlannedTask={id:string;title:string;status:string;internal:boolean;start_date:string|null;due_date:string|null;schedule_revision:number;dependencies:PlannedDependency[]};
+function planningWarnings(task:PlannedTask){
+ return task.status==='done'?[]:task.dependencies.filter(d=>d.status!=='done'&&task.start_date&&d.due_date&&task.start_date<d.due_date).map(d=>({task_id:d.id,title:d.title,due_date:d.due_date,message:'The planned start is before this unfinished prerequisite’s target finish.'}));
+}
 export async function registerProjectManagement(app:FastifyInstance,c:DomainContext){
+ app.get('/projects/:id/schedule',async(req,reply)=>{
+  const a=await c.actor(req,'tasks'),p=await c.getScoped('projects',(req.params as {id:string}).id,a),staff=c.staff(a);
+  const tasks=(await pool.query(`SELECT t.id,t.title,t.status,t.internal,to_char(t.start_date,'YYYY-MM-DD') AS start_date,
+   to_char(t.due_date,'YYYY-MM-DD') AS due_date,t.schedule_revision,
+   COALESCE((SELECT jsonb_agg(jsonb_build_object('id',d.id,'title',d.title,'status',d.status,'due_date',to_char(d.due_date,'YYYY-MM-DD')) ORDER BY d.title,d.id)
+    FROM task_dependencies edge JOIN tasks d ON d.id=edge.depends_on WHERE edge.task_id=t.id AND d.project_id=t.project_id AND d.org_id=t.org_id AND ($2::boolean OR NOT d.internal)),'[]'::jsonb) AS dependencies
+   FROM tasks t WHERE t.project_id=$1 AND ($2::boolean OR NOT t.internal) ORDER BY t.due_date ASC NULLS LAST,t.start_date ASC NULLS LAST,t.title,t.id`,[p.id,staff])).rows as PlannedTask[];
+  const today=(await pool.query("SELECT (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date::text AS today")).rows[0].today as string;
+  const rows=tasks.map(t=>({...t,overdue:t.status!=='done'&&Boolean(t.due_date&&t.due_date<today),unscheduled:!t.start_date&&!t.due_date,
+   pending_visible_dependencies:t.dependencies.filter(d=>d.status!=='done').length,dependency_warnings:planningWarnings(t)}));
+  reply.header('Cache-Control','private, no-store');
+  return {project_id:p.id,as_of:today,as_of_timezone:'Asia/Kolkata',visibility:staff?'studio':'shared_tasks_only',tasks:rows,
+   summary:{total:rows.length,overdue:rows.filter(t=>t.overdue).length,unscheduled:rows.filter(t=>t.unscheduled).length,dependency_risks:rows.filter(t=>t.dependency_warnings.length).length},
+   message:staff?'Task planning dates do not change project, milestone or contractual commitments.':'Only shared task dates and shared prerequisites are shown.'};
+ });
+ app.patch('/tasks/:id/schedule',async req=>{
+  const a=await c.actor(req,'tasks',true);if(!c.staff(a))fail(403,'Project team permission required.');
+  const id=uid.parse((req.params as {id:string}).id),scoped=await c.getScoped('tasks',id,a);
+  const b=z.object({start_date:planningDate.nullable(),due_date:planningDate.nullable(),expected_revision:z.number().int().positive(),reason:z.string().trim().min(10).max(2000)}).strict().parse(req.body);
+  if(b.start_date&&b.due_date&&b.start_date>b.due_date)fail(400,'The planned finish must be on or after the planned start.');
+  return transaction(async db=>{
+   await db.query('SELECT id FROM projects WHERE id=$1 FOR UPDATE',[scoped.project_id]);
+   const before=(await db.query('SELECT id,schedule_revision FROM tasks WHERE id=$1 FOR UPDATE',[id])).rows[0];
+   if(!before||before.schedule_revision!==b.expected_revision)fail(409,'This task’s planning dates changed. Refresh the schedule and reload its dates before saving; your inputs are preserved.');
+   // Transaction-local context cannot escape back into the pooled connection.
+   await db.query("SELECT set_config('anibish.schedule_actor',$1,true),set_config('anibish.schedule_reason',$2,true)",[a.id,b.reason]);
+   const row=(await db.query(`UPDATE tasks SET start_date=$1,due_date=$2 WHERE id=$3
+    RETURNING id,title,status,internal,to_char(start_date,'YYYY-MM-DD') AS start_date,to_char(due_date,'YYYY-MM-DD') AS due_date,schedule_revision`,[b.start_date,b.due_date,id])).rows[0];
+   const dependencies=(await db.query(`SELECT d.id,d.title,d.status,to_char(d.due_date,'YYYY-MM-DD') AS due_date FROM task_dependencies edge JOIN tasks d ON d.id=edge.depends_on WHERE edge.task_id=$1 AND d.project_id=$2 AND d.org_id=$3 ORDER BY d.title,d.id`,[id,scoped.project_id,scoped.org_id])).rows as PlannedDependency[];
+   const warnings=planningWarnings({...row,dependencies});
+   await db.query('INSERT INTO audit_log(org_id,actor_id,action,resource,detail) VALUES($1,$2,$3,$4,$5)',[scoped.org_id,a.id,'task.schedule_saved',id,JSON.stringify({revision:row.schedule_revision,start_date:b.start_date,due_date:b.due_date,dependency_warning_count:warnings.length})]);
+   return {task:row,warnings,message:warnings.length?'Task planning dates saved. Review the visible prerequisite date warnings; no other targets were changed.':'Task planning dates saved. Project, milestone and contractual targets were not changed.'};
+  });
+ });
  app.get('/team/directory',async req=>{const a=await c.actor(req,'projects');if(!c.staff(a))fail(403,'Studio team access required.');return (await pool.query('SELECT id,name,global_role FROM users WHERE global_role IS NOT NULL ORDER BY name')).rows});
  app.get('/projects/:id/activity',async req=>{const a=await c.actor(req,'projects'),p=await c.getScoped('projects',(req.params as {id:string}).id,a);return (await pool.query("SELECT event,detail,created_at FROM project_history WHERE project_id=$1 AND ($2::boolean OR detail->>'internal' IS DISTINCT FROM 'true') ORDER BY id DESC LIMIT 300",[p.id,c.staff(a)])).rows});
  app.get('/projects/:id/team',async req=>{const a=await c.actor(req,'projects'),p=await c.getScoped('projects',(req.params as {id:string}).id,a);return (await pool.query('SELECT t.user_id,t.role,u.name FROM project_team t JOIN users u ON u.id=t.user_id WHERE project_id=$1 ORDER BY u.name',[p.id])).rows});

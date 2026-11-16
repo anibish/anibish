@@ -1,6 +1,6 @@
 {
   "enumeration": "Fastify registered routes; each expansion checked with hasRoute",
-  "registeredMutationRoutes": 113,
+  "registeredMutationRoutes": 116,
   "routesWithDirectTestReferences": 67,
   "fullMatrixSignedOff": 0,
   "nonMutatingUxInventory": "PARTIAL",
@@ -49,7 +49,7 @@
     {
       "method": "PATCH",
       "url": "/admin/assets/:id",
-      "registration": "api/server.ts:127",
+      "registration": "api/server.ts:149",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -272,6 +272,12 @@
           "file": "api/tests/integration.test.ts",
           "line": 115,
           "test": "customer deactivation revokes sessions and recovery without deleting consent or MFA"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 56,
+          "test": "definitive validation and expired-session rejection cannot insert a message or erase an earlier saved send"
         }
       ],
       "status": "PARTIAL",
@@ -948,6 +954,168 @@
           "file": "api/tests/integration.test.ts",
           "line": 35,
           "test": "internal attachments remain private and mismatched image payloads are rejected"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 22,
+          "test": "concurrent identical send references create one persistent message, audit and notification event"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 22,
+          "test": "concurrent identical send references create one persistent message, audit and notification event"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 26,
+          "test": "a lost response can be replayed unchanged, while any changed payload is refused"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 28,
+          "test": "a lost response can be replayed unchanged, while any changed payload is refused"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 29,
+          "test": "a lost response can be replayed unchanged, while any changed payload is refused"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 34,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 35,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 35,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 35,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 36,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 37,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 37,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 37,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 37,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 37,
+          "test": "replay checks authenticated organization, role, private files and replies before returning a saved record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 40,
+          "test": "send references are author/conversation scoped and legacy messages remain compatible"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 40,
+          "test": "send references are author/conversation scoped and legacy messages remain compatible"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 40,
+          "test": "send references are author/conversation scoped and legacy messages remain compatible"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 41,
+          "test": "send references are author/conversation scoped and legacy messages remain compatible"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 47,
+          "test": "outbox failure rolls back the message and audit; retrying the same key commits once"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 48,
+          "test": "outbox failure rolls back the message and audit; retrying the same key commits once"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 52,
+          "test": "definitive validation and expired-session rejection cannot insert a message or erase an earlier saved send"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 53,
+          "test": "definitive validation and expired-session rejection cannot insert a message or erase an earlier saved send"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 55,
+          "test": "definitive validation and expired-session rejection cannot insert a message or erase an earlier saved send"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 57,
+          "test": "definitive validation and expired-session rejection cannot insert a message or erase an earlier saved send"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 60,
+          "test": "a confirmed send survives an application restart and still replays the original record"
+        },
+        {
+          "method": "POST",
+          "file": "api/tests/message-retry.test.ts",
+          "line": 60,
+          "test": "a confirmed send survives an application restart and still replays the original record"
         }
       ],
       "status": "PARTIAL",
@@ -961,7 +1129,7 @@
     {
       "method": "POST",
       "url": "/deliveries",
-      "registration": "api/server.ts:110",
+      "registration": "api/server.ts:132",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -996,7 +1164,7 @@
     {
       "method": "POST",
       "url": "/deliveries/:id/decision",
-      "registration": "api/server.ts:111",
+      "registration": "api/server.ts:133",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -1037,7 +1205,7 @@
     {
       "method": "POST",
       "url": "/email/drafts",
-      "registration": "api/mail-centre.ts:44",
+      "registration": "api/mail-centre.ts:46",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1096,7 +1264,7 @@
     {
       "method": "PUT",
       "url": "/email/drafts/:id",
-      "registration": "api/mail-centre.ts:45",
+      "registration": "api/mail-centre.ts:47",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1131,7 +1299,7 @@
     {
       "method": "POST",
       "url": "/email/drafts/:id/archive",
-      "registration": "api/mail-centre.ts:46",
+      "registration": "api/mail-centre.ts:48",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1153,8 +1321,40 @@
     },
     {
       "method": "POST",
+      "url": "/email/drafts/:id/provider-sync",
+      "registration": "api/mail-centre.ts:50",
+      "candidateComponents": [
+        "src/components/email-workspace.tsx"
+      ],
+      "automatedTestReferences": [],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
+      "url": "/email/drafts/:id/provider-sync/reconcile",
+      "registration": "api/mail-centre.ts:51",
+      "candidateComponents": [
+        "src/components/email-workspace.tsx"
+      ],
+      "automatedTestReferences": [],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "POST",
       "url": "/email/drafts/:id/restore",
-      "registration": "api/mail-centre.ts:46",
+      "registration": "api/mail-centre.ts:48",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1177,7 +1377,7 @@
     {
       "method": "POST",
       "url": "/email/folders",
-      "registration": "api/mail-centre.ts:31",
+      "registration": "api/mail-centre.ts:33",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1193,7 +1393,7 @@
     {
       "method": "PATCH",
       "url": "/email/messages/:id",
-      "registration": "api/mail-centre.ts:40",
+      "registration": "api/mail-centre.ts:42",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1209,7 +1409,7 @@
     {
       "method": "POST",
       "url": "/email/messages/:id/lead",
-      "registration": "api/mail-centre.ts:55",
+      "registration": "api/mail-centre.ts:60",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1225,7 +1425,7 @@
     {
       "method": "POST",
       "url": "/email/messages/:id/link",
-      "registration": "api/mail-centre.ts:54",
+      "registration": "api/mail-centre.ts:59",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1248,7 +1448,7 @@
     {
       "method": "POST",
       "url": "/email/messages/:id/restore-cache",
-      "registration": "api/mail-centre.ts:37",
+      "registration": "api/mail-centre.ts:39",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1264,7 +1464,7 @@
     {
       "method": "POST",
       "url": "/email/messages/:id/work-item",
-      "registration": "api/mail-centre.ts:56",
+      "registration": "api/mail-centre.ts:61",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1305,7 +1505,7 @@
     {
       "method": "PUT",
       "url": "/email/retention",
-      "registration": "api/mail-centre.ts:30",
+      "registration": "api/mail-centre.ts:32",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1334,7 +1534,7 @@
     {
       "method": "POST",
       "url": "/email/send",
-      "registration": "api/mail-centre.ts:47",
+      "registration": "api/mail-centre.ts:52",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1363,7 +1563,7 @@
     {
       "method": "PUT",
       "url": "/email/signatures",
-      "registration": "api/mail-centre.ts:42",
+      "registration": "api/mail-centre.ts:44",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1386,7 +1586,7 @@
     {
       "method": "POST",
       "url": "/email/sync",
-      "registration": "api/mail-centre.ts:35",
+      "registration": "api/mail-centre.ts:37",
       "candidateComponents": [
         "src/components/email-workspace.tsx"
       ],
@@ -1434,7 +1634,7 @@
     {
       "method": "POST",
       "url": "/files",
-      "registration": "api/server.ts:108",
+      "registration": "api/server.ts:130",
       "candidateComponents": [
         "src/components/cms-tools.tsx",
         "src/components/message-thread.tsx",
@@ -2131,7 +2331,7 @@
     {
       "method": "POST",
       "url": "/notifications/:id/read",
-      "registration": "api/server.ts:116",
+      "registration": "api/server.ts:138",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2161,7 +2361,7 @@
     {
       "method": "POST",
       "url": "/payments/sandbox",
-      "registration": "api/server.ts:112",
+      "registration": "api/server.ts:134",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2382,7 +2582,7 @@
     {
       "method": "POST",
       "url": "/projects/:id/from-template",
-      "registration": "api/project-management.ts:17",
+      "registration": "api/project-management.ts:60",
       "candidateComponents": [
         "src/components/email-workspace.tsx",
         "src/components/operations.tsx",
@@ -2400,7 +2600,7 @@
     {
       "method": "POST",
       "url": "/projects/:id/handover",
-      "registration": "api/project-management.ts:18",
+      "registration": "api/project-management.ts:61",
       "candidateComponents": [
         "src/components/email-workspace.tsx",
         "src/components/operations.tsx",
@@ -2443,7 +2643,7 @@
     {
       "method": "POST",
       "url": "/projects/:id/team",
-      "registration": "api/project-management.ts:11",
+      "registration": "api/project-management.ts:54",
       "candidateComponents": [
         "src/components/email-workspace.tsx",
         "src/components/operations.tsx",
@@ -2461,7 +2661,7 @@
     {
       "method": "POST",
       "url": "/projects/:id/time",
-      "registration": "api/project-management.ts:16",
+      "registration": "api/project-management.ts:59",
       "candidateComponents": [
         "src/components/email-workspace.tsx",
         "src/components/operations.tsx",
@@ -2628,7 +2828,7 @@
     {
       "method": "POST",
       "url": "/records/:kind",
-      "registration": "api/server.ts:119",
+      "registration": "api/server.ts:141",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2644,7 +2844,7 @@
     {
       "method": "DELETE",
       "url": "/records/:kind/:id",
-      "registration": "api/server.ts:121",
+      "registration": "api/server.ts:143",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2660,7 +2860,7 @@
     {
       "method": "PATCH",
       "url": "/records/:kind/:id",
-      "registration": "api/server.ts:120",
+      "registration": "api/server.ts:142",
       "candidateComponents": [
         "src/components/operations.tsx"
       ],
@@ -2676,7 +2876,7 @@
     {
       "method": "POST",
       "url": "/refunds",
-      "registration": "api/server.ts:113",
+      "registration": "api/server.ts:135",
       "candidateComponents": [
         "src/components/extra-pages.tsx",
         "src/components/finance-workspace.tsx",
@@ -2872,7 +3072,7 @@
     {
       "method": "POST",
       "url": "/tasks/:id/dependencies",
-      "registration": "api/project-management.ts:13",
+      "registration": "api/project-management.ts:56",
       "candidateComponents": [
         "src/components/project-workbench.tsx"
       ],
@@ -2907,7 +3107,23 @@
     {
       "method": "DELETE",
       "url": "/tasks/:id/dependencies/:dependency",
-      "registration": "api/project-management.ts:14",
+      "registration": "api/project-management.ts:57",
+      "candidateComponents": [
+        "src/components/project-workbench.tsx"
+      ],
+      "automatedTestReferences": [],
+      "status": "PARTIAL",
+      "processing": "Shared request state; component-specific evidence must be checked",
+      "success": "Authoritative response required; exact message mapping pending",
+      "failure": "Network/timeout uncertainty and recovery require per-action sign-off",
+      "navigation": "Per-action verification pending",
+      "automatedEvidence": "Executed integration groups are recorded in the verification reports; direct request references are mappings, not complete outcome coverage",
+      "browserEvidence": "Executed workflow reports; complete per-route failure matrix pending"
+    },
+    {
+      "method": "PATCH",
+      "url": "/tasks/:id/schedule",
+      "registration": "api/project-management.ts:32",
       "candidateComponents": [
         "src/components/project-workbench.tsx"
       ],

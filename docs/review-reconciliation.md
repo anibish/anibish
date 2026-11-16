@@ -14,7 +14,7 @@ Archive correlation has **74/74 source-text/rating matches**, including document
 
 All 136 supplementary Activity snapshots were validated against an actual completed-order document; 136 were accepted. Nine extraction evidence checks and 15 reconciliation checks passed locally. The completed-order list’s 81 original date values are **Due date** labels, not completion dates; the original export is preserved with a SHA-256 hash. Provider date/time labels retain their unidentified display timezone and are not silently converted to UTC.
 
-2 reviews link to 2 portfolio pages; 13 link to 1 service where documented. Original source evidence is delivered only through authenticated administrative access.
+28 reviews link to 6 portfolio pages; 13 link to 1 service where documented. Original source evidence is delivered only through authenticated administrative access.
 
 | Candidate | Original asset number | Reconciliation | Supported platform | Public reviewer | Publication | Source correspondence | Verified portfolio/service association |
 |---|---|---|---|---|---|---|---|
@@ -23,18 +23,18 @@ All 136 supplementary Activity snapshots were validated against an actual comple
 | 2-1 | 2 | Distinct; full visible text | Fiverr | d_c_consulting | Published | Header/profile identity + source text/rating | No verified association |
 | 3-1 | 3 | Distinct; full visible text | Fiverr | d_c_consulting | Published | Header/profile identity + source text/rating | No verified association |
 | 4-1 | 4 | Distinct; full visible text | Fiverr | alechiareese | Published | Header/profile identity + source text/rating | No verified association |
-| 5-1 | 5 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | No verified association |
+| 5-1 | 5 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | fiverr-mariakelley |
 | 6-1 | 6 | Distinct; full visible text | Fiverr | akr9400 | Published | Header/profile identity + source text/rating | No verified association |
 | 7-1 | 7 | Distinct; full visible text | Fiverr | Client Review | Published | Header/profile identity + source text/rating | ssl-scanner / websites |
 | 8-1 | 8 | Distinct; full visible text | Fiverr | vikkilampton | Published | Header/profile identity + source text/rating | No verified association |
-| 9-1 | 9 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | No verified association |
+| 9-1 | 9 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | fiverr-studiosquad |
 | 10-1 | 10 | Distinct; full visible text | Fiverr | sankathir | Published | Header/profile identity + source text/rating | No verified association |
 | 11-1 | 11 | Distinct; full visible text | Fiverr | autotrons | Published | Header/profile identity + source text/rating | websites |
 | 12-1 | 12 | Distinct; full visible text | Fiverr | shibupacifyr | Published | Header/profile identity + source text/rating | websites |
 | 13-1 | 13 | Distinct; full visible text | Fiverr | hopoutreach | Published | Header/profile identity + source text/rating | No verified association |
 | 14-1 | 14 | Distinct; full visible text | Fiverr | hopoutreach | Published | Header/profile identity + source text/rating | No verified association |
 | 15-1 | 15 | Distinct; full visible text | Fiverr | hopoutreach | Published | Header/profile identity + source text/rating | No verified association |
-| 16-1 | 16 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | No verified association |
+| 16-1 | 16 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | fiverr-mariakelley |
 | 17-1 | 17 | Distinct; full visible text | Fiverr | wimberlyandco | Published | Header/profile identity + source text/rating | websites |
 | 18-1 | 18 | Distinct; full visible text | Fiverr | Client Review | Published | Text/rating correspondence; identity unconfirmed | No verified association |
 | 19-1 | 19 | Distinct; full visible text | Fiverr | Client Review | Published | Text/rating correspondence; identity unconfirmed | No verified association |
@@ -43,8 +43,8 @@ All 136 supplementary Activity snapshots were validated against an actual comple
 | 22-1 | 22 | Distinct; full visible text | Fiverr | soseriousnita | Published | Header/profile identity + source text/rating | No verified association |
 | 23-1 | 23 | Distinct; full visible text | Fiverr | alechiareese | Published | Header/profile identity + source text/rating | No verified association |
 | 24-1 | 24 | Distinct; full visible text | Fiverr | sankathir | Published | Header/profile identity + source text/rating | No verified association |
-| 25-1 | 25 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | No verified association |
-| 26-1 | 26 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | No verified association |
+| 25-1 | 25 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | fiverr-mariakelley |
+| 26-1 | 26 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | fiverr-studiosquad |
 | 27-1 | 27 | Distinct; full visible text | Fiverr | Client Review | Published | Text/rating correspondence; identity unconfirmed | No verified association |
 | 28-1 | 28 | Distinct; full visible text | Fiverr | Client Review | Published | Text/rating correspondence; identity unconfirmed | No verified association |
 | 29-1 | 29 | Distinct; full visible text | Fiverr | bizwoman28 | Published | Header/profile identity + source text/rating | No verified association |
@@ -52,42 +52,42 @@ All 136 supplementary Activity snapshots were validated against an actual comple
 | 31-1 | 31 | Distinct; full visible text | Client Review | Client Review | Published | Text/rating correspondence; identity unconfirmed | No verified association |
 | 32-1 | 32 | Distinct; full visible text | Fiverr | codesrc | Published | Header/profile identity + source text/rating | No verified association |
 | 33-1 | 33 | Distinct; full visible text | Fiverr | sell2doors | Published | Header/profile identity + source text/rating | No verified association |
-| 34-1 | 34 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | No verified association |
+| 34-1 | 34 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | fiverr-studiosquad |
 | 35-1 | 35 | Distinct; full visible text | Fiverr | donxanxan | Published | Header/profile identity + source text/rating | No verified association |
 | 36-1 | 36 | Distinct; full visible text | Fiverr | sell2doors | Published | Header/profile identity + source text/rating | No verified association |
-| 37-1 | 37 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | No verified association |
+| 37-1 | 37 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | fiverr-studiosquad |
 | 38-1 | 38 | Distinct; full visible text | Fiverr | codesrc | Published | Header/profile identity + source text/rating | No verified association |
 | 39-1 | 39 | Distinct; full visible text | Fiverr | steven4po | Published | Header/profile identity + source text/rating | No verified association |
 | 40-1 | 40 | Distinct; full visible text | Fiverr | akr9400 | Published | Header/profile identity + source text/rating | No verified association |
 | 41-1 | 41 | Distinct; full visible text | Fiverr | akr9400 | Published | Header/profile identity + source text/rating | No verified association |
 | 42-1 | 42 | Distinct; full visible text | Fiverr | Client Review | Published | Header/profile identity + source text/rating | websites |
-| 43-1 | 43 | Distinct; full visible text | Fiverr | pangeiagroup | Published | Header/profile identity + source text/rating | No verified association |
-| 44-1 | 44 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | No verified association |
-| 45-1 | 45 | Distinct; full visible text | Fiverr | pangeiagroup | Published | Header/profile identity + source text/rating | websites |
-| 46-1 | 46 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | No verified association |
-| 47-1 | 47 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | No verified association |
-| 48-1 | 48 | Distinct; full visible text | Fiverr | fandmspices | Published | Header/profile identity + source text/rating | No verified association |
+| 43-1 | 43 | Distinct; full visible text | Fiverr | pangeiagroup | Published | Header/profile identity + source text/rating | fiverr-pangeiagroup |
+| 44-1 | 44 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | fiverr-mariakelley |
+| 45-1 | 45 | Distinct; full visible text | Fiverr | pangeiagroup | Published | Header/profile identity + source text/rating | fiverr-pangeiagroup / websites |
+| 46-1 | 46 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | fiverr-mariakelley |
+| 47-1 | 47 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | fiverr-mariakelley |
+| 48-1 | 48 | Distinct; full visible text | Fiverr | fandmspices | Published | Header/profile identity + source text/rating | fiverr-fandmspices |
 | 49-1 | 49 | Distinct; full visible text | Fiverr | samuelvaknin | Published | Header/profile identity + source text/rating | No verified association |
 | 50-1 | 50 | Duplicate of 49-1 | Client Review | Excluded duplicate | Excluded duplicate | Not linked | No verified association |
-| 51-1 | 51 | Distinct; full visible text | Fiverr | pangeiagroup | Published | Header/profile identity + source text/rating | websites |
-| 52-1 | 52 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | No verified association |
-| 53-1 | 53 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | No verified association |
-| 54-1 | 54 | Distinct; full visible text | Fiverr | pangeiagroup | Published | Header/profile identity + source text/rating | websites |
+| 51-1 | 51 | Distinct; full visible text | Fiverr | pangeiagroup | Published | Header/profile identity + source text/rating | fiverr-pangeiagroup / websites |
+| 52-1 | 52 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | fiverr-studiosquad |
+| 53-1 | 53 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | fiverr-studiosquad |
+| 54-1 | 54 | Distinct; full visible text | Fiverr | pangeiagroup | Published | Header/profile identity + source text/rating | fiverr-pangeiagroup / websites |
 | 55-1 | 55 | Distinct; full visible text | Fiverr | nanath | Published | Header/profile identity + source text/rating | No verified association |
-| 56-1 | 56 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | No verified association |
+| 56-1 | 56 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | fiverr-mariakelley |
 | 57-1 | 57 | Distinct; full visible text | Fiverr | sgadhok1 | Published | Header/profile identity + source text/rating | No verified association |
 | 58-1 | 58 | Distinct; full visible text | Fiverr | d_c_consulting | Published | Header/profile identity + source text/rating | websites |
 | 59-1 | 59 | Distinct; visible excerpt only | Fiverr | sgadhok1 | Published | Header/profile identity + source text/rating | websites |
 | 60-1 | 60 | Distinct; full visible text | Fiverr | respectedbuilde | Published | Header/profile identity + source text/rating | No verified association |
 | 61-1 | 61 | Distinct; full visible text | Fiverr | d_c_consulting | Published | Header/profile identity + source text/rating | No verified association |
-| 62-1 | 62 | Distinct; full visible text | Fiverr | fandmspices | Published | Header/profile identity + source text/rating | No verified association |
-| 63-1 | 63 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | No verified association |
-| 64-1 | 64 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | No verified association |
-| 65-1 | 65 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | No verified association |
-| 66-1 | 66 | Distinct; full visible text | Fiverr | fandmspices | Published | Header/profile identity + source text/rating | No verified association |
+| 62-1 | 62 | Distinct; full visible text | Fiverr | fandmspices | Published | Header/profile identity + source text/rating | fiverr-fandmspices |
+| 63-1 | 63 | Distinct; full visible text | Fiverr | mariakelley | Published | Header/profile identity + source text/rating | fiverr-mariakelley |
+| 64-1 | 64 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | fiverr-studiosquad |
+| 65-1 | 65 | Distinct; full visible text | Fiverr | studiosquad | Published | Header/profile identity + source text/rating | fiverr-studiosquad |
+| 66-1 | 66 | Distinct; full visible text | Fiverr | fandmspices | Published | Header/profile identity + source text/rating | fiverr-fandmspices |
 | 67-1 | 67 | Distinct; full visible text | Fiverr | martiacosta | Published | Header/profile identity + source text/rating | No verified association |
 | 68-1 | 68 | Distinct; full visible text | Fiverr | luccasqueiroz | Published | Header/profile identity + source text/rating | No verified association |
-| 69-1 | 69 | Distinct; full visible text | Fiverr | fandmspices | Published | Header/profile identity + source text/rating | No verified association |
+| 69-1 | 69 | Distinct; full visible text | Fiverr | fandmspices | Published | Header/profile identity + source text/rating | fiverr-fandmspices |
 | 70-1 | 70 | Distinct; full visible text | Fiverr | martiacosta | Published | Header/profile identity + source text/rating | No verified association |
 | 71-1 | 71 | Distinct; full visible text | Fiverr | nanath | Published | Header/profile identity + source text/rating | No verified association |
 | 72-1 | 72 | Distinct; full visible text | Fiverr | nanath | Published | Header/profile identity + source text/rating | websites |

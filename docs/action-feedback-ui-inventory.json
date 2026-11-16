@@ -1,21 +1,21 @@
 {
   "summary": {
     "status": "PARTIAL",
-    "sourceSnapshot": "Current public availability follow-up; completed review-source release dd4b5fd independently verified in production.",
-    "scope": "Enumerated meaningful operations in22 public/account/CMS/business components; generated dashboard forms and remaining project variants are not yet exhaustive.",
-    "uiOperations": 163,
-    "mutationOperations": 80,
-    "readOperations": 32,
-    "clientOperations": 45,
+    "sourceSnapshot": "Version0.4.1 operational follow-up, verified locally before deployment.",
+    "scope": "Enumerated meaningful operations in23 public/account/CMS/business components; older generated dashboard forms and project variants are not yet exhaustive.",
+    "uiOperations": 176,
+    "mutationOperations": 84,
+    "readOperations": 37,
+    "clientOperations": 49,
     "downloadOperations": 6,
-    "actionsWithScopedBrowserEvidence": 60,
-    "browserPending": 103,
+    "actionsWithScopedBrowserEvidence": 75,
+    "browserPending": 101,
     "fullFailureMatricesSignedOff": 0,
-    "feedbackRegressionChecksExecuted": 94,
-    "registeredMutationRoutes": 113,
+    "feedbackRegressionChecksExecuted": 151,
+    "registeredMutationRoutes": 116,
     "coverageNote": "Scoped browser references prove only the named executed checks. API test references are source mappings, not blanket positive/negative/browser passes.",
-    "components": 22,
-    "integratedApiTestGroupsPassed": 72
+    "components": 23,
+    "integratedApiTestGroupsPassed": 104
   },
   "findings": [
     {
@@ -132,7 +132,8 @@
       "severity": "P2",
       "observation": "Four initial read catches discard failures, so organization/session/team errors render as empty lists without explanation.",
       "browser_reproduced": false,
-      "remediation": "PARTIAL"
+      "remediation": "VERIFIED LOCALLY",
+      "resolution_evidence": "Seven message DB/API groups, three typed-error tests and23 scoped current-component browser assertions. Pending draft keys stay only in the current view; unconfirmed upload acknowledgements require manual file-list recovery."
     }
   ],
   "actions": [
@@ -688,7 +689,7 @@
       "component": "src/components/customer-account.tsx",
       "line": 1,
       "action": "Reload saved billing profile",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -815,7 +816,7 @@
       "component": "src/components/mfa-recovery.tsx",
       "line": 1,
       "action": "Hide privately saved recovery codes",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "1daf827b690a1d621e6ed114828d1ae06f336f1eeeba1099d6e0e7f27505c214",
       "status": "PARTIAL",
@@ -970,7 +971,7 @@
       "component": "src/components/public-pages.tsx",
       "line": 1,
       "action": "Advance/back request-quote steps",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "e5a1190ab9fb2c172eb51ee271190c7a991f103ee827797bc4cec144a93e8ca5",
       "status": "PARTIAL",
@@ -1072,7 +1073,7 @@
       "component": "src/components/cms-workspace.tsx",
       "line": 1,
       "action": "Filter CMS content collection",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "765f569fca6c6ef4f168f51293f5e15ad0ccd4a9aa440205b19a91c5dc1f3e47",
       "status": "PARTIAL",
@@ -1094,7 +1095,7 @@
       "component": "src/components/cms-workspace.tsx",
       "line": 1,
       "action": "Open/create CMS draft editor",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "765f569fca6c6ef4f168f51293f5e15ad0ccd4a9aa440205b19a91c5dc1f3e47",
       "status": "PARTIAL",
@@ -1292,7 +1293,7 @@
       "component": "src/components/cms-workspace.tsx",
       "line": 1,
       "action": "Preview CMS draft",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -1319,7 +1320,7 @@
       "component": "src/components/cms-workspace.tsx",
       "line": 1,
       "action": "Open CMS publication history",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -1346,7 +1347,7 @@
       "component": "src/components/cms-workspace.tsx",
       "line": 1,
       "action": "Add/remove draft page sections",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "765f569fca6c6ef4f168f51293f5e15ad0ccd4a9aa440205b19a91c5dc1f3e47",
       "status": "PARTIAL",
@@ -1368,7 +1369,7 @@
       "component": "src/components/cms-tools.tsx",
       "line": 1,
       "action": "Open/refresh media library",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -1498,7 +1499,7 @@
       "component": "src/components/cms-tools.tsx",
       "line": 1,
       "action": "Open/refresh redirect list",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -1598,7 +1599,7 @@
       "component": "src/components/cms-tools.tsx",
       "line": 1,
       "action": "Reload CMS records after failure",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -1631,7 +1632,7 @@
       "component": "src/components/review-workspace.tsx",
       "line": 1,
       "action": "Search candidate review inventory",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
@@ -1653,7 +1654,7 @@
       "component": "src/components/review-workspace.tsx",
       "line": 1,
       "action": "Select eligible/clear review selection",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
@@ -1675,7 +1676,7 @@
       "component": "src/components/review-workspace.tsx",
       "line": 1,
       "action": "Open review transcription editor",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
@@ -2301,7 +2302,7 @@
       "component": "src/components/portfolio-sources.tsx",
       "line": 1,
       "action": "Search/page private source inventory",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "641347149dfb0e2ae76f43f3acbd3bfb35227882be30f808d9975c5f49563dc1",
       "status": "PARTIAL",
@@ -2323,7 +2324,7 @@
       "component": "src/components/portfolio-sources.tsx",
       "line": 1,
       "action": "Inspect private source record",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "641347149dfb0e2ae76f43f3acbd3bfb35227882be30f808d9975c5f49563dc1",
       "status": "PARTIAL",
@@ -2345,7 +2346,7 @@
       "component": "src/components/legal-workspace.tsx",
       "line": 1,
       "action": "Select legal policy and effective date",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2315a2b2016ea9cc7e35ba8adf9f0c48f80bc58971fe60ce234fb7c1593dca0c",
       "status": "PARTIAL",
@@ -2401,7 +2402,7 @@
       "component": "src/components/legal-workspace.tsx",
       "line": 1,
       "action": "Preview saved legal draft",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2315a2b2016ea9cc7e35ba8adf9f0c48f80bc58971fe60ce234fb7c1593dca0c",
       "status": "PARTIAL",
@@ -2519,7 +2520,7 @@
       "component": "src/components/legal-workspace.tsx",
       "line": 1,
       "action": "Compare/retrieve historical legal version",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -2546,7 +2547,7 @@
       "component": "src/components/legal-workspace.tsx",
       "line": 1,
       "action": "Format legal editor content",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2315a2b2016ea9cc7e35ba8adf9f0c48f80bc58971fe60ce234fb7c1593dca0c",
       "status": "PARTIAL",
@@ -2568,7 +2569,7 @@
       "component": "src/components/portfolio-showcase.tsx",
       "line": 1,
       "action": "Search public portfolio",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "5976dca4bed8b3dbc32e44338d29b27a6c1831b93f39a66923883e8c8728c78d",
       "status": "PARTIAL",
@@ -2592,7 +2593,7 @@
       "component": "src/components/portfolio-showcase.tsx",
       "line": 1,
       "action": "Filter public portfolio category",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "5976dca4bed8b3dbc32e44338d29b27a6c1831b93f39a66923883e8c8728c78d",
       "status": "PARTIAL",
@@ -2616,7 +2617,7 @@
       "component": "src/components/portfolio-showcase.tsx",
       "line": 1,
       "action": "Filter public portfolio technology",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "5976dca4bed8b3dbc32e44338d29b27a6c1831b93f39a66923883e8c8728c78d",
       "status": "PARTIAL",
@@ -2640,7 +2641,7 @@
       "component": "src/components/portfolio-showcase.tsx",
       "line": 1,
       "action": "Next/previous portfolio page",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "5976dca4bed8b3dbc32e44338d29b27a6c1831b93f39a66923883e8c8728c78d",
       "status": "PARTIAL",
@@ -2664,7 +2665,7 @@
       "component": "src/components/portfolio-showcase.tsx",
       "line": 1,
       "action": "Clear public portfolio filters",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "5976dca4bed8b3dbc32e44338d29b27a6c1831b93f39a66923883e8c8728c78d",
       "status": "PARTIAL",
@@ -2688,7 +2689,7 @@
       "component": "src/components/review-directory.tsx",
       "line": 1,
       "action": "Search public reviews",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "9715d7655d8b265a51f2ad1ebcf7024184061803a8e57dad9d3d6ba71108d79d",
       "status": "PARTIAL",
@@ -2710,7 +2711,7 @@
       "component": "src/components/review-directory.tsx",
       "line": 1,
       "action": "Filter reviews category/platform/rating",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "9715d7655d8b265a51f2ad1ebcf7024184061803a8e57dad9d3d6ba71108d79d",
       "status": "PARTIAL",
@@ -2732,7 +2733,7 @@
       "component": "src/components/review-directory.tsx",
       "line": 1,
       "action": "Sort public reviews",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "9715d7655d8b265a51f2ad1ebcf7024184061803a8e57dad9d3d6ba71108d79d",
       "status": "PARTIAL",
@@ -2754,7 +2755,7 @@
       "component": "src/components/review-directory.tsx",
       "line": 1,
       "action": "Next/previous reviews page",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "9715d7655d8b265a51f2ad1ebcf7024184061803a8e57dad9d3d6ba71108d79d",
       "status": "PARTIAL",
@@ -2776,7 +2777,7 @@
       "component": "src/components/review-directory.tsx",
       "line": 1,
       "action": "Clear review filters",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "9715d7655d8b265a51f2ad1ebcf7024184061803a8e57dad9d3d6ba71108d79d",
       "status": "PARTIAL",
@@ -2798,7 +2799,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 10,
       "action": "Initial/automatic mailbox refresh",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -2841,7 +2842,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Select sending/sync mailbox",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -2884,7 +2885,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Select provider folder",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -2927,7 +2928,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Search all synchronized history",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -3004,7 +3005,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Toggle compose editor",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2e7f55fa72c8f49aeef28d35a15d72177820058d9033f1224c87c0a416e63ffa",
       "status": "PARTIAL",
@@ -3026,7 +3027,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Toggle threaded conversations/message list",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2e7f55fa72c8f49aeef28d35a15d72177820058d9033f1224c87c0a416e63ffa",
       "status": "PARTIAL",
@@ -3076,7 +3077,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Start a new message / clear editor",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2e7f55fa72c8f49aeef28d35a15d72177820058d9033f1224c87c0a416e63ffa",
       "status": "PARTIAL",
@@ -3101,7 +3102,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Edit recipient/Cc/subject/body",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2e7f55fa72c8f49aeef28d35a15d72177820058d9033f1224c87c0a416e63ffa",
       "status": "PARTIAL",
@@ -3125,7 +3126,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Read selected composition attachments",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2e7f55fa72c8f49aeef28d35a15d72177820058d9033f1224c87c0a416e63ffa",
       "status": "PARTIAL",
@@ -3149,7 +3150,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Remove a composition attachment",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2e7f55fa72c8f49aeef28d35a15d72177820058d9033f1224c87c0a416e63ffa",
       "status": "PARTIAL",
@@ -3171,7 +3172,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Insert mailbox signature into editor",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2e7f55fa72c8f49aeef28d35a15d72177820058d9033f1224c87c0a416e63ffa",
       "status": "PARTIAL",
@@ -3462,7 +3463,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Open email from CRM correspondence history",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -3493,7 +3494,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Show archived/active private drafts",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -3536,7 +3537,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Refresh saved private drafts",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -3579,7 +3580,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Open a saved private draft",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2e7f55fa72c8f49aeef28d35a15d72177820058d9033f1224c87c0a416e63ffa",
       "status": "PARTIAL",
@@ -3720,7 +3721,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Open a thread history",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -3747,7 +3748,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Open message from inbox list",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -3793,7 +3794,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Open a message within thread history",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -3824,7 +3825,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Previous mailbox/thread page",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -3855,7 +3856,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Next mailbox/thread page",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -3940,7 +3941,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Prepare reply draft",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2e7f55fa72c8f49aeef28d35a15d72177820058d9033f1224c87c0a416e63ffa",
       "status": "PARTIAL",
@@ -3964,7 +3965,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 14,
       "action": "Prepare reply-all draft",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2e7f55fa72c8f49aeef28d35a15d72177820058d9033f1224c87c0a416e63ffa",
       "status": "PARTIAL",
@@ -3988,7 +3989,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 12,
       "action": "Prepare forward draft without attachments",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "2e7f55fa72c8f49aeef28d35a15d72177820058d9033f1224c87c0a416e63ffa",
       "status": "PARTIAL",
@@ -4012,7 +4013,7 @@
       "component": "src/components/email-workspace.tsx",
       "line": 12,
       "action": "Prepare forward draft with attachments",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -4345,7 +4346,7 @@
       "component": "src/components/finance-workspace.tsx",
       "line": 16,
       "action": "Load/refresh financial records",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -4400,7 +4401,7 @@
       "component": "src/components/finance-workspace.tsx",
       "line": 21,
       "action": "Select finance tab",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "ec309e7e2cdb4d13c10c74f682f4f8ca9ad0aa4ae4d94ac79190d3e0e8fbaadd",
       "status": "PARTIAL",
@@ -4422,7 +4423,7 @@
       "component": "src/components/finance-workspace.tsx",
       "line": 21,
       "action": "Open new draft invoice/agreement/transfer editor",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "ec309e7e2cdb4d13c10c74f682f4f8ca9ad0aa4ae4d94ac79190d3e0e8fbaadd",
       "status": "PARTIAL",
@@ -4480,7 +4481,7 @@
       "component": "src/components/finance-workspace.tsx",
       "line": 1,
       "action": "Open invoice publication history",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -4509,7 +4510,7 @@
       "component": "src/components/finance-workspace.tsx",
       "line": 23,
       "action": "Edit existing draft invoice",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "ec309e7e2cdb4d13c10c74f682f4f8ca9ad0aa4ae4d94ac79190d3e0e8fbaadd",
       "status": "PARTIAL",
@@ -4912,7 +4913,7 @@
       "component": "src/components/finance-workspace.tsx",
       "line": 24,
       "action": "Close finance editor/history modal",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "ec309e7e2cdb4d13c10c74f682f4f8ca9ad0aa4ae4d94ac79190d3e0e8fbaadd",
       "status": "PARTIAL",
@@ -4934,7 +4935,7 @@
       "component": "src/components/membership.tsx",
       "line": 8,
       "action": "Load memberships/organizations/sessions/team",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -4953,7 +4954,7 @@
           "path": "/admin/team"
         }
       ],
-      "source_sha256": "6bfec4335403cea52126780374120193fd18cd9dc58b8e5723149c4e07cb6f98",
+      "source_sha256": "c82e0e01ca2ac10f9f8fe2e49e73e8b041b4bb9b45ec467d63b5c7b78cb06eab",
       "status": "PARTIAL",
       "processing": "No load state.",
       "duplicate_guard": "Initial effect only; no explicit retry control.",
@@ -4964,7 +4965,12 @@
       "outstanding": [
         "Concrete gap: initial load errors silently swallowed."
       ],
-      "browser_evidence": [],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/message-membership-browser/report.json",
+          "scope": "23 actual local component assertions with synthetic API responses; not production persistence proof."
+        }
+      ],
       "automated_test_references": [],
       "full_failure_matrix_verified": false
     },
@@ -4980,7 +4986,7 @@
           "path": "/auth/organization"
         }
       ],
-      "source_sha256": "6bfec4335403cea52126780374120193fd18cd9dc58b8e5723149c4e07cb6f98",
+      "source_sha256": "c82e0e01ca2ac10f9f8fe2e49e73e8b041b4bb9b45ec467d63b5c7b78cb06eab",
       "status": "PARTIAL",
       "processing": "if busy return; disabled switch; global Processing.",
       "duplicate_guard": "Component busy + shared in-flight reuse.",
@@ -5007,7 +5013,7 @@
           "path": "/invitations"
         }
       ],
-      "source_sha256": "6bfec4335403cea52126780374120193fd18cd9dc58b8e5723149c4e07cb6f98",
+      "source_sha256": "c82e0e01ca2ac10f9f8fe2e49e73e8b041b4bb9b45ec467d63b5c7b78cb06eab",
       "status": "PARTIAL",
       "processing": "busy guard; Processing button disabled.",
       "duplicate_guard": "Stable key per same form signature + server dedupe; shared in-flight reuse.",
@@ -5072,7 +5078,7 @@
           "path": "/auth/sessions/:id"
         }
       ],
-      "source_sha256": "6bfec4335403cea52126780374120193fd18cd9dc58b8e5723149c4e07cb6f98",
+      "source_sha256": "c82e0e01ca2ac10f9f8fe2e49e73e8b041b4bb9b45ec467d63b5c7b78cb06eab",
       "status": "PARTIAL",
       "processing": "busy guard and disabled revoke.",
       "duplicate_guard": "Component busy + shared in-flight reuse.",
@@ -5099,7 +5105,7 @@
           "path": "/admin/team"
         }
       ],
-      "source_sha256": "6bfec4335403cea52126780374120193fd18cd9dc58b8e5723149c4e07cb6f98",
+      "source_sha256": "c82e0e01ca2ac10f9f8fe2e49e73e8b041b4bb9b45ec467d63b5c7b78cb06eab",
       "status": "PARTIAL",
       "processing": "busy guard and disabled Grant.",
       "duplicate_guard": "Component busy + shared in-flight reuse.",
@@ -5120,7 +5126,7 @@
       "component": "src/components/message-thread.tsx",
       "line": 8,
       "action": "Initial/polled conversation refresh",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -5131,7 +5137,7 @@
           "path": "/files"
         }
       ],
-      "source_sha256": "251e10eeaaa5ca36744ab16b213882c86250f130880578374d2ab2979f96e45a",
+      "source_sha256": "5aed1f51a61aaa3d900e98d7a102a456bf0b3eb92f8b2d27b499db816fcd9f47",
       "status": "PARTIAL",
       "processing": "Connecting initial status, then poll every4seconds; no separate in-flight flag.",
       "duplicate_guard": "No overlap/read-generation guard visible.",
@@ -5154,14 +5160,14 @@
       "component": "src/components/message-thread.tsx",
       "line": 11,
       "action": "Reconnect conversation",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
           "path": "/conversations/:id/messages"
         }
       ],
-      "source_sha256": "251e10eeaaa5ca36744ab16b213882c86250f130880578374d2ab2979f96e45a",
+      "source_sha256": "5aed1f51a61aaa3d900e98d7a102a456bf0b3eb92f8b2d27b499db816fcd9f47",
       "status": "PARTIAL",
       "processing": "Uses refresh(); no disabled reconnect.",
       "duplicate_guard": "GETs can overlap.",
@@ -5184,9 +5190,9 @@
       "component": "src/components/message-thread.tsx",
       "line": 11,
       "action": "Search loaded conversation",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
-      "source_sha256": "251e10eeaaa5ca36744ab16b213882c86250f130880578374d2ab2979f96e45a",
+      "source_sha256": "5aed1f51a61aaa3d900e98d7a102a456bf0b3eb92f8b2d27b499db816fcd9f47",
       "status": "PARTIAL",
       "processing": "Immediate local filter.",
       "duplicate_guard": "Client state only.",
@@ -5214,7 +5220,7 @@
           "path": "/conversations/:id/messages"
         }
       ],
-      "source_sha256": "251e10eeaaa5ca36744ab16b213882c86250f130880578374d2ab2979f96e45a",
+      "source_sha256": "5aed1f51a61aaa3d900e98d7a102a456bf0b3eb92f8b2d27b499db816fcd9f47",
       "status": "PARTIAL",
       "processing": "busy=true and Saving message button disabled.",
       "duplicate_guard": "Disabled button and shared identical in-flight reuse; submit has no explicit busy-return; no durable message key.",
@@ -5323,7 +5329,7 @@
           "path": "/conversations/:id/messages"
         }
       ],
-      "source_sha256": "251e10eeaaa5ca36744ab16b213882c86250f130880578374d2ab2979f96e45a",
+      "source_sha256": "5aed1f51a61aaa3d900e98d7a102a456bf0b3eb92f8b2d27b499db816fcd9f47",
       "status": "PARTIAL",
       "processing": "Same busy state spans upload and message POST.",
       "duplicate_guard": "Shared request dedupe only while in flight; retry creates another upload because created id is not retained in component state.",
@@ -5334,7 +5340,12 @@
       "outstanding": [
         "Concrete risk: upload-success/message-failure retry can orphan or duplicate attachment records; no durable upload result retained."
       ],
-      "browser_evidence": [],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/message-membership-browser/report.json",
+          "scope": "23 actual local component assertions with synthetic API responses; not production persistence proof."
+        }
+      ],
       "automated_test_references": [
         {
           "method": "POST",
@@ -5406,7 +5417,7 @@
           "path": "/files/:id/download"
         }
       ],
-      "source_sha256": "251e10eeaaa5ca36744ab16b213882c86250f130880578374d2ab2979f96e45a",
+      "source_sha256": "5aed1f51a61aaa3d900e98d7a102a456bf0b3eb92f8b2d27b499db816fcd9f47",
       "status": "PARTIAL",
       "processing": "Native link/new tab; no component download status.",
       "duplicate_guard": "No download-specific guard.",
@@ -5427,7 +5438,7 @@
       "component": "src/components/ticket-thread.tsx",
       "line": 6,
       "action": "Load/refresh support replies",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -5506,7 +5517,7 @@
       "component": "src/components/notification-operations.tsx",
       "line": 4,
       "action": "Load/refresh delivery logs and templates",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -5537,7 +5548,7 @@
       "component": "src/components/notification-operations.tsx",
       "line": 4,
       "action": "Search notification jobs",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "f45e3ff90020cd35e72370912920534c080a3415ac7d1c839ef041d2f3aed5d4",
       "status": "PARTIAL",
@@ -5559,7 +5570,7 @@
       "component": "src/components/notification-operations.tsx",
       "line": 4,
       "action": "Expand job event history/suppression lists",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "f45e3ff90020cd35e72370912920534c080a3415ac7d1c839ef041d2f3aed5d4",
       "status": "PARTIAL",
@@ -5644,7 +5655,7 @@
       "component": "src/components/notification-operations.tsx",
       "line": 4,
       "action": "Select transactional template",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "f45e3ff90020cd35e72370912920534c080a3415ac7d1c839ef041d2f3aed5d4",
       "status": "PARTIAL",
@@ -5668,7 +5679,7 @@
       "component": "src/components/notification-operations.tsx",
       "line": 4,
       "action": "Edit template subject/plain text",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "f45e3ff90020cd35e72370912920534c080a3415ac7d1c839ef041d2f3aed5d4",
       "status": "PARTIAL",
@@ -5783,7 +5794,7 @@
       "component": "src/components/review-workspace.tsx",
       "line": 1,
       "action": "Load or refresh captured order feedback",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -5812,7 +5823,7 @@
       "component": "src/components/review-workspace.tsx",
       "line": 1,
       "action": "Select or clear unlinked feedback sources",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
@@ -5865,7 +5876,7 @@
       "component": "src/components/review-workspace.tsx",
       "line": 1,
       "action": "Filter review candidate source collection",
-      "kind": "client_only",
+      "kind": "client",
       "routes": [],
       "source_sha256": "d7b6743fd7bc5e3ad7eae94d585fbc995caf93440a22b76ec61fe7b124f5af0a",
       "status": "PARTIAL",
@@ -5889,7 +5900,7 @@
       "component": "src/components/review-workspace.tsx",
       "line": 1,
       "action": "Preview private captured feedback evidence",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -5918,7 +5929,7 @@
       "component": "src/components/review-workspace.tsx",
       "line": 1,
       "action": "Read saved candidate decision history",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -5947,7 +5958,7 @@
       "component": "src/components/review-workspace.tsx",
       "line": 1,
       "action": "Reload saved review inventory after an error",
-      "kind": "remote_read",
+      "kind": "read",
       "routes": [
         {
           "method": "GET",
@@ -6000,6 +6011,404 @@
       ],
       "outstanding": [
         "Complete expired-session/duplicate/persistence matrix does not apply wholesale to this public read; full per-action audit remains unsigned."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "message-thread-7",
+      "component": "src/components/message-thread.tsx",
+      "action": "Reload available private files",
+      "kind": "read",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/files"
+        }
+      ],
+      "source_sha256": "5aed1f51a61aaa3d900e98d7a102a456bf0b3eb92f8b2d27b499db816fcd9f47",
+      "processing": "Loading available private files\u2026; reload disabled while pending.",
+      "success": "Authoritative file rows replace the list and clear file-read error.",
+      "failure": "Resource-specific read error is displayed; no false empty success.",
+      "recovery": "Reload available files; choose the intended stored file explicitly after an uncertain upload.",
+      "navigation": "Same private workspace.",
+      "duplicate_guard": "No new server mutation.",
+      "status": "PARTIAL",
+      "browser_evidence": [
+        "message-membership-browser/report.json:23local actual-component checks with synthetic API responses."
+      ],
+      "automated_test_references": [],
+      "full_failure_matrix_verified": false,
+      "outstanding": [
+        "Production verification and complete per-action matrix remain separate."
+      ],
+      "line": 1
+    },
+    {
+      "id": "message-thread-8",
+      "component": "src/components/message-thread.tsx",
+      "action": "Retry last send unchanged",
+      "kind": "mutation",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/conversations/:id/messages"
+        }
+      ],
+      "source_sha256": "5aed1f51a61aaa3d900e98d7a102a456bf0b3eb92f8b2d27b499db816fcd9f47",
+      "processing": "Same component send lock; disabled controls; original payload/key reused.",
+      "success": "Original message confirmed, or one new record saved; newer edits are preserved as an unsent draft.",
+      "failure": "Already-uncertain attempts remain unresolved after later permission errors; no automatic new send reference.",
+      "recovery": "Check saved history and retry unchanged after connection/access recovery.",
+      "navigation": "Same private workspace.",
+      "duplicate_guard": "Synchronous send lock and disabled controls; server scoped key prevents duplicate message saves.",
+      "status": "PARTIAL",
+      "browser_evidence": [
+        "message-membership-browser/report.json:23local actual-component checks with synthetic API responses."
+      ],
+      "automated_test_references": [
+        "api/tests/message-retry.test.ts:7executed DB/API groups."
+      ],
+      "full_failure_matrix_verified": false,
+      "outstanding": [
+        "Production verification and complete per-action matrix remain separate."
+      ],
+      "line": 1
+    },
+    {
+      "id": "message-thread-9",
+      "component": "src/components/message-thread.tsx",
+      "action": "Remove prepared attachment from current draft",
+      "kind": "client",
+      "routes": [],
+      "source_sha256": "5aed1f51a61aaa3d900e98d7a102a456bf0b3eb92f8b2d27b499db816fcd9f47",
+      "processing": "Immediate draft-state update; disabled during send.",
+      "success": "Prepared association and file input clear. Stored files and saved references are not deleted.",
+      "failure": "No server deletion or mutation is attempted.",
+      "recovery": "Explicitly choose an available private file or a new upload if wanted.",
+      "navigation": "Same private workspace.",
+      "duplicate_guard": "No new server mutation.",
+      "status": "PARTIAL",
+      "browser_evidence": [
+        "message-membership-browser/report.json:23local actual-component checks with synthetic API responses."
+      ],
+      "automated_test_references": [],
+      "full_failure_matrix_verified": false,
+      "outstanding": [
+        "Production verification and complete per-action matrix remain separate."
+      ],
+      "line": 1
+    },
+    {
+      "id": "membership-6",
+      "component": "src/components/membership.tsx",
+      "action": "Reload membership details after a read failure",
+      "kind": "read",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/members"
+        },
+        {
+          "method": "GET",
+          "path": "/organizations"
+        },
+        {
+          "method": "GET",
+          "path": "/auth/sessions"
+        },
+        {
+          "method": "GET",
+          "path": "/admin/team"
+        }
+      ],
+      "source_sha256": "c82e0e01ca2ac10f9f8fe2e49e73e8b041b4bb9b45ec467d63b5c7b78cb06eab",
+      "processing": "Loading membership, organization and session details\u2026; reload/switch controls guarded.",
+      "success": "Independent successful resources recover; their errors clear without erasing failed mutations.",
+      "failure": "Each failed resource identifies its server rejection; unavailable organizations cannot be switched.",
+      "recovery": "Sign in/reconnect if needed, then reload membership details.",
+      "navigation": "Same private workspace.",
+      "duplicate_guard": "No new server mutation.",
+      "status": "PARTIAL",
+      "browser_evidence": [
+        "message-membership-browser/report.json:23local actual-component checks with synthetic API responses."
+      ],
+      "automated_test_references": [],
+      "full_failure_matrix_verified": false,
+      "outstanding": [
+        "Production verification and complete per-action matrix remain separate."
+      ],
+      "line": 1
+    },
+    {
+      "id": "email-provider-queue",
+      "component": "src/components/email-workspace.tsx",
+      "line": 1,
+      "action": "Sync saved draft to verified provider Drafts folder",
+      "kind": "mutation",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/email/drafts/:id/provider-sync"
+        }
+      ],
+      "source_sha256": "20d80b44b476cd606998e3e0b6762e52cad7dae0f8cb988296a7ae677d188adf",
+      "status": "PARTIAL",
+      "processing": "Queued/processing indicator; changed unsaved editor cannot sync.",
+      "duplicate_guard": "Component processing guard; server revision/idempotency validation applies to mutations.",
+      "success": "Durable job status distinguishes queued and confirmed provider bytes; no email was sent.",
+      "failure": "Unknown acknowledgement, revision conflict or session error is explicit.",
+      "recovery": "Refresh authoritative saved-job status; never create a new APPEND after uncertainty.",
+      "navigation": "Same Email Centre editor.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/provider-drafts-browser/report.json",
+          "scope": "Actual current component using local synthetic API responses; no production write."
+        }
+      ],
+      "outstanding": [
+        "Full per-action positive/negative/timeout/session/duplicate/persistence sign-off remains pending."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "email-provider-refresh",
+      "component": "src/components/email-workspace.tsx",
+      "line": 1,
+      "action": "Refresh provider draft status",
+      "kind": "read",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/email/drafts/:id/provider-sync"
+        }
+      ],
+      "source_sha256": "20d80b44b476cd606998e3e0b6762e52cad7dae0f8cb988296a7ae677d188adf",
+      "status": "PARTIAL",
+      "processing": "Refresh control disabled during status read.",
+      "duplicate_guard": "Component processing guard; server revision/idempotency validation applies to mutations.",
+      "success": "Authoritative current revision/job replaces state; stale reads ignored.",
+      "failure": "Read error preserves editor and known status.",
+      "recovery": "Refresh again or reauthenticate.",
+      "navigation": "Same editor.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/provider-drafts-browser/report.json",
+          "scope": "Actual current component using local synthetic API responses; no production write."
+        }
+      ],
+      "outstanding": [
+        "Full per-action positive/negative/timeout/session/duplicate/persistence sign-off remains pending."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "email-provider-reconcile",
+      "component": "src/components/email-workspace.tsx",
+      "line": 1,
+      "action": "Reconcile uncertain provider draft copy",
+      "kind": "mutation",
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/email/drafts/:id/provider-sync/reconcile"
+        }
+      ],
+      "source_sha256": "20d80b44b476cd606998e3e0b6762e52cad7dae0f8cb988296a7ae677d188adf",
+      "status": "PARTIAL",
+      "processing": "Explicit confirmation and pending status.",
+      "duplicate_guard": "Component processing guard; server revision/idempotency validation applies to mutations.",
+      "success": "Existing durable job is reconciled by source identity/bytes.",
+      "failure": "Uncertain or retained older copy remains clearly labelled.",
+      "recovery": "Inspect status/provider folders; no blind APPEND or purge.",
+      "navigation": "Same editor.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/provider-drafts-browser/report.json",
+          "scope": "Actual current component using local synthetic API responses; no production write."
+        }
+      ],
+      "outstanding": [
+        "Full per-action positive/negative/timeout/session/duplicate/persistence sign-off remains pending."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "schedule-load",
+      "component": "src/components/project-workbench.tsx",
+      "line": 1,
+      "action": "Load or refresh task planning schedule",
+      "kind": "read",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/projects/:id/schedule"
+        }
+      ],
+      "source_sha256": "37133ac4c1c8a2db5ea40861a2d635c359c96fd33148cc3d66974a5a29bb564b",
+      "status": "PARTIAL",
+      "processing": "Visible schedule/loading or save state; controls respect active operation.",
+      "duplicate_guard": "Component processing guard; server revision/idempotency validation applies to mutations.",
+      "success": "Confirmed task-only planning result or visible local selection; Asia/Kolkata business date shown.",
+      "failure": "Inline resource/stale-write/network error; entered dates and note preserved on failure.",
+      "recovery": "Refresh and compare latest dates; reload explicitly replaces dates while preserving rationale. No automatic movement of commitments.",
+      "navigation": "Current project Schedule tab.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/project-schedule-browser/report.json",
+          "scope": "Actual current component using local synthetic API responses; no production write."
+        }
+      ],
+      "outstanding": [
+        "Full per-action positive/negative/timeout/session/duplicate/persistence sign-off remains pending."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "schedule-filter",
+      "component": "src/components/project-workbench.tsx",
+      "line": 1,
+      "action": "Filter planning dates by overdue, dependency risk or unscheduled",
+      "kind": "client",
+      "routes": [],
+      "source_sha256": "37133ac4c1c8a2db5ea40861a2d635c359c96fd33148cc3d66974a5a29bb564b",
+      "status": "PARTIAL",
+      "processing": "Visible schedule/loading or save state; controls respect active operation.",
+      "duplicate_guard": "Component processing guard; server revision/idempotency validation applies to mutations.",
+      "success": "Confirmed task-only planning result or visible local selection; Asia/Kolkata business date shown.",
+      "failure": "Inline resource/stale-write/network error; entered dates and note preserved on failure.",
+      "recovery": "Refresh and compare latest dates; reload explicitly replaces dates while preserving rationale. No automatic movement of commitments.",
+      "navigation": "Current project Schedule tab.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/project-schedule-browser/report.json",
+          "scope": "Actual current component using local synthetic API responses; no production write."
+        }
+      ],
+      "outstanding": [
+        "Full per-action positive/negative/timeout/session/duplicate/persistence sign-off remains pending."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "schedule-open",
+      "component": "src/components/project-workbench.tsx",
+      "line": 1,
+      "action": "Open task date editor",
+      "kind": "client",
+      "routes": [],
+      "source_sha256": "37133ac4c1c8a2db5ea40861a2d635c359c96fd33148cc3d66974a5a29bb564b",
+      "status": "PARTIAL",
+      "processing": "Visible schedule/loading or save state; controls respect active operation.",
+      "duplicate_guard": "Component processing guard; server revision/idempotency validation applies to mutations.",
+      "success": "Confirmed task-only planning result or visible local selection; Asia/Kolkata business date shown.",
+      "failure": "Inline resource/stale-write/network error; entered dates and note preserved on failure.",
+      "recovery": "Refresh and compare latest dates; reload explicitly replaces dates while preserving rationale. No automatic movement of commitments.",
+      "navigation": "Current project Schedule tab.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/project-schedule-browser/report.json",
+          "scope": "Actual current component using local synthetic API responses; no production write."
+        }
+      ],
+      "outstanding": [
+        "Full per-action positive/negative/timeout/session/duplicate/persistence sign-off remains pending."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "schedule-save",
+      "component": "src/components/project-workbench.tsx",
+      "line": 1,
+      "action": "Save task planning dates with internal reason",
+      "kind": "mutation",
+      "routes": [
+        {
+          "method": "PATCH",
+          "path": "/tasks/:id/schedule"
+        }
+      ],
+      "source_sha256": "37133ac4c1c8a2db5ea40861a2d635c359c96fd33148cc3d66974a5a29bb564b",
+      "status": "PARTIAL",
+      "processing": "Visible schedule/loading or save state; controls respect active operation.",
+      "duplicate_guard": "Component processing guard; server revision/idempotency validation applies to mutations.",
+      "success": "Confirmed task-only planning result or visible local selection; Asia/Kolkata business date shown.",
+      "failure": "Inline resource/stale-write/network error; entered dates and note preserved on failure.",
+      "recovery": "Refresh and compare latest dates; reload explicitly replaces dates while preserving rationale. No automatic movement of commitments.",
+      "navigation": "Current project Schedule tab.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/project-schedule-browser/report.json",
+          "scope": "Actual current component using local synthetic API responses; no production write."
+        }
+      ],
+      "outstanding": [
+        "Full per-action positive/negative/timeout/session/duplicate/persistence sign-off remains pending."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "schedule-reload",
+      "component": "src/components/project-workbench.tsx",
+      "line": 1,
+      "action": "Reload latest task dates after a conflict",
+      "kind": "read",
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/projects/:id/schedule"
+        }
+      ],
+      "source_sha256": "37133ac4c1c8a2db5ea40861a2d635c359c96fd33148cc3d66974a5a29bb564b",
+      "status": "PARTIAL",
+      "processing": "Visible schedule/loading or save state; controls respect active operation.",
+      "duplicate_guard": "Component processing guard; server revision/idempotency validation applies to mutations.",
+      "success": "Confirmed task-only planning result or visible local selection; Asia/Kolkata business date shown.",
+      "failure": "Inline resource/stale-write/network error; entered dates and note preserved on failure.",
+      "recovery": "Refresh and compare latest dates; reload explicitly replaces dates while preserving rationale. No automatic movement of commitments.",
+      "navigation": "Current project Schedule tab.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/project-schedule-browser/report.json",
+          "scope": "Actual current component using local synthetic API responses; no production write."
+        }
+      ],
+      "outstanding": [
+        "Full per-action positive/negative/timeout/session/duplicate/persistence sign-off remains pending."
+      ],
+      "full_failure_matrix_verified": false
+    },
+    {
+      "id": "schedule-cancel",
+      "component": "src/components/project-workbench.tsx",
+      "line": 1,
+      "action": "Cancel unsaved task date edit",
+      "kind": "client",
+      "routes": [],
+      "source_sha256": "37133ac4c1c8a2db5ea40861a2d635c359c96fd33148cc3d66974a5a29bb564b",
+      "status": "PARTIAL",
+      "processing": "Visible schedule/loading or save state; controls respect active operation.",
+      "duplicate_guard": "Component processing guard; server revision/idempotency validation applies to mutations.",
+      "success": "Confirmed task-only planning result or visible local selection; Asia/Kolkata business date shown.",
+      "failure": "Inline resource/stale-write/network error; entered dates and note preserved on failure.",
+      "recovery": "Refresh and compare latest dates; reload explicitly replaces dates while preserving rationale. No automatic movement of commitments.",
+      "navigation": "Current project Schedule tab.",
+      "automated_test_references": [],
+      "browser_evidence": [
+        {
+          "file": ".local/launch/project-schedule-browser/report.json",
+          "scope": "Actual current component using local synthetic API responses; no production write."
+        }
+      ],
+      "outstanding": [
+        "Full per-action positive/negative/timeout/session/duplicate/persistence sign-off remains pending."
       ],
       "full_failure_matrix_verified": false
     }
